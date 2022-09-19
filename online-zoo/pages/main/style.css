@@ -49,29 +49,39 @@
   align-items: center;
   gap: 63px;
 }
+.header menu {
+  width: 100%;
+}
 .header .menu {
   display: flex;
   gap: 58px;
 }
+.header .menu__copyright {
+  margin-left: auto;
+  letter-spacing: -0.7px;
+  margin-right: 3px;
+}
 .header .menu__link {
   text-decoration: none;
   color: #FFFFFF;
+  font-weight: 500;
 }
 
 .logo {
   font-size: 19.0145px;
   line-height: 120%;
   color: #FFFFFF;
-  width: 82px;
+  width: 93.1px;
   height: 52px;
   text-align: center;
   border: 1px solid #FFFFFF;
   border-radius: 2px;
   position: relative;
+  padding-top: 3px;
 }
 .logo::after {
   content: "";
-  width: 12.03px;
+  width: 5px;
   height: 20.98px;
   position: absolute;
   left: 10px;

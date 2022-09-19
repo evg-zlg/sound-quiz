@@ -61,14 +61,22 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
     align-items: center;
     gap: 63px;
   }
-
+  menu {
+    width: 100%;
+  }
   .menu {
     display: flex;
     gap: 58px;
   }
+  .menu__copyright {
+    margin-left: auto; 
+    letter-spacing: -0.70px;
+    margin-right: 3px;
+  }
   .menu__link {
     text-decoration: none;
     color: #FFFFFF;
+    font-weight: 500;
   }
   
 }
@@ -79,7 +87,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   line-height: 120%;
   color: #FFFFFF;
 
-  width: 82px;
+  width: 93.1px;
   height: 52px;
 
   text-align: center;
@@ -88,10 +96,12 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   border-radius: 2px;
 
   position: relative;
+
+  padding-top: 3px;
   
   &::after {
     content: "";
-    width: 12.03px;
+    width: 5px;
     height: 20.98px;
     position: absolute;
     left: 10px;
