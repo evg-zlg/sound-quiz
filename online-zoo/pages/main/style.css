@@ -22,16 +22,63 @@
   font-style: normal;
   font-weight: 300;
 }
-h1 {
-  color: #FFEE2E;
-  background-image: linear-gradient(315.75deg, rgba(254, 210, 144, 0.7) 30.06%, #FEBDAB 100.95%, rgba(254, 210, 144, 0.7) 106.36%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%), linear-gradient(315.75deg, rgba(254, 189, 171, 0.74) 30.06%, rgba(243, 169, 248, 0.66) 50.74%, #E0D8F0 80.49%, #EAF7FE 127.9%, #EAF7FE 149.54%);
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: "Roboto";
-  font-weight: bold;
   font-weight: normal;
-  font-weight: 500;
+  font-size: 16px;
 }
-h1:hover {
-  color: blue;
+
+.content {
+  max-width: 1160px;
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background: #000000;
+  backdrop-filter: blur(2px);
+}
+.header .content {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+}
+.header .menu {
+  display: flex;
+  gap: 58px;
+}
+.header .menu__link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.logo {
+  font-size: 19.0145px;
+  line-height: 120%;
+  color: #FFFFFF;
+  width: 82px;
+  height: 52px;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  position: relative;
+}
+.logo::after {
+  content: "";
+  width: 12.03px;
+  height: 20.98px;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+  background-image: url("../../assets/icons/bamboo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 /*# sourceMappingURL=style.css.map */
