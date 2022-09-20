@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Medium.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("../../assets/fonts/Roboto-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.content {
+  max-width: 1160px;
+  width: 100%;
+  height: 100%;
+  margin: auto auto;
+}
+
+.header {
+  height: 80px;
+  width: 100%;
+  background: #000000;
+  backdrop-filter: blur(2px);
+}
+.header .content {
+  display: flex;
+  align-items: center;
+  gap: 63px;
+}
+
+.logo {
+  font-size: 19.0145px;
+  line-height: 120%;
+  color: #FFFFFF;
+  width: 93.1px;
+  height: 52px;
+  text-align: center;
+  border: 1px solid #FFFFFF;
+  border-radius: 2px;
+  position: relative;
+  padding-top: 3px;
+  cursor: pointer;
+}
+.logo::after {
+  content: "";
+  width: 12px;
+  height: 20.98px;
+  position: absolute;
+  left: 15px;
+  top: 23px;
+  background-image: url("../../assets/icons/bamboo.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.logo__link {
+  text-decoration: none;
+}
+
+menu {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  gap: 58px;
+}
+
+.menu__item {
+  position: relative;
+}
+
+.menu__copyright {
+  margin-left: auto;
+  letter-spacing: -0.7px;
+  margin-right: 3px;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-weight: 500;
+  padding: 5px 0;
+}
+.menu__link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  left: 0;
+  top: 110%;
+  height: 2px;
+  background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  transition: width 0.3s ease 0s;
+}
+.menu__link:hover::after {
+  width: 100%;
+}
+
+.menu__link_activ {
+  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  pointer-events: none;
+}
+
+/*# sourceMappingURL=style.css.map */
