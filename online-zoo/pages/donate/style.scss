@@ -77,10 +77,54 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
       height: 34px;
       margin-left: 0;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 414px) {
       position: relative;
       left: -10px;
       top: 0.5px;
+    }
+  }
+  .logo_orange {
+    color: #FE9013;
+    position: absolute;
+    left:1x;
+    top: 13px;
+    font-size: 15.2116px;
+    line-height: 120%;
+
+
+    @media (max-width: 768px) {
+    }
+    @media (max-width: 414px) {
+      left: 2px;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 65.6px;
+      height: 41.6px;
+      border: 0.8px solid #FE9013;
+      border-radius: 2px;
+      position: absolute;
+      top: -3px;
+      left: 8px;
+    }
+    &::after {
+      content: "";
+      width: 10px;
+      height: 20.98px;
+      position: absolute;
+      left: 16px;
+      top: 16px;
+
+      background-image: url("../../assets/icons/bamboo-orange.svg") ;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      @media (max-width: 414px) {
+        left: 16px;
+        top: 16px;
+        width: 10px;
+      }
     }
   }
   @media (max-width: 768px) {
@@ -108,6 +152,19 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
     left: 0px;
     top: 0;
     padding: 82px 0 0 10px;
+    
+    .menu__item {
+      @media (max-width: 768px) {
+        margin: 0 0 14.6px 0;       
+      }
+    }
+    .menu__link {
+      @media (max-width: 768px) {
+        margin: 0 0 0 0;       
+        line-height: 140%;
+
+      }
+    }
 }
 }
 .logo {
@@ -136,9 +193,6 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
     font-size: 12.2899px;
     padding:0;
   }
-  @media (max-width: 768px) {
-
-  }
   
   &::after {
     content: "";
@@ -162,24 +216,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
     }
   }
 }
-.logo_orange {
-  color: #FE9013;
-  position: absolute;
-  left:5px;
-  top: 15px;
 
-  &::before {
-    content: "";
-    display: block;
-    width: 65.6px;
-    height: 41.6px;
-    border: 0.8px solid #FE9013;
-    border-radius: 2px;
-    position: absolute;
-    top: -6px;
-    left: 8px;
-  }
-}
 .logo__link {
   text-decoration: none;
 }
@@ -230,6 +267,11 @@ menu {
   }
   @media (max-width: 768px) {
     margin: 0;
+  }
+}
+.menu__burger-open  {
+  @media (max-width: 768px) {
+    margin: 0 0 20px 0;
   }
 }
 .menu__link {
