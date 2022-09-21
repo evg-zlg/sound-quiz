@@ -245,13 +245,14 @@ menu {
     width: 18px;
     height: 10px;
     position: absolute;
-    right: 10px;
-    top: 12px;
+    right: 20px;
+    top: 11px;
     color: white;
     cursor: pointer;
   }
   @media (max-width: 414px) {
-
+    right: 10px;
+    top: 12px;
   }
 }
 .menu__item {
