@@ -193,6 +193,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   font-size: 19.0145px;
   line-height: 120%;
   color: #FFFFFF;
+  transition: color 0.3s ease 0s;
 
   width: 82px;
   height: 52px;
@@ -207,6 +208,11 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
 
   padding-top: 3px;
   cursor: pointer;
+
+  &:hover {
+    color: #FE9013;
+    
+  }
 
   @media (max-width: 1000px) {
     width: 82.1px;
@@ -852,7 +858,11 @@ menu {
       bottom: -90px;
       transition: all 0.5s ease 0s;
       box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+      @media (max-width:976px) {
+        bottom: -105px;
+      }
     }
+
     .card__footer {
       display: none;
     }

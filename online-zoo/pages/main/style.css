@@ -183,6 +183,7 @@
   font-size: 19.0145px;
   line-height: 120%;
   color: #FFFFFF;
+  transition: color 0.3s ease 0s;
   width: 82px;
   height: 52px;
   text-align: center;
@@ -192,6 +193,9 @@
   z-index: 10;
   padding-top: 3px;
   cursor: pointer;
+}
+.logo:hover {
+  color: #FE9013;
 }
 @media (max-width: 1000px) {
   .logo {
@@ -974,6 +978,11 @@ menu {
   bottom: -90px;
   transition: all 0.5s ease 0s;
   box-shadow: 0px 0px 0px 9999px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 976px) {
+  .cards__card:hover .card__tooltip {
+    bottom: -105px;
+  }
 }
 .cards__card:hover .card__footer {
   display: none;
