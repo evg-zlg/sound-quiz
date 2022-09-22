@@ -42,6 +42,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   font-family: "Roboto";
   font-weight:normal;
   font-size: 16px;
+  color: $color-black-blue;
 }
 
 .content {
@@ -915,5 +916,98 @@ menu {
     position: absolute;
     top: 26px;
     left: 21px;
+  }
+}
+.section-3 {
+  background-image: $color-orange-grad;
+  padding: 69px 0 100px 0;
+  .content {
+    background-color: $color-glass-white;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+
+    max-height: 835px;
+
+    padding: 41px 0 59px 0;
+  }
+  &__title {
+    color: #FE9013;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 120%;
+    text-align: center;
+
+    margin: 0 auto 32px;
+  }
+  &__sub-title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+
+    margin: 0 0 40px 99px;
+  }
+  &__text-strong {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+
+    margin: 0 0 10px 99px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+
+    margin: 0 0 60px 99px;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 1px solid #FE9013;
+    }
+  }
+  &__title-how {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 130%;
+    text-align: center;
+
+    margin: 0 0 38px 0;
+  }
+  &__widjets {
+    max-width: 764px;
+    display: flex;
+    justify-content: space-between;
+  
+    margin: 0 auto 62px;
+  }
+  
+.widjets__elem {
+  .widjets__image {
+    width: 168px;
+    height: 168px;
+    padding: 54px 30px;
+    background-color: white;
+    border: 1px solid #FE9013;
+    border-radius: 5px;
+
+    margin: 0 0 27px 0;
+  }
+  p {
+    max-width: 168px;
+    line-height: 140%;
+  }
+  .widjets__arrow {
+    margin: 60px 0 0 0;
+  }
+}
+.widjets__elem:nth-child(3) .widjets__image {
+  padding: 38px 41px 31px 41.23px;
+}
+.widjets__elem:nth-child(5) .widjets__image {
+  padding: 48px 20.25px 46.4px 22px;
+}
+  .btn {
+    margin: 0 auto;
   }
 }
