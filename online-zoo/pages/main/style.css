@@ -324,9 +324,7 @@ menu {
 }
 
 .menu__link_activ {
-  background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #F9804B;
   pointer-events: none;
 }
 
@@ -543,6 +541,15 @@ menu {
   letter-spacing: 0.1px;
   display: block;
   box-sizing: border-box;
+  cursor: pointer;
+}
+.btn:hover {
+  background-image: none;
+  background-color: #E47209;
+}
+.btn:active {
+  background-image: none;
+  background-color: rgb(75, 146, 0);
 }
 
 .section-2 {
@@ -984,6 +991,17 @@ menu {
   border-radius: 50%;
   border: none;
   background-image: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+  cursor: pointer;
+}
+.cards__arrow-left:hover,
+.cards__arrow-right:hover {
+  background-image: none;
+  background-color: #E47209;
+}
+.cards__arrow-left:active,
+.cards__arrow-right:active {
+  background-image: none;
+  background-color: #4B9200;
 }
 @media (max-width: 639px) {
   .cards__arrow-left,
@@ -1114,6 +1132,10 @@ menu {
   display: inline-block;
   text-decoration: none;
   border-bottom: 1px solid #FE9013;
+}
+.section-3__text a:hover {
+  color: #E47209;
+  transition: all 0.3s ease 0s;
 }
 .section-3__title-how {
   font-weight: 400;

@@ -322,9 +322,7 @@ menu {
 }
 
 .menu__link_activ {
-  background: $color-orange;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #F9804B;
   pointer-events: none;
 }
 
@@ -492,12 +490,25 @@ menu {
   height: 54px;
   border-radius: 25px;
   background-image: $color-orange;
+  // background-color: transparent;
+  // transition: background-color 0.3s ease 0s;
   border: none;
   color: white;
   padding: 0 0 0.5px 3.5px;
   letter-spacing: 0.1px;
   display: block;
   box-sizing: border-box;
+  cursor: pointer;
+  &:hover {
+    background-image: none;
+    background-color: #E47209; 
+    
+  }
+  &:active {
+    background-image: none;
+    background-color: rgb(75	146	0);
+    
+  }
 }
 
 .section-2 {
@@ -846,6 +857,17 @@ menu {
     border-radius: 50%;
     border: none;
     background-image: $color-orange;  
+    cursor: pointer;
+
+    &:hover {
+      background-image: none;
+      background-color: #E47209
+    }
+    &:active {
+      background-image: none;
+      background-color: #4B9200
+    }
+
     @media (max-width:639px) {
       display:none;
     }
@@ -964,6 +986,10 @@ menu {
       display: inline-block;
       text-decoration: none;
       border-bottom: 1px solid #FE9013;
+      &:hover {
+        color: #E47209;
+        transition: all 0.3s ease 0s;
+      }
     }
   }
   &__title-how {
