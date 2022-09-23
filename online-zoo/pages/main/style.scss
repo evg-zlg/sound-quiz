@@ -1169,7 +1169,7 @@ menu {
   padding: 15px 15px 19px 16px;
   position: relative;
 
-  margin: 0 0 21px 0;
+  margin: 0 0 18px 0;
 
   &::before {
     content: "";
@@ -1220,13 +1220,35 @@ menu {
   }
 }
 .testimonials__scroll {
+  margin: 0 auto 24px auto;
+  width: fit-content;
+}
+.testimonials__slider {
   width: 600px;
-  height: 8px;
+  height: 10px;
+  appearance: none;
   border: 1px solid orangered;
   border-radius: 5px;
   background: #F5F7F6;
-
-  margin: 0 auto 31px auto;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: 115px;
+    height: 6px;
+    background-color: #FE9013;
+    transition: background-color 0.3s ease 0s;
+    border-radius: 5px;
+    
+    &:hover {
+      background-color: #E47209;
+      
+    }
+    &:active {
+      background-color: $color-green;
+    }
+  }    
 }
 .testimonials__btn {
     margin: 0 0 180px 0;
