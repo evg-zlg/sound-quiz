@@ -1357,16 +1357,22 @@ menu {
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   &__item {
     list-style-type: none;
     cursor: pointer;
-    
+    transition: all 0.3s ease 0s;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   &__link {
     text-decoration: none;
     display: flex;
     align-items: center;
     gap: 12px;
+    
+
   }
   &__icon {
     display: inline-block;
@@ -1408,8 +1414,8 @@ menu {
     &_youtube {
       &::before {
         background-image: url("../../assets/icons/youtube.svg");
-        left: 5px;
-        top: 4px;
+        left: 4px;
+        top: 6px;
       }
     }
   }
@@ -1418,5 +1424,6 @@ menu {
     font-size: 16px;
     line-height: 100%;
     color: #FFFFFF;
+    cursor: pointer;
   }
 }

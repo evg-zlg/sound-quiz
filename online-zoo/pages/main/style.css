@@ -1484,6 +1484,10 @@ menu {
 .social__item {
   list-style-type: none;
   cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+.social__item:hover {
+  transform: scale(1.05);
 }
 .social__link {
   text-decoration: none;
@@ -1524,14 +1528,15 @@ menu {
 }
 .social__icon_youtube::before {
   background-image: url("../../assets/icons/youtube.svg");
-  left: 5px;
-  top: 4px;
+  left: 4px;
+  top: 6px;
 }
 .social__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 100%;
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

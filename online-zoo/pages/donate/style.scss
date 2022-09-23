@@ -34,6 +34,12 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   font-style: normal; 
   font-weight: 300; 
 }
+@font-face {
+  font-family: "Roboto"; 
+  src: url("../../assets/fonts/Roboto-Thin.ttf") format("truetype"); 
+  font-style: normal; 
+  font-weight: 100; 
+}
 
 *, *::after, *::before {
   margin: 0;
@@ -42,6 +48,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   font-family: "Roboto";
   font-weight:normal;
   font-size: 16px;
+  color: $color-black-blue;
 }
 
 .content {
@@ -59,7 +66,8 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   background: #000000;
   backdrop-filter: blur(2px);
   padding: 0 30px;
-    
+  position: relative;
+  z-index: 20;  
   .content {
     display: flex;
     align-items: center;
@@ -91,6 +99,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
     font-size: 15.2116px;
     line-height: 120%;
 
+    transition: all 0.3s ease 0.32s;
 
     @media (max-width: 768px) {
     }
@@ -107,6 +116,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
       position: absolute;
       top: -3px;
       left: 8px;
+      transition: all 0.3s ease 0.32s;
     }
     &::after {
       content: "";
@@ -119,6 +129,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
       background-image: url("../../assets/icons/bamboo-orange.svg") ;
       background-repeat: no-repeat;
       background-size: contain;
+      transition: all 0.3s ease 0.32s;
 
       @media (max-width: 414px) {
         left: 16px;
@@ -140,19 +151,36 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
       display: none;
     }
   }
+  @keyframes show {
+    0% {
+      transform: 0;
+    }
+    100% {
+      transform:translateY(1000px);
+    }
+  }
   .menu_burger-open {
     display: block;
-    transition: all 0.3s ease 0s;
+    min-height: 100vh;
     flex-direction: column;
     gap: 15px;
-    background-color: #FFFFFF;
+    background-color: white;
+
     width: 100%;
     height: 100%;
     position: absolute;
     left: 0px;
-    top: 0;
-    padding: 82px 0 0 10px;
-    
+    top: -1000px;
+
+    animation: show 0.3s 1;
+    animation-fill-mode: forwards;
+
+
+    padding: 82px 0 0 10px; 
+
+    @media (max-width: 768px) {
+        margin: 0 0 20px 0;
+      }
     .menu__item {
       @media (max-width: 768px) {
         margin: 0 0 14.6px 0;       
@@ -171,6 +199,7 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
   font-size: 19.0145px;
   line-height: 120%;
   color: #FFFFFF;
+  transition: color 0.3s ease 0s;
 
   width: 82px;
   height: 52px;
@@ -185,6 +214,11 @@ $color-glass-white: rgba(253, 253, 255, 0.52);
 
   padding-top: 3px;
   cursor: pointer;
+
+  &:hover {
+    color: #FE9013;
+    
+  }
 
   @media (max-width: 1000px) {
     width: 82.1px;
@@ -270,11 +304,7 @@ menu {
     margin: 0;
   }
 }
-.menu__burger-open  {
-  @media (max-width: 768px) {
-    margin: 0 0 20px 0;
-  }
-}
+
 .menu__link {
   text-decoration: none;
   color: #FFFFFF;
@@ -304,8 +334,6 @@ menu {
 }
 
 .menu__link_activ {
-  background: $color-orange;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: #F9804B;
   pointer-events: none;
 }
