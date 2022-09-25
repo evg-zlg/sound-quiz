@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="style.css" rel="stylesheet">
-  <title>Donate</title>
+  <title>PetStory | Donate</title>
 </head>
 <body>
   <header class="header">
@@ -75,17 +75,82 @@
         <p class="feed__sub-title">
           We know the animals bring you joy, and in these extraordinary times, we’re glad.
         </p>
-        <div class="feed__count">
-          
-        </div>
-        <div class="feed__amount">
+        <div class="feed__widget widget">
+          <div class="widget__count">
+            <p class="widget__number">
+              4
+            </p>
+            <p class="widget__label">
+              Panda diet for the day.
+            </p>
 
+          </div>
+          <span class="widget__simbol"></span>
+          <img src="../../assets/icons/panda-widget.svg" alt="panda" class="widget__icon">
         </div>
+        <div class="feed__amount amount">
+          <label class="amount__label">Amount</label>
+          <div class="amount__group">
+            <div class="amount__radio-group">
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount" checked>
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+              <label class="amount__radio-label">
+                <input class="amount__radio" type="radio" name="amount">
+                <span></span>
+              </label>
+            </div>
+            <div class="amount__price-group">
+              <span class="amount__price">$5000</span>
+              <span class="amount__price">$2000</span>            
+              <span class="amount__price">$1000</span>          
+              <span class="amount__price">$500</span>           
+              <span class="amount__price">$250</span>            
+              <span class="amount__price">$100</span>            
+              <span class="amount__price">$50</span>            
+              <span class="amount__price">$25</span>
+            </div>
+          </div>
+        </div>
+        <span class="feed__another-amount-simbol">
+          <input type="number" class="feed__another-amount" placeholder="Another amount">
+        </span>
         
-        <input type="text" class="feed__another-amount">
-        <div class="feed__choise">
-          <input type="radio" class="choise__monthly" name="choise"> Monthly 
-          <input type="radio" class="choise__once" name="choise" checked> Once
+        <div class="feed__choise choise">
+          <label class=choise__radio-label>
+            <input type="radio" class="choise__radio choise__radio_monthly" name="choise"> 
+            Monthly 
+          </label>
+          <label class=choise__radio-label>
+            <input type="radio" class="choise__radio choise__radio_once" name="choise" checked> 
+            Once
+          </label>
+          
         </div>
         <button type="button" class="feed__btn btn">
           Feed a friend now
