@@ -392,14 +392,14 @@ menu {
     font-size: 16px;
     line-height: 140%;
     color: #FFFFFF;
-    margin: 0 0 40px 0;
+    margin: 0 0 44px 0;
   }
   &__sub-title {
     font-weight: 400;
     font-size: 36px;
     line-height: 130%;
     color: #FE9013;
-    margin: 0 0 50px 0;
+    margin: 0 0 60px 0;
   }
 }
 .feed {
@@ -408,7 +408,7 @@ menu {
   background: rgba(255, 255, 255, 0.52);
   backdrop-filter: blur(2px);
   border-radius: 20px;
-  padding: 40px 92px 62px;
+  padding: 85px 63px 62px 121px;
 
   &__title {
     font-weight: 400;
@@ -416,17 +416,18 @@ menu {
     line-height: 120%;
     text-align: center;
     color: #FE9013;
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 44px;
   }
   &__sub-title {
     font-weight: normal;
     font-size: 24px;
     line-height: 120%;
     color: $color-black-blue;
-    margin: 0 0 87px 0;
+    margin: 0 0 60px 0;
   }
   &__widget {
-    margin: 0 auto 30px;
+    margin: 0 auto 48px;
+    // padding: 0 0 0 44px;
   }
   &__amount {
     margin: 0 0 50px 0;
@@ -453,7 +454,7 @@ menu {
       position: relative;
       display: block;
       width: fit-content;
-      margin: 0 auto 25px;
+      margin: 0 auto 27px;
 
       &::before {
         content: "";
@@ -470,19 +471,27 @@ menu {
     }
   }
   &__choise {
+    margin: 0 auto 28px;
+  }
+  &__btn {
     margin: 0 auto 30px;
+  }
+  &__sub-text {
+    text-align: center;
+    margin: 0 auto 10px;
   }
 }
 
 .widget {
   height: 246px;
-  width: 534px;
+  width: fit-content;
   
   display: flex;
   align-items: center;
 
+
   &__count {
-    margin: 30px 0 0 0;
+    margin: 56px 0 0 -12px;
   }
   &__number {
     font-weight: 500;
@@ -491,6 +500,7 @@ menu {
     text-align: center;
     text-transform: uppercase;
     color: #000000;
+    margin: 0 0 11px 0;
   }
   &__label {
     font-weight: 400;
@@ -498,6 +508,7 @@ menu {
     line-height: 140%;
     text-align: center;
     color: $color-black-blue;
+    // margin: 0 0 0 -12px;
   }
   &__simbol {
     display: block;
@@ -506,9 +517,12 @@ menu {
     background-size: cover;
     width: 16px;
     height: 16px;
+    position: relative;
+    left: 10px;
+    top: 13px;
   }
   &__icon {
-    margin: 0 0 0 30px;
+    margin: 0 0 0 74px;
   }
 }
 .amount {
@@ -518,7 +532,7 @@ menu {
     line-height: 140%;
     color: #000000;
     display: block;
-    margin: 0 0 17px 0;
+    margin: 0 0 17px 4px;
   }
   &__group {
     height: 75px;
@@ -526,8 +540,8 @@ menu {
   &__radio-group {
     height: 27px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 95px;
     padding: 0 26px;
     background: #404950;
     border-radius: 2px;
@@ -549,12 +563,48 @@ menu {
   }
   &__radio-label {
     display: block;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #FFEE2E;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+    margin: 58px 0 0 -15px;
+    cursor: pointer;
     position: relative;
-    z-index: 10;
+    &:has(.amount__radio:checked) {
+      color: #FE9013;
+      transition: all 0.3s ease 0s;
+    }
+    &::before {
+      display: block;
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #FFEE2E;
+      position: relative;
+      z-index: 10;
+      left: 15px;
+      top: 2px;
+    }
+    &:nth-child(2) {
+     right: 10px;
+    }
+    &:nth-child(3) {
+      right: 21px;
+    }
+    &:nth-child(4) {
+      right: 31px;
+    }
+    &:nth-child(5) {
+      right: 27px;
+    }
+    &:nth-child(6) {
+      right: 22px;
+    }
+    &:nth-child(7) {
+      right: 18px;
+    }
   }
   &__radio {
     opacity: 0;
@@ -564,8 +614,8 @@ menu {
     height: 25px;
     width: 25px;
     position: relative;
-    left:-8px;
-    top: -8px;
+    left:6px;
+    top: -16px;
     &:checked ~span::before {
       content: "";
       display: block;
@@ -574,22 +624,37 @@ menu {
       border: 2px solid #FE9013;
       border-radius: 50%;
       position: absolute;
-      top: -15px;
-      left: -15px;
+      top: -13px;
+      left: 0px;
+      z-index: 10;
     }
+    
     &:checked ~span::after {
       content: "";
       display: block;
-      width: 23px;
-      height: 23px;
+      width: 24px;
+      height: 24px;
       border: 2px solid #FE9013;
       border-radius: 50%;
       position: absolute;
-      top: -6.5px;
-      left: -6.5px;
+      top: -5px;
+      left: 8px;
+      z-index: 10;
+    }
+    
+  }
+  span {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 140%;
+    text-transform: uppercase;
+    color: #333B41;
+    margin: 0 0 0 -20px;
+    &:last-child {
+      // margin: 0 0 0 -10px;
     }
   }
-
   &__price-group {
     display: flex;
     justify-content: space-between;
@@ -618,7 +683,8 @@ menu {
     position: relative;
     padding: 0 0 0 10px;
     display: block;
-    
+    cursor: pointer;
+    margin: 0 7px 0 -9px;
 
     &::before {
       content: "";
@@ -630,9 +696,9 @@ menu {
       top: 0;
       left: 0;
     }
-    &::before ~input:checked {
-      border: 1px solid $color-green;
+    &:has(input:checked)::before {
       background-color: $color-green;
+      border: 1px solid $color-green;
     }
   }
   &__radio {
