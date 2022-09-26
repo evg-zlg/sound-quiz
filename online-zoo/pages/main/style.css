@@ -340,12 +340,12 @@ menu {
 
 .section-1 {
   width: 100%;
-  max-height: 780px;
+  max-height: 700px;
   height: calc(48.75vw + 15px);
   background-image: url("../../assets/images/giant-panda.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: 0px -80px;
+  background-position: 0px -223px;
 }
 @media (max-width: 1400px) {
   .section-1 {
@@ -567,7 +567,7 @@ menu {
 }
 
 .section-2 {
-  padding: 58px 0 0 0px;
+  padding: 137px 0 0 0px;
   position: relative;
   overflow: hidden;
 }
@@ -633,8 +633,8 @@ menu {
 }
 .section-2 .section-2__flower {
   position: absolute;
-  right: 0;
-  top: -70px;
+  right: -1px;
+  top: 9px;
   z-index: -1;
 }
 @media (max-width: 1550px) {
@@ -722,7 +722,7 @@ menu {
   display: flex;
   justify-content: space-between;
   max-height: 403px;
-  margin: 0 0 180px 0;
+  margin: 0 0 182px 0;
 }
 @media (max-width: 1000px) {
   .backstage {

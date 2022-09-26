@@ -374,7 +374,6 @@ menu {
   background-image: url("../../assets/images/panda-donate.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 5px 0px;
 }
 .section-2 {
   height: 1482px;
@@ -416,7 +415,7 @@ menu {
     line-height: 120%;
     text-align: center;
     color: #FE9013;
-    margin: 0 0 20px 44px;
+    margin: 0 0 20px -15px;
   }
   &__sub-title {
     font-weight: normal;
