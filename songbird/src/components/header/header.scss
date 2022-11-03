@@ -1,0 +1,14 @@
+.header {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.logo {
+}
+.logo__img {
+    height: 100%;
+    object-fit: contain;
+}
+.logo__label {
+    color: red;
+}
