@@ -26,7 +26,7 @@ module.exports = {
       progress: true,
     },
     liveReload: true,
-    watchFiles: ['src/*.*'],
+    watchFiles: ['./src/*.*'],
   },
   module: {
     rules: [

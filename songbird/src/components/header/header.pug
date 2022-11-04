@@ -1,14 +1,15 @@
-style 
-    include header.scss
+//- style 
+//-     include header.scss
 
 mixin header() 
     .header 
-        figure.logo 
-            img.logo__img(src=require("../../assests/logo/logo.png") alt="Logo")
-            label.logo__label sound quiz
+        figure.logo
+            a.logo__link(href="./") 
+                img.logo__img(src=require("../../assests/logo/logo.png") alt="Logo")
+                label.logo__label sound quiz
         menu.menu
             li.menu__item
-                a.menu__link.menu__link--ative(href="#") About 
+                a.menu__link.menu__link--ative(href="./") About 
             li.menu__item
                 a.menu__link(href="#") Results 
             li.menu__item

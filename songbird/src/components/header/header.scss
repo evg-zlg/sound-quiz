@@ -2,13 +2,106 @@
     height: 150px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(167, 167, 167);
+    padding: 10px 0;
+
+    .logo {
+        margin: 0 0 0 10px;
+    }
+
+    .btn {
+        margin: 0 10px 0 0;
+    }
 }
 .logo {
-}
-.logo__img {
     height: 100%;
-    object-fit: contain;
+    position: relative;
+ 
+
+    &__link{
+        display: block;
+        height: 100%;
+        cursor: pointer;
+
+    }
+
+    &__img {
+        height: 80%;
+        object-fit: contain;
+    }
+
+    &__label {  
+        font-size: 20px;
+        font-weight: 600;
+        color: #e16259;
+        position: absolute;
+        bottom: 0px;
+        left: 22%;
+        pointer-events: none;
+
+        @media (max-width: 1024px) {
+            
+        }
+    }
 }
-.logo__label {
-    color: red;
+
+.menu {
+    display: flex;
+    gap: 50px;
+    
+    @media (max-width: 1000px) {
+        gap: 8vw;
+    }
+
+    &__item {
+        list-style-type: none;    
+        position: relative;
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: 2rem;
+        cursor: pointer;
+        transition: color 0.15s ease-in 0s;
+        text-shadow: 0.5px 0.5px 5px gray;
+
+        @media (max-width: 1000px) {
+            font-size: 2.5rem;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: 0;
+            left: 0;
+            top: 110%;
+            height: 2px;
+            background-color: #e16259;
+            transition: width 0.3s ease 0s;
+        }
+
+        &:hover::after {
+            width: 100%;   
+        }
+    }
+}
+
+.btn {
+    border: none;
+    border-radius: 5px;
+    background-color: #e16259;
+    padding: 5px 20px;
+    font-size: 2rem;
+    color: white;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in 0s;
+    box-shadow: 0px 4px 9px rgb(0 0 0 / 5%), 0px 1.54074px 2.86667px rgb(0 0 0 / 7%), 0px 0.325926px 0.733333px rgb(0 0 0 / 12%);
+
+    &:hover {
+        // box-shadow: 2px 2px 5px gray, -2px -2px 5px gray, -2px 2px 5px gray, 2px -2px 5px gray;
+        background-color: #e15046;
+    }
 }
