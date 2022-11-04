@@ -1,4 +1,10 @@
 include ./../../components/header/header.pug
-//- style 
-//-     include start-page.scss
+
 +header()
+.content 
+    main.main 
+        .main__description
+            h1.main__title welcome to the #[strong.main__title--colored sound quiz]
+            p.main__text.main__text--question Are you good with musical instruments? 
+            p.main__text Try to identify a musical instrument by sounds, and then listen to beautiful music 
+        img(src=require("./../../assets/images/musical-instruments.webp"), alt="Musical instruments").main__image
