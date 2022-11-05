@@ -14,7 +14,7 @@ module.exports = {
     clean: true,
     // assetModuleFilename: './assets/[name].[contenthash][ext][query]',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    // publicPath: '/',
     // filename: 'assets/js/[name].[contenthash:8].js'
   },
   devServer: {

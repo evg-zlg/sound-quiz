@@ -9,8 +9,20 @@ include ./../../components/button/button.pug
             .main__description    
                 h2.main__text.main__text--question simple sounds
                 p.main__text Try to identify a musical instrument by sounds, and then listen to beautiful music 
-                +button("I want to try", "main__btn")
-            img(src=require("./../../assets/images/musical-instruments.webp"), alt="Musical instruments").main__image
+                +button("Try it", "main__btn")
+            .main__collage
+                img(src=require("./../../assets/images/accordion.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/cello.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/guitar.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/piano.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/trumpet.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/maracas.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/double-note.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/collage-main.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+                img(src=require("./../../assets/images/drum.png"), alt="Musical instruments").main__image
     
     section.rules 
         h2.rules__title how to play?
@@ -31,6 +43,6 @@ include ./../../components/button/button.pug
         .songs__description 
             h2.songs__title listen to great music 
             p.songs__text If you answered correctly, you can listen to music with this musical instrument
-            +button("Go, go, go!", "songs__btn")
+            +button("I'm ready to play", "songs__btn")
     footer.footer 
         
