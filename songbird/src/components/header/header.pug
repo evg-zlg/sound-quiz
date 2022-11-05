@@ -1,5 +1,4 @@
-//- style 
-//-     include header.scss
+include ./../button/button.pug
 
 mixin header() 
     .header 
@@ -14,6 +13,6 @@ mixin header()
                 a.menu__link(href="#") Results 
             li.menu__item
                 a.menu__link(href="#") Blog 
-        button.btn Lets play
+        +button("Lets play")
 
 script(src=require("header.js")) 

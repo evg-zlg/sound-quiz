@@ -5,6 +5,11 @@
     align-items: center;
     border-bottom: 1px solid rgb(167, 167, 167);
     padding: 10px 0;
+    
+    position: fixed;
+    top: 0;
+    width: 1080px;
+    z-index: 20;
 
     .logo {
         margin: 0 0 0 10px;
@@ -37,8 +42,9 @@
         color: #e16259;
         position: absolute;
         bottom: 0px;
-        left: 16%;
+        left: 9%;
         pointer-events: none;
+        text-transform: uppercase;
 
         @media (max-width: 1024px) {
             
@@ -91,7 +97,7 @@
     border: none;
     border-radius: 5px;
     background-color: #e16259;
-    padding: 5px 20px;
+    padding: 10px 25px;
     font-size: 2rem;
     color: white;
     font-weight: 500;

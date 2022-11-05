@@ -1,3 +1,4 @@
+@import "./components/button/button.scss";
 @import "./components/header/header.scss";
 @import "./pages/start-page/start-page.scss";
 
@@ -20,4 +21,6 @@ body,
   margin: 0 auto;
   width: 1080px;
   padding: 0 20px;
+  position: relative;
+
 }
