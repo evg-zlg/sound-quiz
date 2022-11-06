@@ -1,0 +1,10 @@
+mixin player(label)
+    .player
+        label.player__label #{label}
+        .player__control
+            audio(src=require("../../assets/sounds/piano-mi.mp3")).player__audio
+            button.player__play
+            .player__progress-bar
+                .player__progress
+                label.player__current-time 00:00
+                label.player__all-time 00:05

@@ -1,48 +1,45 @@
-include ./../../components/header/header.pug
 include ./../../components/button/button.pug
 
-+header()
-.content 
-    main.main 
-        h1.main__title welcome to the #[strong.main__title--colored sound quiz]
-        .main__about
-            .main__description    
-                h2.main__text.main__text--question simple sounds
-                p.main__text Try to identify a musical instrument by sounds, and then listen to beautiful music 
-                +button("Try it", "main__btn")
-            .main__collage
-                img(src=require("./../../assets/images/accordion.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/cello.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/guitar.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/piano.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/trumpet.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/maracas.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/double-note.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/collage-main.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
-                img(src=require("./../../assets/images/drum.png"), alt="Musical instruments").main__image
-    
-    section.rules 
-        h2.rules__title how to play?
-        .rules__items 
-            .rules__item 
-                img(src=require("./../../assets/images/play.png"), alt="Play sound").rules__image
-                .rules__description listen to the sound
-            .rules__item 
-                img(src=require("./../../assets/images/check.png"), alt="Choose answer").rules__image
-                .rules__description choose the correct answer
-            .rules__item 
-                img(src=require("./../../assets/images/results.png"), alt="Results").rules__image
-                .rules__description see the results
+main.main 
+    h1.main__title welcome to the #[strong.main__title--colored sound quiz]
+    .main__about
+        .main__description    
+            h2.main__text.main__text--question simple sounds
+            p.main__text Try to identify a musical instrument by sounds, and then listen to beautiful music 
+            +button("Try it", "main__btn js-btn--play")
+        .main__collage
+            img(src=require("./../../assets/images/accordion.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/cello.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/guitar.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/piano.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/trumpet.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/maracas.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/double-note.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/collage-main.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+            img(src=require("./../../assets/images/drum.png"), alt="Musical instruments").main__image
 
-    
-    section.songs
-        img(src=require("./../../assets/images/listen-music.png"), alt="").songs__image
-        .songs__description 
-            h2.songs__title listen to great music 
-            p.songs__text If you answered correctly, you can listen to music with this musical instrument
-            +button("I'm ready to play", "songs__btn")
-    footer.footer 
+section.rules 
+    h2.rules__title how to play?
+    .rules__items 
+        .rules__item 
+            img(src=require("./../../assets/images/play.png"), alt="Play sound").rules__image
+            .rules__description listen to the sound
+        .rules__item 
+            img(src=require("./../../assets/images/check.png"), alt="Choose answer").rules__image
+            .rules__description choose the correct answer
+        .rules__item 
+            img(src=require("./../../assets/images/results.png"), alt="Results").rules__image
+            .rules__description see the results
+
+
+section.songs
+    img(src=require("./../../assets/images/listen-music.png"), alt="").songs__image
+    .songs__description 
+        h2.songs__title listen to great music 
+        p.songs__text If you answered correctly, you can listen to music with this musical instrument
+        +button("I'm ready to play", "songs__btn js-btn--play")
+footer.footer 
         

@@ -1,0 +1,42 @@
+include ./../../components/player/player.pug
+
+.quiz
+    .quiz__header
+        ul.choise-quiz
+            li.choise-quiz__item.choise-quiz__item--active sound 
+            .choise-quiz__separator
+            li.choise-quiz__item composer
+            .choise-quiz__separator
+            li.choise-quiz__item composition
+            .choise-quiz__separator
+
+    .quiz__game.game
+        .game__question 
+            .game__image.game__image--masked
+            .game__player 
+                +player("Listen sound and choise musical instrument")
+        .game__answers
+            .game__inputs
+                label 
+                    input.game__answer(type="radio" name="answer") 
+                    | answer 1 
+                label 
+                    input.game__answer(type="radio" name="answer") 
+                    | answer 2 
+                label 
+                    input.game__answer(type="radio" name="answer") 
+                    | answer 3 
+                label 
+                    input.game__answer(type="radio" name="answer") 
+                    | answer 4 
+                label 
+                    input.game__answer(type="radio" name="answer") 
+                    | answer 5 
+
+            .game__info.info
+                .info__description
+                    img.info__image(src=require("./../../assets/images/piano.png"))
+                    p.info__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio veritatis atque praesentium libero dolores laboriosam, doloribus quisquam commodi iure cumque voluptatum ad quasi, autem sunt veniam ducimus, fugit iste ex.
+                .info__player
+                    +player("Listen music with this music instrument")
+

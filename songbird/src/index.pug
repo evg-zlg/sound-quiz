@@ -1,3 +1,5 @@
+include components/header/header.pug
+
 doctype html 
 head 
     meta(charset="UTF-8")
@@ -9,5 +11,10 @@ head
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,400;0,8..144,500;0,8..144,600;0,8..144,700;0,8..144,800;0,8..144,900;1,8..144,300;1,8..144,400&display=swap" rel="stylesheet">
 body 
     .content 
-        include pages/start-page/start-page.pug
-        script(src=require("./index.js") type="module") 
+        +header()
+        .start-page.start-page--hidden
+            include pages/start-page/start-page.pug
+        .quiz-page
+            include pages/quiz-page/quiz-page.pug
+    
+    script(src=require("./index.js") type="module") 

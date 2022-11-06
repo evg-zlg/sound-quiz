@@ -1,10 +1,18 @@
 console.log("script work");
 
-// import "./components/header/header"
+import "./components/header/header.js";
+import "./components/player/player.js";
 
-// import "./style.scss";
-// import createStartPage from "./pages/start-page/start-page.js"
-// import "./components/header/header.js"
+const startPage = document.querySelector(".start-page");
+const quizPage = document.querySelector(".quiz-page");
 
-// document.body.classList = "text-gray-900";
-// document.body.append(createStartPage());
+
+function handlerPlayBtn() {
+    startPage.classList.add("start-page--hidden");
+    quizPage.classList.remove("quiz-page--hidden");
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+}
+
+document.querySelectorAll(".js-btn--play").forEach(elem => {
+    elem.addEventListener("click", handlerPlayBtn)
+});
