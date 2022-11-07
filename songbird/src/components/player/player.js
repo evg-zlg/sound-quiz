@@ -1,31 +1,42 @@
 const title = document.querySelector(".player__label");
-const audio = document.querySelector(".player__audio");
-const btnPlay = document.querySelector(".player__play");
+const audio = document.querySelectorAll(".player__audio");
+const btnPlay = document.querySelectorAll(".player__play");
 const progress = document.querySelector(".player__progress-in");
 const currentTime = document.querySelector(".player__current-time");
 const allTime = document.querySelector(".player__all-time");
 
 
-function playAudio () {
-  audio.play();
+function playAudio (n) {
+  audio[n].play();
 }
 
-function pauseAudio () {
-  audio.pause();
+function pauseAudio (n) {
+  audio[n].pause();
 }
 
-function handlerBtnPlay() {
-  if (btnPlay.classList.contains("player__play--pause")) {
-    pauseAudio();
+function handlerBtnPlay(n) {
+  if (btnPlay[n].classList.contains("player__play--pause")) {
+    pauseAudio(n);
   } else {
-    playAudio();
+    playAudio(n);
   }
-  btnPlay.classList.toggle("player__play--pause");
+  btnPlay[n].classList.toggle("player__play--pause");
 };
 
-btnPlay.addEventListener("click", handlerBtnPlay);
+btnPlay[0].addEventListener("click", () => handlerBtnPlay(0));
+btnPlay[1].addEventListener("click", () => handlerBtnPlay(1));
 
 
-export default function load(obj) {
-  audio.src = obj.mp3;
+function load(obj) {
+  audio[0].src = obj.mp3;
+  audio[1].src = obj.music;
 }
+
+audio[0].addEventListener("ended", () => {
+  btnPlay[0].classList.toggle("player__play--pause");
+});
+audio[1].addEventListener("ended", () => {
+  btnPlay[1].classList.toggle("player__play--pause");
+});
+
+export { load, handlerBtnPlay, playAudio, pauseAudio }

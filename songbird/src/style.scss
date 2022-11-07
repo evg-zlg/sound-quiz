@@ -24,11 +24,19 @@ body,
   max-width: 1080px;
   padding: 0 20px;
   position: relative;
+  @media (max-width: 820px) {
+    max-width: 820px;
+  }
 }
 
 .start-page {
   margin: 250px 0 0 0;
-
+  
+  @media (max-width: 820px) {
+    margin: 0px auto 0;
+    padding: 100px 0 0 0;
+  }
+  
   &--hidden {
     display: none;
   }
@@ -38,6 +46,11 @@ body,
   margin: 180px auto 0;
   &--hidden {
     display: none;
+  }
+
+  @media (max-width: 820px) {
+    margin: 0px auto 0;
+    padding: 100px 0 0 0;
   }
 
 }

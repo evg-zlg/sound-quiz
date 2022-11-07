@@ -1,5 +1,3 @@
-console.log("script work");
-
 import "./components/header/header.js";
 import "./components/player/player.js";
 import "./pages/quiz-page/quiz-page.js";
@@ -13,8 +11,9 @@ function handlerPlayBtn() {
     quizPage.classList.remove("quiz-page--hidden");
     document.body.scrollTop = document.documentElement.scrollTop = 0;
     document.querySelector(".menu__link--active").classList.remove("menu__link--active");
+    document.querySelectorAll(".menu__link")[1].classList.add("menu__link--active");
 }
 
 document.querySelectorAll(".js-btn--play").forEach(elem => {
-    elem.addEventListener("click", handlerPlayBtn)
+    elem.addEventListener("click", handlerPlayBtn);
 });

@@ -1,5 +1,5 @@
 // console.log("hello from quiz-page");
-import load from "./../../components/player/player.js";
+import { load, handlerBtnPlay, playAudio, pauseAudio } from "./../../components/player/player.js";
 import songs from "./quiz-data-songs";
 import composers from "./quiz-data-composers";
 
@@ -8,6 +8,8 @@ const btnNext = document.querySelector(".game__next");
 const temp = document.querySelector(".game__temp");
 const count = document.querySelector(".game__count");
 const imgPlayer = document.querySelector(".game__image");
+const playerPlayFirst = document.querySelectorAll(".player__play")[0];
+const playerPlaySecond = document.querySelectorAll(".player__play")[1];
 let score = 0;
 let scoreTemp = 0;
 let currentQuestIndex = 0;
@@ -28,6 +30,11 @@ document.addEventListener("DOMContentLoaded", () => {
 btnNext.addEventListener("click", handlerBtnNext)
 
 function handlerBtnNext() {
+  playerPlaySecond.classList.remove("player__play--pause");
+  playerPlayFirst.classList.remove("player__play--pause");
+  pauseAudio(1);
+  pauseAudio(0);
+  
   if (isFinish()) {
     alert("finish");
   } else {
@@ -44,6 +51,11 @@ function checkAnswer(answer, obj) {
 }
 
 function handlerAnswersInput (e) {
+  if (playerPlayFirst.classList.contains("player__play--pause")) {
+    playerPlayFirst.classList.remove("player__play--pause");
+    pauseAudio(0);
+  }
+
   if (checkAnswer(e.target.parentNode.childNodes[1].data, currentQuest)) {
     e.target.parentNode.classList.add("game__answer--is-right");
     btnNext.disabled = false;

@@ -22,13 +22,18 @@
 }
 
 .choise-quiz {
-    margin: 0 0 20px 0;
     list-style-type: none;
     display: flex;
     justify-content: center;
     gap: 10px;
     text-transform: uppercase;
     font-size: 1.125rem;
+
+    @media (max-width: 820px) {
+      padding: 5px 5px;
+      font-size: 0.6rem;
+      gap: 5px;
+    }
 
     &__separator {
         width: 2px;
@@ -44,6 +49,10 @@
         padding: 5px 40px;
         border-radius: 5px;
         
+        @media (max-width: 820px) {
+          padding: 5px 10px;
+        }
+
         &:hover {
             background-color: #f1efee;
         }
@@ -87,6 +96,10 @@
         border-radius: 10px;
         padding: 10px;
         border: 1px solid #e16259;
+
+        @media (max-width: 820px) {
+          flex-direction: column;
+        }
     }
     &__inputs {
         flex: 1;
@@ -97,6 +110,11 @@
         flex-direction: column;
         gap: 10px;
         justify-content: center;
+
+        @media (max-width: 820px) {
+          border-right: none;
+          border-bottom: 1px solid #e16259;
+        }
 
         &--disabled {
           pointer-events: none;
