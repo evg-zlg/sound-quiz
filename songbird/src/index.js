@@ -12,6 +12,7 @@ function handlerPlayBtn() {
     startPage.classList.add("start-page--hidden");
     quizPage.classList.remove("quiz-page--hidden");
     document.body.scrollTop = document.documentElement.scrollTop = 0;
+    document.querySelector(".menu__link--active").classList.remove("menu__link--active");
 }
 
 document.querySelectorAll(".js-btn--play").forEach(elem => {

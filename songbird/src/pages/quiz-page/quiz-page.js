@@ -78,14 +78,15 @@ function updateQuestion() {
   // hidden info
   document.querySelector(".info").classList.add("info--masked");
 
-  setTimeout(() => {
-    // load audio
-    load(currentQuest);
+  // load audio
+  load(currentQuest);
 
-    // load answers
-    for (let i = 0; i < currentQuest.answers.length; i++) {
-      inputs[i].parentNode.childNodes[1].data = currentQuest.answers[i];
-    };
+  // load answers
+  for (let i = 0; i < currentQuest.answers.length; i++) {
+    inputs[i].parentNode.childNodes[1].data = currentQuest.answers[i];
+  };
+  
+  setTimeout(() => {
     //load quest image by default
     imgPlayer.src = require("./../../assets/images/collage-main.png");
     //load info

@@ -63,6 +63,7 @@
     &__item {
         list-style-type: none;    
         position: relative;
+
     }
 
     &__link {
@@ -90,6 +91,13 @@
 
         &:hover::after {
             width: 100%;   
+        }
+        
+        &--active {
+          pointer-events: none;
+          &::after {
+            width: 100%;   
+          }
         }
     }
 }
