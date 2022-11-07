@@ -28,10 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
 btnNext.addEventListener("click", handlerBtnNext)
 
 function handlerBtnNext() {
+  if (isFinish()) {
+    alert("finish");
+  } else {
+    updateQuestion();
+  }
+};
 
-  updateQuestion();
-  
-}
 function checkAnswer(answer, obj) {
   if (answer == obj.answer) {
     return true
@@ -58,43 +61,51 @@ function handlerAnswersInput (e) {
   }
 }
 
+function shuffle() {
+
+}
+
+function isFinish() {
+    if ((currentQuestIndex) == songs.length) {
+        return true
+    } else return false
+}
+
 function updateQuestion() {
-  
-  //update score
-  scoreTemp = 10;
-  currentQuest = songs[currentQuestIndex++];
-  
-  // clear answers block
-  inputs[0].parentNode.parentNode.classList.remove("game__inputs--disabled");
-  inputs.forEach(elem => {
-    elem.parentNode.classList.remove("game__answer--is-right");
-    elem.parentNode.classList.remove("game__answer--is-wrong");
-    elem.checked = false;
-  });
 
-  //disabled button netx
-  btnNext.disabled = true;
+    //update score
+    scoreTemp = 10;
+    currentQuest = songs[currentQuestIndex++];
 
-  // hidden info
-  document.querySelector(".info").classList.add("info--masked");
+    // clear answers block
+    inputs[0].parentNode.parentNode.classList.remove("game__inputs--disabled");
+    inputs.forEach(elem => {
+      elem.parentNode.classList.remove("game__answer--is-right");
+      elem.parentNode.classList.remove("game__answer--is-wrong");
+      elem.checked = false;
+    });
 
-  // load audio
-  load(currentQuest);
+    //disabled button netx
+    btnNext.disabled = true;
 
-  // load answers
-  for (let i = 0; i < currentQuest.answers.length; i++) {
-    inputs[i].parentNode.childNodes[1].data = currentQuest.answers[i];
-  };
-  
-  setTimeout(() => {
-    //load quest image by default
-    imgPlayer.src = require("./../../assets/images/collage-main.png");
-    //load info
-    document.querySelector(".info__image").src = currentQuest.png;
-    document.querySelector(".info__text").innerText = currentQuest.descript;
-    
-  }, 300);
-  
+    // hidden info
+    document.querySelector(".info").classList.add("info--masked");
+
+    // load audio
+    load(currentQuest);
+
+    // load answers
+    for (let i = 0; i < currentQuest.answers.length; i++) {
+      inputs[i].parentNode.childNodes[1].data = currentQuest.answers[i];
+    };
+
+    setTimeout(() => {
+      //load quest image by default
+      imgPlayer.src = require("./../../assets/images/collage-main.png");
+      //load info
+      document.querySelector(".info__image").src = currentQuest.png;
+      document.querySelector(".info__text").innerText = currentQuest.descript;
+    }, 300);  
 };
 
 
