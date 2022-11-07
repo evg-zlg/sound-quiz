@@ -71,13 +71,9 @@
         border: 1px solid #e16259;
     }
     &__image {
-        background-image: url("./../../assets/images/collage-main.png");
-        background-size: contain;
-        background-repeat: no-repeat;
+        object-fit: contain;
         width: 100px;
         height: 100px;
-        &--masked {
-        } 
     }
     &__player {
         width: 60%;

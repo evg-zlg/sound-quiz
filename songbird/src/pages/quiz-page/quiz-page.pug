@@ -12,7 +12,7 @@ include ./../../components/player/player.pug
 
     .quiz__game.game
         .game__question 
-            .game__image.game__image--masked
+            img(src=require("./../../assets/images/collage-main.png")).game__image
             .game__player 
                 +player("Listen sound and choise musical instrument")
         .game__answers
@@ -42,7 +42,7 @@ include ./../../components/player/player.pug
             .game__info.info.info--masked
                 .info__description
                     img.info__image(src=require("./../../assets/images/piano.png"))
-                    p.info__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio veritatis atque praesentium libero dolores laboriosam, doloribus quisquam commodi iure cumque voluptatum ad quasi, autem sunt veniam ducimus, fugit iste ex.
+                    p.info__text Lorem ipsum
                 .info__player
                     +player("Listen music with this music instrument")
         button.game__next(disabled) next question
