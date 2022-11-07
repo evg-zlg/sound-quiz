@@ -2,6 +2,7 @@ console.log("script work");
 
 import "./components/header/header.js";
 import "./components/player/player.js";
+import "./pages/quiz-page/quiz-page.js";
 
 const startPage = document.querySelector(".start-page");
 const quizPage = document.querySelector(".quiz-page");

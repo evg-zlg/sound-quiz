@@ -1,2 +1,1 @@
-console.log("hellow from header");
-// const styles = require("./header.scss");
+console.log("hello from header");

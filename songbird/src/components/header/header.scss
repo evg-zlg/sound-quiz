@@ -71,6 +71,7 @@
         cursor: pointer;
         transition: color 0.15s ease-in 0s;
         text-shadow: 0.5px 0.5px 5px gray;
+        user-select: none;
 
         @media (max-width: 1000px) {
             font-size: 2.5rem;

@@ -17,26 +17,33 @@ include ./../../components/player/player.pug
                 +player("Listen sound and choise musical instrument")
         .game__answers
             .game__inputs
-                label 
-                    input.game__answer(type="radio" name="answer") 
+                label.game__score Score: 
+                  span.game__count 0
+                label.game__correct Correct answer: 
+                  span.game__temp 10
+                p.game__select select an answer:
+                label.game__answer
+                    input.game__input(type="radio" name="answer") 
                     | answer 1 
-                label 
-                    input.game__answer(type="radio" name="answer") 
-                    | answer 2 
-                label 
-                    input.game__answer(type="radio" name="answer") 
-                    | answer 3 
-                label 
-                    input.game__answer(type="radio" name="answer") 
-                    | answer 4 
-                label 
-                    input.game__answer(type="radio" name="answer") 
-                    | answer 5 
+                label.game__answer
+                    input.game__input(type="radio" name="answer") 
+                    | answer 1 
+                label.game__answer
+                    input.game__input(type="radio" name="answer") 
+                    | answer 1 
+                label.game__answer
+                    input.game__input(type="radio" name="answer") 
+                    | answer 1 
+                label.game__answer
+                    input.game__input(type="radio" name="answer") 
+                    | answer 1 
+                
 
-            .game__info.info
+            .game__info.info.info--masked
                 .info__description
                     img.info__image(src=require("./../../assets/images/piano.png"))
                     p.info__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio veritatis atque praesentium libero dolores laboriosam, doloribus quisquam commodi iure cumque voluptatum ad quasi, autem sunt veniam ducimus, fugit iste ex.
                 .info__player
                     +player("Listen music with this music instrument")
+        button.game__next(disabled) next question
 

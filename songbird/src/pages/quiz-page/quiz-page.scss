@@ -1,5 +1,4 @@
 .quiz {
-
     text-align: center;
 
     padding: 20px 20px;
@@ -68,6 +67,8 @@
         gap: 10px;
         justify-content: center;
         align-items: center;
+        border-radius: 10px;
+        border: 1px solid #e16259;
     }
     &__image {
         background-image: url("./../../assets/images/collage-main.png");
@@ -83,6 +84,7 @@
         font-size: 1.125rem;
     }
     &__answers {
+        margin: 10px 0 0 0;
         display: flex;
         min-height: 65%;
         height: 100%;
@@ -93,24 +95,112 @@
     &__inputs {
         flex: 1;
         text-align: start;
+        padding: 0 20px 0 0;
+        border-right: 1px solid #e16259;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
 
-        label {
-            white-space: nowrap;
-            display: flex;
-            align-items: center;
-            margin: 20px 0 0 10px;
-            font-size: 1.125rem;
-            cursor: pointer;
+        &--disabled {
+          pointer-events: none;
         }
+    }  
+    
+    &__answer {
+      display: flex;
+      align-items: center;
+      font-size: 1.125rem;
+      line-height: 30px;
+      cursor: pointer;
+      border-radius: 5px;
+      padding: 0 0 0 10px;
+      transition: all 0.15s ease 0s;
+      position: relative;
+      user-select:none;
+
+      &::before {
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        border: 2px solid rgb(167, 167, 167);
+        position: absolute;
+        left: 5px; 
+      }
+
+      &:has(.game__input:checked)::after {
+        content: "";
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background-color:rgb(167, 167, 167);
+        position: absolute;
+        left: 9px; 
+      }
+
+      &:hover {
+        background-color: rgb(167, 167, 167);
+        color: white;
+      }
+
+      &--is-right {
+        color: green;
+        font-weight: 500;
+        
+        &::before {
+          border: 2px solid green;
+        }
+
+        &:has(.game__input:checked)::after {
+          background-color:green;
+        }
+      }
+
+      &--is-wrong {
+        color: #e16259;
+        font-weight: 500;
+        pointer-events: none;
+        
+        &::before {
+          border: 2px solid #e16259;
+        }
+
+        &:has(.game__input:checked)::after {
+          background-color:#e16259;
+        }
+      }
+    }     
+
+    &__score {
+      font-size: 1.125rem;
+      margin: 0 0 5px 0;
     }
 
-    &__answer {
-        display: inline-block;
-        margin: 0 5px 0 0;
+    &__correct {
+      font-size: 1.125rem;
+      margin: 0 0 20px 0;
+    }
+
+    &__count {
+      font-size: 1.5rem;
+      color:#e16259;
+      font-weight: 500;
+    }
+
+    &__select {
+      text-transform: uppercase;
+      font-size: 1.125rem;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+    }
+
+    &__input {
+      margin: 0 5px 0 0;
+      opacity: 0;
     }
     &__info {
-        flex: 2;
-        border-left: 1px solid #e16259;
+      flex: 2;  
     }
 }
 .info {
@@ -118,6 +208,10 @@
     flex-direction: column;
     padding: 10px;
     
+    &--hidden {
+      opacity: 0;
+    }
+
     &__description {
         width: 100%;
         height: 80%;
@@ -135,4 +229,34 @@
     &__player {
 
     }
+
+    opacity: 1;
+    transition: opacity 0.3s ease 0s;
+
+    &--masked {
+      opacity: 0;
+    }
+}
+.game__next {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #e16259;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  padding: 10px 0;
+  margin: 10px 0 0 0;
+  transition: all 0.15s ease 0s;
+
+  &:hover {
+    background-color: #e15046;
+  }
+
+  &:disabled {
+    background-color: rgb(167, 167, 167);
+    pointer-events: none;
+  }
 }
