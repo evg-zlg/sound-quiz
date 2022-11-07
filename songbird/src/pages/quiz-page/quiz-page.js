@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 btnNext.addEventListener("click", handlerBtnNext)
 
 function handlerBtnNext() {
+  document.body.scrollTop = document.documentElement.scrollTop = 160;
   playerPlaySecond.classList.remove("player__play--pause");
   playerPlayFirst.classList.remove("player__play--pause");
   pauseAudio(1);
