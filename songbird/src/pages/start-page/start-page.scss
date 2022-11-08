@@ -79,6 +79,7 @@
         display: block;
         width: 100%;
         margin: 30px auto 0;
+        
         @media (max-width:1000px) {
           font-size: 1.125rem;
         }
@@ -192,6 +193,15 @@
         text-transform: uppercase;
         text-align: center;
         margin: 0 0 40px 0;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+  
+        @media (max-width: 440px) {
+          font-size: 1.125rem;
+        }
+  
     }
 
     &__items {
@@ -220,6 +230,10 @@
 
     &__description {
         font-size: 1.5rem;
+        @media (max-width: 440px) {
+          font-size: 1.125rem;
+        }
+  
     }
 }
 
@@ -228,48 +242,168 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
+    position: relative;
 
     @media (max-width: 820px) {
         margin: 50px 0 0 0;
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
     &__description {
         align-items: center;
         padding: 0 20px;
+        flex: 1 1 40%;
+        order: 2;
     }   
+
     &__title {
         text-transform: uppercase;
         text-align: center;
         font-size: 2rem;
         margin: 0 0 20px 0;
+
+        @media (max-width: 768px) {
+          font-size: 1.5rem;
+        }
+
+        @media (max-width: 440px) {
+          font-size: 1.125rem;
+        }
     }   
+
     &__text {
         font-size: 1.5rem;
         text-align: center;
+        @media (max-width: 440px) {
+          font-size: 1rem;
+        }
     }
 
     &__btn {
         margin: 30px 0 0 0;
         display: block;
         width: 100%;
+
+        @media (max-width: 1000px) {
+          font-size: 1.125rem;
+        }
     }
 
     &__image {
-        max-width: 500px;
-        object-fit: contain;
-
+        flex: 1 1 60%;
+        display: flex;
+        justify-content: end;
+        
         @media (max-width: 820px) {
-            max-width: 250px;
+          width: 105%;
+          background-image: url("./../../assets/images/listen-music-4.png");
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center -7.6vw;
         }
+
     }
+
+    &__img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+      @media (max-width: 820px) {
+        opacity: 0;
+        max-height: 55vw;
+      }
+      @media (max-width: 768px) {
+        
+      }
+    }
+}
+.composer {
+  margin: 160px 0 0 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  @media (max-width: 820px) {
+      margin: 20px 0 0 0;
+      flex-direction: column-reverse;
+  }
+
+  &__description {
+      align-items: center;
+      padding: 0 20px;
+      flex: 1 1 40%;
+      order: 2;
+  }   
+  &__title {
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 2rem;
+      margin: 0 0 20px 0;
+
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+      }
+
+      @media (max-width: 440px) {
+        font-size: 1.125rem;
+      }
+  }   
+  &__text {
+      font-size: 1.5rem;
+      text-align: center;
+      
+      @media (max-width: 440px) {
+        font-size: 1rem;
+      }
+  }
+
+  &__btn {
+      margin: 30px 0 0 0;
+      display: block;
+      width: 100%;
+
+      @media (max-width: 1000px) {
+        font-size: 1.125rem;
+        margin: 30px 0 50px 0;
+      }
+  }
+
+  &__image {
+      flex: 1 1 60%;
+      display: flex;
+      justify-content: end;
+      
+      &:last-child {
+        justify-content: center;
+        order: 1;
+        @media (max-width: 820px) {
+          max-height: 350px;
+
+        }
+      }
+      
+      @media (max-width: 820px) {
+        max-height: 250px;
+        width: 100%;
+      }
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 400px;
+    object-fit: contain;
+  }
 }
 
 .footer {
-    margin: 80px 0 0 0;
-
-    opacity: 0;
+    opacity: 1;
     height: 120px;
-    background-color: gray;
+    border-top: 2px solid rgb(167, 167, 167);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__text {
+      
+    }
 }

@@ -35,12 +35,23 @@ section.rules
             img(src=require("./../../assets/images/results.png"), alt="Results").rules__image
             .rules__description see the results
 
-
 section.songs
-    img(src=require("./../../assets/images/listen-music.png"), alt="").songs__image
+    .songs__image 
+      img(src=require("./../../assets/images/listen-music-great.png"), alt="").songs__img
     .songs__description 
         h2.songs__title listen to great music 
-        p.songs__text If you answered correctly, you can listen to music with this musical instrument
-        +button("I'm ready to play", "songs__btn js-btn--play")
-footer.footer 
+        p.songs__text Listen, listen more.. and find right song.
+        +button("Hmm, that's interesting", "songs__btn js-btn--play")
+
+section.composer
+    .composer__description 
+      h2.composer__title Do you know the classics?
+      p.composer__text Test your knowledge and learn something new in the section COMPOSERS
+      +button("I'm ready to play", "composer__btn js-btn--play")
+    .composer__image 
+      img(src=require("./../../assets/images/composer-1.png"), alt="").composer__img
+      img(src=require("./../../assets/images/composer-with-vine-2.png"), alt="").composer__img
+        
+footer.footer
+  p.footer__text this is footer
         

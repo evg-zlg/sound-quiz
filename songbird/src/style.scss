@@ -18,12 +18,14 @@ body,
   color: $primary-text-color;
   background-color: $primary-bg-color;
   font-family: "Roboto Serif", Helvetica, sans-serif;
+
 }
 .content {
   margin: 0 auto;
   max-width: 1080px;  
   position: relative;
   padding: 0 10px;
+  overflow: hidden;
   @media (max-width: 820px) {
     max-width: 820px;
   }
