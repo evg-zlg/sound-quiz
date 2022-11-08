@@ -25,9 +25,11 @@ body,
   max-width: 1080px;  
   position: relative;
   padding: 0 10px;
-  overflow: hidden;
+  
   @media (max-width: 820px) {
     max-width: 820px;
+    padding: 0;
+    overflow: hidden;
   }
 }
 

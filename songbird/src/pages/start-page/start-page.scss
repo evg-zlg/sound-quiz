@@ -44,7 +44,7 @@
 
     &__description {
         flex: 1 1 40%;
-        padding: 0 0 0 10px;
+        padding: 0 10px 0 10px;
         
         @media (max-width:820px) {
             width: 100%;
@@ -392,6 +392,7 @@
     max-width: 100%;
     max-height: 400px;
     object-fit: contain;
+    
   }
 }
 
@@ -419,6 +420,13 @@
 
       position: relative;
 
+      @media (max-width: 510px) {
+        font-size: 1.125rem;
+        height: 30px;
+        background-size: 24%;
+        padding: 0 0 0 50px;
+      }
+
       &::after {
         content: "";
         position: absolute;
@@ -438,18 +446,28 @@
     &__text {
       font-size: 2rem;
       font-weight: 500;
+
+      @media (max-width: 510px) {
+        font-size: 1.5rem;
+      }
     }
 
     &__logo {
       height: 45px;
-      width: 121pxy;
+      width: 121px;
       background-image: url("./../../assets/logo/rs-school-js.svg");
       background-size: contain;
       background-repeat: no-repeat;
       background-color: transparent;
       background-position: 0 center;
-
+      filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3));
       position: relative;
+
+      @media (max-width: 510px) {
+        font-size: 1.5rem;
+        height: 35px;
+        width: 94px;
+      }
 
       &::after {
         content: "";
