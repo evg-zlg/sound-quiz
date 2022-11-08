@@ -6,11 +6,12 @@
     border-bottom: 1px solid rgb(167, 167, 167);
     padding: 10px 0;
     
-    position: fixed;
+    position: sticky;
     top: 0;
-    width: 1080px;
+    width: 100%;
 
     z-index: 20;
+
     @media (max-width: 820px) {
         width: 90%;
         height: 80px;
@@ -66,7 +67,7 @@
     gap: 50px;
     
     @media (max-width: 1000px) {
-        gap: 8vw;
+        gap: 5vw;
     }
 
     &__item {
@@ -83,9 +84,7 @@
         text-shadow: 0.5px 0.5px 5px gray;
         user-select: none;
 
-        @media (max-width: 1000px) {
-            font-size: 2.5rem;
-        }
+      
         @media (max-width: 820px) {
             font-size: 1.125rem;
         }
