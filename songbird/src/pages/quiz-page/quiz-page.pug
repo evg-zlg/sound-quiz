@@ -21,18 +21,18 @@ include ./../../components/button/button.pug
                   option reed
                   option drum
                   option keyboards
-                //- li.choise-quest__item strings
-                //- li.choise-quest__item wind
-                //- li.choise-quest__item reed
-                //- li.choise-quest__item drum
-                //- li.choise-quest__item keyboards
-                li.choise-quest__item струнные
-                li.choise-quest__item духовые
-                li.choise-quest__item язычковые
-                li.choise-quest__item ударные
-                li.choise-quest__item клавишные
+                li.choise-quest__item.choise-quest__item--active strings
+                li.choise-quest__item wind
+                li.choise-quest__item reed
+                li.choise-quest__item drum
+                li.choise-quest__item keyboards
+                //- li.choise-quest__item.choise-quest__item--active струнные
+                //- li.choise-quest__item духовые
+                //- li.choise-quest__item язычковые
+                //- li.choise-quest__item ударные
+                //- li.choise-quest__item клавишные
         .score
-            label.score__label.game__score Score: 
+            label.score__label Score: 
                 span.score__count 0
     .quiz__game.game
         .game__question 
