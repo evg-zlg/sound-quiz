@@ -38,11 +38,10 @@ include ./../../components/button/button.pug
         .game__question 
             img(src=require("./../../assets/images/collage-main.png")).game__image
             .game__player 
-                +player("What musical instrument sounds?")
+                +player("What instrument?")
         .game__answers
             .game__inputs
-                
-                p.game__select select an answer:
+
                 label.game__answer
                     input.game__input(type="radio" name="answer") 
                     |  
