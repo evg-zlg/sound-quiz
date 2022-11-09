@@ -3,14 +3,37 @@ include ./../../components/button/button.pug
 
 .quiz
     .quiz__header
-        ul.choise-quiz
-            li.choise-quiz__item.choise-quiz__item--active sound 
-            .choise-quiz__separator
-            li.choise-quiz__item composer
-            .choise-quiz__separator
-            li.choise-quiz__item composition
-            .choise-quiz__separator
-
+        .quiz__menu
+            ul.choise-group
+                select.choise-group__dropdown.dropdown
+                  option instruments
+                  option composers
+                  option musics
+                li.choise-group__item.choise-group__item--active instruments 
+                .choise-group__separator
+                li.choise-group__item composers
+                .choise-group__separator
+                li.choise-group__item musics
+            ul.choise-quest
+                select.choise-quest__dropdown.dropdown
+                  option strings
+                  option wind
+                  option reed
+                  option drum
+                  option keyboards
+                //- li.choise-quest__item strings
+                //- li.choise-quest__item wind
+                //- li.choise-quest__item reed
+                //- li.choise-quest__item drum
+                //- li.choise-quest__item keyboards
+                li.choise-quest__item струнные
+                li.choise-quest__item духовые
+                li.choise-quest__item язычковые
+                li.choise-quest__item ударные
+                li.choise-quest__item клавишные
+        .score
+            label.score__label.game__score Score: 
+                span.score__count 0
     .quiz__game.game
         .game__question 
             img(src=require("./../../assets/images/collage-main.png")).game__image
@@ -18,10 +41,7 @@ include ./../../components/button/button.pug
                 +player("What musical instrument sounds?")
         .game__answers
             .game__inputs
-                label.game__score Score: 
-                  span.game__count 0
-                label.game__correct Correct answer: 
-                  span.game__temp 10
+                
                 p.game__select select an answer:
                 label.game__answer
                     input.game__input(type="radio" name="answer") 
