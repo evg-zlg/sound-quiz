@@ -66,9 +66,8 @@ include ./../../components/button/button.pug
                     input.game__input(type="radio" name="answer") 
                     |  
             .game__info.info.info--masked
-                .info__description
-                    img.info__image(src=require("./../../assets/images/piano.png"))
-                    p.info__text Lorem ipsum
+                img.info__image(src=require("./../../assets/images/piano.png"))
+                p.info__text Lorem ipsum
                 .info__player
                     +player("Music with this music instrument")
         +button("next question", "game__next") 

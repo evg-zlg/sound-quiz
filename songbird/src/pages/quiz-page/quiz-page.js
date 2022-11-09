@@ -1,6 +1,6 @@
 // console.log("hello from quiz-page");
 import { load, handlerBtnPlay, playAudio, pauseAudio } from "./../../components/player/player.js";
-import songs from "./quiz-data-songs";
+import songs from "./quiz-data-instruments";
 import composers from "./quiz-data-composers";
 
 const inputs = document.querySelectorAll(".game__input");
@@ -11,6 +11,7 @@ const imgPlayer = document.querySelector(".game__image");
 const playerPlayFirst = document.querySelectorAll(".player__play")[0];
 const playerPlaySecond = document.querySelectorAll(".player__play")[1];
 const playerLabelFirst = document.querySelectorAll(".player__label")[0];
+let subCat = 0;
 let score = 0;
 let scoreTemp = 0;
 let currentQuestIndex = 0;
@@ -53,15 +54,22 @@ function checkAnswer(answer, obj) {
 }
 
 function handlerAnswersInput (e) {
-  if (playerPlayFirst.classList.contains("player__play--pause")) {
-    playerPlayFirst.classList.remove("player__play--pause");
-    pauseAudio(0);
-  }
+
+  document.querySelector(".info").classList.remove("info--masked");
+  //load info
+  // document.querySelector(".info__image").src = currentQuest.png;
+  // document.querySelector(".info__text").innerText = currentQuest.descript;
 
   if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest)) {
+    // if music play, set pause
+    if (playerPlayFirst.classList.contains("player__play--pause")) {
+      playerPlayFirst.classList.remove("player__play--pause");
+      pauseAudio(0);
+    }
+
     e.target.parentNode.classList.add("game__answer--is-right");
     btnNext.disabled = false;
-    document.querySelector(".info").classList.remove("info--masked");
+    
     score += scoreTemp;
     count.innerText = score;
     //load quest image
@@ -80,7 +88,7 @@ function shuffle() {
 }
 
 function isFinish() {
-    if ((currentQuestIndex) == songs.length) {
+    if ((currentQuestIndex) == songs[subCat].length) {
         return true
     } else return false
 }
@@ -91,17 +99,16 @@ function updateQuestion() {
 
     //update score
     scoreTemp = 5;
-    currentQuest = songs[currentQuestIndex++];
+    currentQuest = songs[subCat][currentQuestIndex++];
 
     // clear answers block
-    
     inputs.forEach(elem => {
       elem.parentNode.classList.remove("game__answer--is-right");
       elem.parentNode.classList.remove("game__answer--is-wrong");
       elem.checked = false;
     });
 
-    //disabled button netx
+    //disabled button next
     btnNext.disabled = true;
 
     // hidden info
@@ -113,7 +120,7 @@ function updateQuestion() {
     // load answers
     for (let i = 0; i < currentQuest.answers.length; i++) {
       //label answer
-      inputs[i].parentNode.childNodes[2].data = currentQuest.answers[i];
+      inputs[i].parentNode.childNodes[2].data = currentQuest.answers[0][i];
       //image answer
       inputs[i].parentNode.childNodes[0].src = require("./../../assets/images/"+currentQuest.answers[i]+".png");
     };
