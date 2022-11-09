@@ -43,7 +43,7 @@
         width: 80%;
         height: 15px;
         border-radius: 10px;
-        border: 2px solid rgb(167, 167, 167);
+        border: 2px solid var(--shadow-color);
         position: relative;
         display: flex;
         align-items: center;
@@ -53,7 +53,7 @@
         width: 50%;
         height: 9px;
         border-radius: 10px;
-        background-color: rgb(167, 167, 167);
+        background-color: var(--shadow-color);
     }
     &__current-time {
         position: absolute;

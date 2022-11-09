@@ -4,9 +4,29 @@
 @import "./pages/start-page/start-page.scss";
 @import "./pages/quiz-page/quiz-page.scss";
 
-$primary-bg-color: #fffefc;
-$primary-text-color: #040404;
-$primary-red-color: #e16259;
+:root {
+  --primary-bg-color: #fffefc;
+  --primary-text-color: #040404;
+  --primary-accent-color: #e16259;
+  --hover-color: #c0443b;
+  --right-color: rgb(53, 136, 53);
+  --shadow-color: rgb(167, 167, 167);
+  --drop-shadow-color: rgba(0,0,0,0.3);
+}
+
+
+// :root {
+//   background-color: #fefefe;
+//   filter: invert(100%);
+// }
+
+// * {
+//   background-color: inherit;
+// }
+
+// img:not([src*=".svg"]) {
+//   filter: invert(100%);
+// }
 
 body,
 *,
@@ -15,10 +35,9 @@ body,
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $primary-text-color;
-  background-color: $primary-bg-color;
+  color: var(--primary-text-color);
+  background-color: var(--primary-bg-color);
   font-family: "Roboto Serif", Helvetica, sans-serif;
-
 }
 .content {
   margin: 0 auto;
