@@ -2,7 +2,7 @@ const songs = [
   // 0
   {  
     name: "piano",
-    answers: ["drum", "guitar", "piano", "accordion", "cello"],
+    answers: ["drum", "guitar", "piano", "accordion", "cello", "guitar"],
     answer: "piano",
     mp3: require("./../../assets/sounds/piano.mp3"),
     png: require("./../../assets/images/piano.png"),

@@ -36,34 +36,40 @@ include ./../../components/button/button.pug
                 span.score__count 0
     .quiz__game.game
         .game__question 
-            img(src=require("./../../assets/images/collage-main.png")).game__image
+            img.game__image(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
             .game__player 
                 +player("What instrument?")
         .game__answers
             .game__inputs
-
                 label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
                     input.game__input(type="radio" name="answer") 
                     |  
                 label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
                     input.game__input(type="radio" name="answer") 
                     |  
                 label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
                     input.game__input(type="radio" name="answer") 
                     |  
                 label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
                     input.game__input(type="radio" name="answer") 
                     |  
                 label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
                     input.game__input(type="radio" name="answer") 
                     |  
-                
-
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
+                    input.game__input(type="radio" name="answer") 
+                    |  
             .game__info.info.info--masked
                 .info__description
                     img.info__image(src=require("./../../assets/images/piano.png"))
                     p.info__text Lorem ipsum
                 .info__player
-                    +player("Listen music with this music instrument")
+                    +player("Music with this music instrument")
         +button("next question", "game__next") 
 

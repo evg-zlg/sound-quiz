@@ -11,6 +11,9 @@
   transition: background-color 0.15s ease-in 0s;
   box-shadow: 0px 1px 9px var(--shadow-color);
 
+  @media (max-width: 820px) {
+    font-size: 1rem;
+  }
     &:hover {
       background-color: var(--hover-color);
     }

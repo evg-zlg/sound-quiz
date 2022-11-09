@@ -6,10 +6,11 @@ import composers from "./quiz-data-composers";
 const inputs = document.querySelectorAll(".game__input");
 const btnNext = document.querySelector(".game__next");
 const temp = document.querySelector(".game__temp");
-const count = document.querySelector(".game__count");
+const count = document.querySelector(".score__count");
 const imgPlayer = document.querySelector(".game__image");
 const playerPlayFirst = document.querySelectorAll(".player__play")[0];
 const playerPlaySecond = document.querySelectorAll(".player__play")[1];
+const playerLabelFirst = document.querySelectorAll(".player__label")[0];
 let score = 0;
 let scoreTemp = 0;
 let currentQuestIndex = 0;
@@ -57,20 +58,20 @@ function handlerAnswersInput (e) {
     pauseAudio(0);
   }
 
-  if (checkAnswer(e.target.parentNode.childNodes[1].data, currentQuest)) {
+  if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest)) {
     e.target.parentNode.classList.add("game__answer--is-right");
     btnNext.disabled = false;
-    inputs[0].parentNode.parentNode.classList.add("game__inputs--disabled");
     document.querySelector(".info").classList.remove("info--masked");
     score += scoreTemp;
     count.innerText = score;
     //load quest image
     imgPlayer.src = currentQuest.png;
+    //update player label
+    playerLabelFirst.innerText = currentQuest.name;
 
   } else {
     e.target.parentNode.classList.add("game__answer--is-wrong");
-    scoreTemp -= 2;
-    temp.innerText = scoreTemp;
+    scoreTemp -= 1;
   }
 }
 
@@ -85,13 +86,15 @@ function isFinish() {
 }
 
 function updateQuestion() {
+    //update player label
+    playerLabelFirst.innerText = "What instrument?"
 
     //update score
-    scoreTemp = 10;
+    scoreTemp = 5;
     currentQuest = songs[currentQuestIndex++];
 
     // clear answers block
-    inputs[0].parentNode.parentNode.classList.remove("game__inputs--disabled");
+    
     inputs.forEach(elem => {
       elem.parentNode.classList.remove("game__answer--is-right");
       elem.parentNode.classList.remove("game__answer--is-wrong");
@@ -109,7 +112,10 @@ function updateQuestion() {
 
     // load answers
     for (let i = 0; i < currentQuest.answers.length; i++) {
-      inputs[i].parentNode.childNodes[1].data = currentQuest.answers[i];
+      //label answer
+      inputs[i].parentNode.childNodes[2].data = currentQuest.answers[i];
+      //image answer
+      inputs[i].parentNode.childNodes[0].src = require("./../../assets/images/"+currentQuest.answers[i]+".png");
     };
 
     setTimeout(() => {
