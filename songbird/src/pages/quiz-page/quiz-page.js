@@ -45,12 +45,13 @@ function handlerBtnNext() {
   if (isFinish()) {
     alert("finish");
   } else {
+    currentQuestIndex ++;
     updateQuestion();
   }
 };
 
 function checkAnswer(answer, obj) {
-  if (answer == obj.answer) {
+  if (answer == obj.name) {
     return true
   } else {
     return false
@@ -68,31 +69,39 @@ function handlerAnswersInput (e) {
 
   gameInfo.classList.remove("info--masked");
 
-  if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest)) {
+  if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest[rightAnswerIndex])) {
     // if music play, set pause
     if (playerPlayFirst.classList.contains("player__play--pause")) {
       playerPlayFirst.classList.remove("player__play--pause");
       pauseAudio(0);
     }
 
-    e.target.parentNode.classList.add("game__answer--is-right");
-    btnNext.disabled = false;
-    
-    score += scoreTemp;
-    count.innerText = score;
-    //load quest image
-    imgPlayer.src = currentQuest.png;
-    //update player label
-    playerLabelFirst.innerText = currentQuest.name;
+    if ( ! e.target.parentNode.classList.contains("game__answer--is-right")) {
+      e.target.parentNode.classList.add("game__answer--is-right");
+      btnNext.disabled = false;
+      
+      //update score
+      score += scoreTemp;
+      count.innerText = score;
+
+      //load quest image
+      imgPlayer.src = currentQuest[rightAnswerIndex].png;
+      //update player label
+      playerLabelFirst.innerText = currentQuest[currentQuestIndex].name;
+    }
 
   } else {
-    e.target.parentNode.classList.add("game__answer--is-wrong");
-    scoreTemp -= 1;
+    //check for repeat incorrect answer
+    if (! e.target.parentNode.classList.contains("game__answer--is-wrong")) {
+      e.target.parentNode.classList.add("game__answer--is-wrong");
+      scoreTemp -= 1;
+    }
+    
   }
 }
 
 function isFinish() {
-    if ((currentQuestIndex) == songs[subCat].length) {
+    if ((currentQuestIndex) == currentQuest.length) {
         return true
     } else return false
 }
