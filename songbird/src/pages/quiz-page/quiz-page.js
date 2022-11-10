@@ -1,6 +1,6 @@
 // console.log("hello from quiz-page");
 import { load, handlerBtnPlay, playAudio, pauseAudio } from "./../../components/player/player.js";
-import songs from "./quiz-data-instruments";
+import instruments from "./quiz-data-instruments";
 import composers from "./quiz-data-composers";
 
 const inputs = document.querySelectorAll(".game__input");
@@ -8,28 +8,32 @@ const btnNext = document.querySelector(".game__next");
 const temp = document.querySelector(".game__temp");
 const count = document.querySelector(".score__count");
 const imgPlayer = document.querySelector(".game__image");
+const gameInfo = document.querySelector(".info");
+const infoImage = document.querySelector(".info__image");
+const infoText = document.querySelector(".info__text");
 const playerPlayFirst = document.querySelectorAll(".player__play")[0];
 const playerPlaySecond = document.querySelectorAll(".player__play")[1];
 const playerLabelFirst = document.querySelectorAll(".player__label")[0];
-let subCat = 0;
+
+let category = 0;
 let score = 0;
 let scoreTemp = 0;
 let currentQuestIndex = 0;
 let currentQuest = new Object;
+let rightAnswerIndex = 0;
+
 
 // on load quiz
 document.addEventListener("DOMContentLoaded", () => {
   updateQuestion();
-  // add click for answers
-  for (let i = 0; i < currentQuest.answers.length; i++) {
+  // add click event for inputs with answer
+  for (let i = 0; i < currentQuest.length; i++) {
     inputs[i].addEventListener("click", handlerAnswersInput);
   }  
 });
 
-// function choiseQuest() {
-//   currentQuest = songs[0];
-// }
-btnNext.addEventListener("click", handlerBtnNext)
+
+btnNext.addEventListener("click", handlerBtnNext);
 
 function handlerBtnNext() {
   document.body.scrollTop = document.documentElement.scrollTop = 160;
@@ -55,10 +59,14 @@ function checkAnswer(answer, obj) {
 
 function handlerAnswersInput (e) {
 
-  document.querySelector(".info").classList.remove("info--masked");
-  //load info
-  // document.querySelector(".info__image").src = currentQuest.png;
-  // document.querySelector(".info__text").innerText = currentQuest.descript;
+  // get answer object
+  let answer = currentQuest.filter(item => item.name == e.target.parentNode.childNodes[2].textContent)[0];
+  
+  //load new data into game__info
+  infoImage.src = answer.png;
+  infoText.innerText = answer.descript;
+
+  gameInfo.classList.remove("info--masked");
 
   if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest)) {
     // if music play, set pause
@@ -83,25 +91,58 @@ function handlerAnswersInput (e) {
   }
 }
 
-function shuffle() {
-
-}
-
 function isFinish() {
     if ((currentQuestIndex) == songs[subCat].length) {
         return true
     } else return false
 }
 
+function updateGameQuestionPlayerLabel () {
+  if (category === 0) {
+    playerLabelFirst.innerText = "What instrument?";
+  } else if (category === 1) {
+    playerLabelFirst.innerText = "Who is the composer?";
+  } else if (category === 2) {
+    playerLabelFirst.innerText = "Do you know this music?";
+  }
+};
+
+function choiseCurrentQuest () {
+  if (category === 0) {
+    choiseRightAnswer(instruments[currentQuestIndex]);
+    return shuffleAnswers(instruments[currentQuestIndex]);
+  }
+}
+
+function choiseRightAnswer(arr) {
+  rightAnswerIndex = Math.floor(Math.random() * (arr.length - 1));
+  console.log(rightAnswerIndex);
+}
+
+function shuffleAnswers(arr) {
+  const newArr = Array.from(arr);
+  let j = 0;
+  let temp = 0;
+  for (let i = newArr.length - 1; i > 0 ; i--) {
+    j = Math.floor(Math.random() * (i + 1));
+    temp = newArr[i];
+    newArr[i] = newArr[j];
+    newArr[j] = temp;
+  };
+  return newArr;
+}
+
 function updateQuestion() {
     //update player label
-    playerLabelFirst.innerText = "What instrument?"
+    updateGameQuestionPlayerLabel();
 
     //update score
     scoreTemp = 5;
-    currentQuest = songs[subCat][currentQuestIndex++];
 
-    // clear answers block
+    //update currentQuest
+    currentQuest = choiseCurrentQuest();
+
+    // clear style answers block, unchecked inputs
     inputs.forEach(elem => {
       elem.parentNode.classList.remove("game__answer--is-right");
       elem.parentNode.classList.remove("game__answer--is-wrong");
@@ -112,26 +153,23 @@ function updateQuestion() {
     btnNext.disabled = true;
 
     // hidden info
-    document.querySelector(".info").classList.add("info--masked");
+    gameInfo.classList.add("info--masked");
 
-    // load audio
-    load(currentQuest);
+    // load audio for quest
+    load(currentQuest[rightAnswerIndex]);
 
     // load answers
-    for (let i = 0; i < currentQuest.answers.length; i++) {
+    for (let i = 0; i < currentQuest.length; i++) {
       //label answer
-      inputs[i].parentNode.childNodes[2].data = currentQuest.answers[0][i];
+      inputs[i].parentNode.childNodes[2].data = currentQuest[i].name;
       //image answer
-      inputs[i].parentNode.childNodes[0].src = require("./../../assets/images/"+currentQuest.answers[i]+".png");
+      inputs[i].parentNode.childNodes[0].src = require("./../../assets/images/"+currentQuest[i].name+".png");
     };
 
-    setTimeout(() => {
-      //load quest image by default
-      imgPlayer.src = require("./../../assets/images/collage-main.png");
-      //load info
-      document.querySelector(".info__image").src = currentQuest.png;
-      document.querySelector(".info__text").innerText = currentQuest.descript;
-    }, 300);  
+    //load quest image by default
+    imgPlayer.src = require("./../../assets/images/collage-main.png");
+
+ 
 };
 
 
