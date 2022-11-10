@@ -1,5 +1,11 @@
 .quiz {
-    padding: 20px 20px;
+    padding: 0 20px;
+    height: 85vh;
+    border: 2px solid var(--primary-accent-color);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
 
     @media (max-width:500px) {
       padding: 20px 10px 10px 10px;
@@ -7,7 +13,7 @@
 
     &__header {
         width: 100%;   
-        margin: 0 0 50px 0;
+        margin: 0 0 0 0;
         text-align: center;
 
         @media (max-width: 820px) {
@@ -30,11 +36,7 @@
     }
 
     &__game{
-        margin: 0 auto;
-        width: 80%;
-        @media (max-width: 820px) {
-          width: 100%;
-        }
+        
     }
 
 }
@@ -162,49 +164,13 @@
   }
 }
 
-.score {
-  width: 100%;
-  max-width: 650px;
-  border-radius: 5px;
-  padding: 5px 0;
-  margin: 35px auto 0;
-  background-color: var(--primary-accent-color);
 
-  @media (max-width: 820px) {
-    margin: 5px auto 0;
-    max-width: 460px;
-  };
-
-  &__label {
-    background-color: inherit;
-    color: var(--primary-bg-color);
-    font-size: 1.5rem;  
-
-    @media (max-width: 820px) {
-      font-size: 1rem;  
-    }
-  }
-
-  &__count {
-    background-color: inherit;
-    color: var(--primary-bg-color);
-    
-    font-size: 1.5rem;  
-
-    @media (max-width: 820px) {
-      font-size: 1.125rem;  
-    }
-    
-
-  }
-
-}
 
 .game {
+    flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: auto;
 
     &__question {
         width: 100%;
@@ -213,8 +179,6 @@
         gap: 10px;
         justify-content: center;
         align-items: center;
-        border-radius: 10px;
-        border: 1px solid var(--primary-accent-color);
 
         @media (max-width: 820px) {
           height: auto;
@@ -241,31 +205,25 @@
         }
     }
     &__answers {
-      flex: 1 0 auto;
-        margin: 10px 0 0 0;
+        flex: 1 0 auto;
         display: flex;
-        border-radius: 10px;
-        padding: 10px;
-        border: 1px solid var(--primary-accent-color);
 
         @media (max-width: 820px) {
           flex-direction: column;
           padding: 5px 5px 2px 5px;
         }
+        
     }
     &__inputs {
         flex: 1;
         text-align: start;
         padding: 0 20px 0 0;
-        border-right: 1px solid var(--primary-accent-color);
         display: flex;
         gap: 10px;
         justify-content: flex-start;
         flex-wrap: wrap;
 
         @media (max-width: 820px) {
-          border-right: none;
-          border-bottom: 1px solid var(--primary-accent-color);
           padding: 0 0 10px 0;
         }
 
@@ -278,7 +236,7 @@
       flex: 1 1 20%;
       display: flex;
       align-items: center;
-      
+      gap: 5px;
       font-size: 1.125rem;
       line-height: 30px;
       cursor: pointer;
@@ -326,39 +284,90 @@
       flex: 2;  
       height: 100%;
     }
+
+    .score {
+      width: 100%;
+      border-radius: 5px;
+      padding: 5px 0;
+      background-color: var(--right-light-color);
+      text-align: center;
+    
+      @media (max-width: 820px) {
+
+      }
+    
+      &__label {
+        background-color: unset;
+        color: var(--primary-text-color);
+        font-weight: 600;
+        font-size: 1.5rem;  
+        text-shadow: 1px 0px 15px var(--primary-bg-color), 
+                     -1px 0px 15px var(--primary-bg-color),
+                     1px 1px 15px var(--primary-bg-color)
+;
+    
+        @media (max-width: 820px) {
+          font-size: 1rem;  
+        }
+  
+      }
+    
+      &__count {
+        background-color: inherit;
+        color: var(--primary-text-color);
+        font-weight: 600;
+        font-size: 1.75rem;  
+        text-shadow: 1px 0px 15px var(--primary-bg-color), 
+                    -1px 0px 15px var(--primary-bg-color),
+                    1px 1px 15px var(--primary-bg-color);
+    
+        @media (max-width: 820px) {
+          font-size: 1.125rem;  
+        }
+  
+      }
+    }
+
 }
 .info {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     padding: 10px;
-    
+    flex-wrap: wrap;
+
     @media (max-width: 820px) {
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      justify-content: space-around;
       padding: 0;
     }
 
+    &__image {
+        flex: 1 0 40%;
+        height: 170px;
+        object-fit: contain;
+        @media (max-width: 768px) {
+          max-height: 17vw;
+
+        }
+    }
+
     &__text {
+      flex: 1 1 60%;
+      overflow: scroll;
       text-align: end;
       font-size: 1.125rem;
-      padding: 0 0 0 10px;
+      padding: 0 10px 0 10px;
+      max-height: 200px;
+      
       @media (max-width: 820px) {
-        font-size: 0.8rem;
+        font-size: 1rem;
         text-align: center;
+      }
+      @media (max-width: 520px) {
         display: none;
       }
 
-    }
-
-    &__image {
-        width: 40%;
-        height: 170px;
-        object-fit: contain;
-        @media (max-width: 820px) {
-          height: 60px;
-          width: 60px;
-        }
     }
 
     &__player {
@@ -385,12 +394,25 @@
     transition: opacity 0.3s ease 0s;
 
     &--masked {
-      opacity: 0;
+      background-image: url("./../../assets/images/collage-single.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center center;
+
+      @media (max-width: 820px) {
+        background-image: url("./../../assets/images/listen-music-4.png");
+        background-size: cover;
+      }
+
+      & * {
+        opacity: 0;
+      }
+      
     }
 }
 .game__next {
   text-transform: uppercase;
   padding: 10px 0;
-  margin: 10px 0 0 0;
+  margin: 5px 0;
   transition: all 0.15s ease 0s;
 }

@@ -1,10 +1,10 @@
 .header {
-    height: 120px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 1px solid var(--shadow-color);
-    padding: 10px 10px;
+    padding: 5px 10px;
     position: sticky;
     top: 0;
     width: 100%;
@@ -22,8 +22,7 @@
     }
 
     .logo {
-        margin: 0 0 0 10px;
-        
+        margin: 0 0 0 10px; 
     }
 
     .btn {
@@ -37,13 +36,11 @@
 .logo {
     height: 100%;
     position: relative;
- 
 
     &__link{
         display: block;
         height: 100%;
         cursor: pointer;
-
     }
 
     &__img {
@@ -52,13 +49,13 @@
     }
 
     &__label {  
-      font-size: 1.125rem;
-      font-weight: 700;
+      font-size: 0.85rem;
+      font-weight: 800;
       white-space: nowrap;
       color: var(--primary-accent-color);
       position: absolute;
-      bottom: 0px;
-      left: 1%;
+      bottom: -3px;
+      left: -4%;
       pointer-events: none;
       text-transform: uppercase;
 
@@ -71,7 +68,7 @@
 
 .menu {
     display: flex;
-    gap: 50px;
+    gap: 45px;
     
     @media (max-width: 1000px) {
         gap: 5vw;
@@ -80,12 +77,11 @@
     &__item {
         list-style-type: none;    
         position: relative;
-
     }
 
     &__link {
         text-decoration: none;
-        font-size: 2rem;
+        font-size: 1.5rem;
         cursor: pointer;
         transition: color 0.15s ease-in 0s;
         text-shadow: 0.5px 1px 4px var(--shadow-color);

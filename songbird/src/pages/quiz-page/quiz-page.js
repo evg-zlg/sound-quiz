@@ -172,13 +172,11 @@ function updateQuestion() {
       //label answer
       inputs[i].parentNode.childNodes[2].data = currentQuest[i].name;
       //image answer
-      inputs[i].parentNode.childNodes[0].src = require("./../../assets/images/"+currentQuest[i].name+".png");
+      inputs[i].parentNode.childNodes[0].src = currentQuest[i].png;
     };
 
     //load quest image by default
     imgPlayer.src = require("./../../assets/images/collage-main.png");
-
- 
 };
 
 

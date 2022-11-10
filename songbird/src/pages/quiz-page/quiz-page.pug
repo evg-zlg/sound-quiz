@@ -5,6 +5,7 @@ include ./../../components/button/button.pug
     .quiz__header
         .quiz__menu
             ul.choise-group
+                //- label.choise-group__label categorys:
                 select.choise-group__dropdown.dropdown
                   option instruments
                   option composers
@@ -15,6 +16,7 @@ include ./../../components/button/button.pug
                 .choise-group__separator
                 li.choise-group__item musics
             ul.choise-quest
+                //- label.choise-quest__label questions:
                 select.choise-quest__dropdown.dropdown
                   option strings
                   option wind
@@ -27,14 +29,15 @@ include ./../../components/button/button.pug
                 li.choise-quest__item drum
                 li.choise-quest__item keyboards
                 //- li.choise-quest__item.choise-quest__item--active струнные
-                //- li.choise-quest__item духовые
+                //- li.choise-quest__item духовые: флейта, саксофон, валторна, труба, волынка, орган
                 //- li.choise-quest__item язычковые
                 //- li.choise-quest__item ударные
                 //- li.choise-quest__item клавишные
-        .score
-            label.score__label Score: 
-                span.score__count 0
+        
     .quiz__game.game
+        .score
+                label.score__label Score: 
+                    span.score__count 0
         .game__question 
             img.game__image(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
             .game__player 
