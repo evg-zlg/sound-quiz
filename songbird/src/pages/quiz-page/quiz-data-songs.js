@@ -31,10 +31,12 @@ const songs = [
   },
   //3
   {  
-    name: "cello",
+    name: "synthesizer",
     answers: ["drum", "cello", "piano", "saxophone", "violin"],
     answer: "cello",
+    // TODO
     mp3: require("./../../assets/sounds/cello.mp3"),
+    // TODO
     png: require("./../../assets/images/cello.png"),
     descript: "The cello or violoncello is a bowed (sometimes plucked and occasionally hit) string instrument of the violin family. Its four strings are usually tuned in perfect fifths: from low to high, C2, G2, D3 and A3. The viola's four strings are each an octave higher. Music for the cello is generally written in the bass clef, with tenor clef, or alto clef, and treble clef used for higher-range passages.",
     music: require("./../../assets/sounds/cello-music.mp3"),

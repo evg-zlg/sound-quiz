@@ -103,6 +103,65 @@ const instruments = [
       descriptRU: "Орган — клавишный духовой музыкальный инструмент. Большие концертные органы превосходят по габаритам все прочие музыкальные инструменты. Основу конструкции органа составляют духовые трубы разной длины и диаметра, устройство для нагнетания воздуха, пульт с клавиатурами, трактура. Звуковое своеобразие органа определяют специфические тембры («регистры»), набор которых индивидуален для каждого инструмента. Оформ­ле­ние кор­пу­са (большого акустического) органа иногда пред­став­ля­ет не мень­шую ху­дожественную цен­ность, чем его зву­ча­ние.",
     },
   ],
+  //keyboards 
+  [
+    {
+      name: "piano",
+      nameRU: "фортепиано",
+      mp3: require("./../../assets/sounds/piano.mp3"),
+      png: require("./../../assets/images/piano.png"),
+      descript: "The piano is a stringed keyboard instrument in which the strings are struck by wooden hammers that are coated with a softer material. It is played using a keyboard, which is a row of keys (small levers) that the performer presses down or strikes with the fingers and thumbs of both hands to cause the hammers to strike the strings. It was invented in Italy by Bartolomeo Cristofori around the year 1700.",
+      descriptRU: "Фортепиано — клавишный струнный инструмент с горизонтальным (рояль) или вертикальным (пианино) расположением струн. На звучание фортепиано большое влияние оказывает его конструкция, с XVIII в. претерпевшая значительные изменения. Фортепиано состоит из акустического аппарата (резонансная дека, струнная одежда), клавишного механизма, опорных конструкций (футор, металлическая рама, вирбельбанк). Сложная система рычагов механизма позволяет передать усилие от играющего через клавишу к молоточку, удар которого по струне производит звук. Современный диапазон фортепиано — 71⁄4 октав (88 клавиш).",
+    },
+    {
+      name: "accordion",
+      nameRU: "аккордеон",
+      mp3: require("./../../assets/sounds/accordion.mp3"),
+      png: require("./../../assets/images/accordion.png"),
+      descript: "The saxophone (referred to colloquially as the sax) is a type of single-reed woodwind instrument with a conical body, usually made of brass. As with all single-reed instruments, sound is produced when a reed on a mouthpiece vibrates to produce a sound wave inside the instrument's body.",
+      descriptRU: "Аккордеон — хроматическая ручная гармоника с клавиатурой мелодии фортепианного (наиболее часто) типа. Клавиатура аккомпанемента такая же как у баяна: с 5—6 рядами кнопок, звучащими басами и аккордами (готовый аккордеон) или отдельными нотами (выборный или готово-выборный аккордеон).",
+    },
+    {
+      name: "synthesizer",
+      nameRU: "синтезатор",
+      // TODO
+      mp3: require("./../../assets/sounds/horn.mp3"),
+      // TODO
+      png: require("./../../assets/images/horn.png"),
+      descript: "A synthesizer is an electronic musical instrument that generates audio signals. Synthesizers typically create sounds by generating waveforms through methods including subtractive synthesis, additive synthesis and frequency modulation synthesis. These sounds may be altered by components such as filters, which cut or boost frequencies; envelopes, which control articulation, or how notes begin and end; and low-frequency oscillators, which modulate parameters such as pitch, volume, or filter characteristics affecting timbre. Synthesizers are typically played with keyboards or controlled by sequencers, software or other instruments, and may be synchronized to other equipment via MIDI.",
+      descriptRU: "Синтезатор — электронный клавишный музыкальный инструмент. В зависимости от способа генерации звуковых волн и их преобразования синтез звука можно классифицировать следующим образом: суммирующий, вычитающий, операторный, физический, сэплерный, волновой, гибритный. С развитием микроэлектроники начиная с конца 1970-х годов выпускаются простейшие синтезаторы как в виде отдельных инструментов, так и являющиеся составной частью других устройств, например, калькуляторов. Такие синтезаторы обычно позволяют воспроизводить только один тон одновременно.",
+    },
+    {
+      name: "harpsichord",
+      nameRU: "клавесин",
+      //TODO
+      mp3: require("./../../assets/sounds/trumpet.mp3"),
+      //TODO
+      png: require("./../../assets/images/trumpet.png"),
+      descript: "The trumpet is a brass instrument commonly used in classical and jazz ensembles. The trumpet group ranges from the piccolo trumpet—with the highest register in the brass family—to the bass trumpet, pitched one octave below the standard B♭ or C trumpet.",
+      descriptRU: "Клавесин — клавишный струнный музыкальный инструмент с щипковым способом звукоизвлечения. Музыканта, исполняющего произведения на клавесине и его разновидностях, называют клавесини́стом. Звук клавесина — блестящий, но мало певучий, отрывистый, не поддающийся динамическим изменениям[3], то есть плавное увеличение и уменьшение громкости на клавесине невозможно. Тем не менее, разнообразных динамических эффектов можно добиться, умело управляя количеством и скоростью взятия звуков, взаимодействием с резонансом.",
+    },
+    {
+      name: "button accordion",
+      nameRU: "баян",
+      // TODO
+      mp3: require("./../../assets/sounds/bagpipes.mp3"),
+      // TODO
+      png: require("./../../assets/images/collage-main.png"),
+      descript: "A chromatic button accordion is a type of button accordion where the melody-side keyboard consists of rows of buttons arranged chromatically. The bass-side keyboard is usually the Stradella system or one of the various free-bass systems. Included among chromatic button accordions are the Russian bayan and Schrammel accordion. There can be 3 to 5 rows of vertical treble buttons. In a 5 row chromatic, two additional rows repeat the first 2 rows to facilitate options in fingering.",
+      descriptRU: "Баян — русская хроматическая ручная гармоника имеющая от 3 и более рядов круглых кнопок на клавиатуре мелодии и 5—6 рядов кнопок на клавиатуре аккомпанемента, клавиши которого звучат басами и аккордами (готовый аккомпанемент) или отдельными нотами (выборный или готово-выборный аккомпанемент).Современные баяны выпускают с двумя основными видами правой клавиатуры: трёхрядные и пятирядные. В пятирядной клавиатуре ряды 2 и 1 (считая от меха) являются вспомогательными, они дублируют ноты 5-го и 4-го рядов соответственно. Баян входит в состав оркестра русских народных инструментов.",
+    },
+    {
+      name: "celesta",
+      nameRU: "челеста",
+      //TODO
+      mp3: require("./../../assets/sounds/organ.mp3"),
+      //TODO
+      png: require("./../../assets/images/collage-main.png"),
+      descript: "The celesta, also called a bell-piano, is a struck idiophone operated by a keyboard. It looks similar to an upright piano (four- or five-octave), albeit with smaller keys and a much smaller cabinet, or a large wooden music box (three-octave). The keys connect to hammers that strike a graduated set of metal (usually steel) plates or bars suspended over wooden resonators. Four- or five-octave models usually have a damper pedal that sustains or damps the sound. The three-octave instruments do not have a pedal because of their small \"table-top\" design. One of the best-known works that uses the celesta is Pyotr Ilyich Tchaikovsky's \"Dance of the Sugar Plum Fairy\" from The Nutcracker.",
+      descriptRU: "Челеста — клавишный металлофон, по технике игры и внешне напоминающий небольшое пианино или фисгармонию. Ударный музыкальный инструмент, звучащим телом которого являются стальные пластинки. Челеста нашла применение не только как академический инструмент, но используется и в джазе, рок-музыке, других направлениях популярной музыки. В 1930-е годы Фэтс Уоллер иногда играл на челесте правой рукой и одновременно на фортепиано левой.",
+    },
+  ],
 ];
 
 export default instruments
