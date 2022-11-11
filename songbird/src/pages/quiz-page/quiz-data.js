@@ -162,6 +162,61 @@ const instruments = [
       descriptRU: "Челеста — клавишный металлофон, по технике игры и внешне напоминающий небольшое пианино или фисгармонию. Ударный музыкальный инструмент, звучащим телом которого являются стальные пластинки. Челеста нашла применение не только как академический инструмент, но используется и в джазе, рок-музыке, других направлениях популярной музыки. В 1930-е годы Фэтс Уоллер иногда играл на челесте правой рукой и одновременно на фортепиано левой.",
     },
   ],
+  //other
+  [
+    {
+      name: "xylophone",
+      nameRU: "ксилофон",
+      mp3: require("./../../assets/sounds/xylophone.mp3"),
+      png: require("./../../assets/images/xylophone.png"),
+      descript: "The xylophone   is a musical instrument in the percussion family that consists of wooden bars struck by mallets. Like the glockenspiel (which uses metal bars), the xylophone essentially consists of a set of tuned wooden keys arranged in the fashion of the keyboard of a piano.",
+      descriptRU: "Ксилофон — ударный музыкальный инструмент с определённой высотой звучания. Представляет собой ряд деревянных брусков разной величины, настроенных на определённые ноты. По брускам ударяют палочками с шарообразными наконечниками (малетами) или специальными молоточками, похожими на небольшие ложки. Диапазон современного ксилофона составляет 3,5 октавы.",
+    },
+    {
+      name: "drum",
+      nameRU: "барабан",
+      mp3: require("./../../assets/sounds/drum.mp3"),
+      png: require("./../../assets/images/drum.png"),
+      descript: "The drum is a member of the percussion group of musical instruments. In the Hornbostel-Sachs classification system, it is a membranophone. Drums consist of at least one membrane, called a drumhead or drum skin, that is stretched over a shell and struck, either directly with the player's hands, or with a percussion mallet, to produce sound.",
+      descriptRU: "Барабан — музыкальный инструмент из семейства ударных. Типичным представителем является мембранный барабан, состоящий из полого корпуса-резонатора определённой формы или рамы, на которую натянута кожаная или пластиковая мембрана. Её натяжением регулируется относительная высота звука. Звук извлекают ударом по мембране деревянной колотушкой с мягким наконечником, палочкой, щётками, руками, а иногда и трением.",
+    },
+    {
+      name: "triangle",
+      nameRU: "треугольник",
+      mp3: require("./../../assets/sounds/triangle.mp3"),
+      png: require("./../../assets/images/triangle.png"),
+      descript: "The triangle is a musical instrument in the percussion family, and is classified as an idiophone in the Hornbostel-Sachs classification system. Triangles are made from a variety of metals. The metal is formed into a triangle shape by bending or casting methods. The instrument is usually held by a loop of some form of thread or wire at the top curve.",
+      descriptRU: "Треугольник — ударный музыкальный инструмент в виде металлического прута (обычно из стали или алюминия), изогнутого в форме треугольника. Один из углов оставлен открытым (концы прута почти касаются). Треугольник принадлежит к инструментам с неопределённой высотой звука, имеет блестящий и яркий тембр, способный украсить даже мощное оркестровое тутти. Треугольник подвешивается за один из углов на тонкой проволоке или тесьме, которую держат в руке или прикрепляют к пюпитру. По треугольнику ударяют металлической (реже деревянной) палочкой (на жаргоне музыкантов эта палочка называется «гвоздь»).",
+    },
+    {
+      name: "maracas",
+      nameRU: "мараки",
+      mp3: require("./../../assets/sounds/maracas.mp3"),
+      png: require("./../../assets/images/maracas.png"),
+      descript: "A maracas, sometimes called shaker or chac-chac, is a rattle which appears in many genres of Caribbean and Latin music. It is shaken by a handle and usually played as part of a pair.",
+      descriptRU: "Марака — древнейший ударно-шумовой инструмент коренных жителей Антильских островов — индейцев таино, разновидность погремушки, издающей при потряхивании характерный шуршащий звук. В настоящее время мараки популярны на всей территории Латинской Америки и являются одним из символов латиноамериканской музыки. Как правило, музыкант, играющий на мараках, использует пару погремушек — по одной в каждой руке.",
+    },
+    {
+      name: "vargan",
+      nameRU: "варган",
+      // TODO
+      mp3: require("./../../assets/sounds/bagpipes.mp3"),
+      // TODO
+      png: require("./../../assets/images/collage-main.png"),
+      descript: "The vargan is a lamellophone instrument, consisting of a flexible metal or bamboo tongue or reed attached to a frame. Contrary to the name, the harp originated in Mongolia and has no relation to the Jewish people. Vargan may be categorized as idioglot or heteroglot (whether or not the frame and the tine are one piece); by the shape of the frame (rod or plaque); by the number of tines, and whether the tines are plucked, joint-tapped, or string-pulled.",
+      descriptRU: "Варган — музыкальный инструмент в виде свободно колеблющегося в проёме рамки язычка, приводимого в движение пальцем или дёрганием за нитку. Инструмент устанавливают в области рта. Ротовая полость и глотка, а также носовая полость и нижние дыхательные пути служат резонатором, усиливающим громкость. Управляя работой артикуляционного аппарата и дыхания, изменяют тембр звучания варгана за счёт усиления тех или иных обертонов в его звуковом спектре, при этом основной тон звучит постоянным бурдоном.",
+    },
+    {
+      name: "timpani",
+      nameRU: "литавры",
+      //TODO
+      mp3: require("./../../assets/sounds/organ.mp3"),
+      //TODO
+      png: require("./../../assets/images/collage-main.png"),
+      descript: "Timpani are musical instruments in the percussion family. A type of drum categorised as a hemispherical drum, they consist of a membrane called a head stretched over a large bowl traditionally made of copper. Thus timpani are an example of kettle drums, also known as vessel drums and semispherical drums, whose body is similar to a section of a sphere whose cut conforms the head. Most modern timpani are pedal timpani and can be tuned quickly and accurately to specific pitches by skilled players through the use of a movable foot-pedal. ",
+      descriptRU: "Литавры — ударный музыкальный инструмент с определённой высотой звучания. Литавры представляют собой систему от двух до семи металлических котлообразных чаш, открытая сторона которых затянута кожей или пластиком, а нижняя часть может иметь отверстие. На литаврах возможно достичь огромных градаций звука — от едва слышного пианиссимо до оглушительного фортиссимо. Среди особых эффектов — приглушённое звучание литавр, покрытых кусками мягкого сукна.",
+    },
+  ],
 ];
 
 export default instruments

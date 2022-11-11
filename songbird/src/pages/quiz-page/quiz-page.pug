@@ -2,36 +2,62 @@ include ./../../components/player/player.pug
 include ./../../components/button/button.pug
 
 .quiz
-    .quiz__header
-        .quiz__menu
-            ul.choise-group
-                //- label.choise-group__label categorys:
-                select.choise-group__dropdown.dropdown
-                  option instruments
-                  option composers
-                  option musics
-                li.choise-group__item.choise-group__item--active instruments 
-                .choise-group__separator
-                li.choise-group__item composers
-                .choise-group__separator
-                li.choise-group__item musics
-            ul.choise-quest
-                //- label.choise-quest__label questions:
-                select.choise-quest__dropdown.dropdown
-                  option strings
-                  option wind
-                  option reed
-                  option drum
-                  option keyboards
-                li.choise-quest__item.choise-quest__item--active strings
-                li.choise-quest__item wind
-                li.choise-quest__item keyboards
-                li.choise-quest__item other
+    figure.choise-group
+        .choise-group__row
+            figcaption.choise-group__category instruments
+            ul.choise-group__elements
+                li.choise-group__item.choise-group__item--current
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+        .choise-group__row
+            figcaption.choise-group__category composers
+            ul.choise-group__elements
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+        .choise-group__row
+            figcaption.choise-group__category music
+            ul.choise-group__elements
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+        //- .choise-group__row
+        //-     figcaption.choise-group__category composers
+        //-     ul.choise-group__elements
+        //-         li.choise-group__item возраждение
+        //-         li.choise-group__item барокко
+        //-         li.choise-group__item классицизм
+        //-         li.choise-group__item романтизм
+        //-         li.choise-group__item ещё романтизм
+        //-         li.choise-group__item импрессионизм
+        //-         li.choise-group__item модернизм
+        //-         li.choise-group__item современные
+        //- .choise-group__row
+        //-     figcaption.choise-group__category music
+        //-     ul.choise-group__elements
+        //-         li.choise-group__item вальс
+        //-         li.choise-group__item симфония
+        //-         li.choise-group__item соната
+        //-         li.choise-group__item концерт
+        //-         li.choise-group__item увертюра
+        //-         li.choise-group__item разное
+        //-         li.choise-group__item современные
+            
                 
                 //- li.choise-quest__item.choise-quest__item--active струнные
                 //- li.choise-quest__item духовые: флейта, саксофон, валторна, труба, волынка, орган
                 //- li.choise-quest__item клавишные: пианино, аккордеон, синтезатор, клавесин, баян, челеста 
-                //- li.choise-quest__item разные: ксилофон, барабан, треугольник, маракасы, варган, литавры
+                //- li.choise-quest__item разные: "ксилофон", "барабан", треугольник, маракасы, варган, литавры
                 
         
     .quiz__game.game
@@ -72,6 +98,6 @@ include ./../../components/button/button.pug
                 img.info__image(src=require("./../../assets/images/piano.png"))
                 p.info__text Lorem ipsum
                 .info__player
-                    +player("Music with this music instrument")
+                    +player("Listen to this instrument ")
         +button("next question", "game__next") 
 
