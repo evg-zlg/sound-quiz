@@ -27,9 +27,8 @@ btnPlay[0].addEventListener("click", () => handlerBtnPlay(0));
 btnPlay[1].addEventListener("click", () => handlerBtnPlay(1));
 
 
-function load(obj) {
-  audio[0].src = obj.mp3;
-  audio[1].src = obj.mp3;
+function load(obj,i) {
+  audio[i].src = obj.mp3;
 }
 
 audio[0].addEventListener("ended", () => {

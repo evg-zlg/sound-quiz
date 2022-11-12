@@ -86,7 +86,9 @@ function handlerAnswersInput (e) {
   //load new data into game__info
   infoImage.src = answer.png;
   infoText.innerText = answer.descript;
-  // playerLabelSecond.textContent = "Listen to the "+answer.name;
+  playerLabelSecond.textContent = "Listen to the "+answer.name;
+  //load audi into info
+  load(answer, 1)
 
 
   gameInfo.classList.remove("info--masked");
@@ -109,8 +111,9 @@ function handlerAnswersInput (e) {
 
       //load quest image
       imgPlayer.src = currentQuest[rightAnswerIndex].png;
+
       //update player label
-      playerLabelFirst.innerText = currentQuest[currentQuestIndex].name;
+      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name;
     }
 
   } else {
@@ -185,7 +188,7 @@ function updateQuestion() {
   // hidden info
   gameInfo.classList.add("info--masked");
   // load audio for quest
-  load(currentQuest[rightAnswerIndex]);
+  load(currentQuest[rightAnswerIndex], 0);
   // load answers
   for (let i = 0; i < currentQuest.length; i++) {
     //label answer

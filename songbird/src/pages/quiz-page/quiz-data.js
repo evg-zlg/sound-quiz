@@ -88,8 +88,7 @@ const instruments = [
       name: "bagpipes",
       nameRU: "волынка",
       mp3: require("./../../assets/sounds/bagpipes.mp3"),
-      // TODO
-      png: require("./../../assets/images/collage-main.png"),
+      png: require("./../../assets/images/bagpipes.png"),
       descript: "Bagpipes are a woodwind instrument using enclosed reeds fed from a constant reservoir of air in the form of a bag. The Scottish Great Highland bagpipes are the best known examples in the Anglophone world, but people have played bagpipes for centuries throughout large parts of Europe, Northern Africa, Western Asia, around the Persian Gulf and northern parts of South Asia.The term bagpipe is equally correct in the singular or the plural, though pipers usually refer to the bagpipes as \"the pipes\", \"a set of pipes\" or \"a stand of pipes\"",
       descriptRU: "Волынка — традиционный музыкальный духовой язычковый инструмент многих народов Европы. В Шотландии — главный национальный инструмент. Представляет собой мешок, который обыкновенно делается из воловьей, телячьей или козьей шкуры, снятой целиком, в виде бурдюка, зашитой наглухо и снабжённой сверху трубкой для наполнения меха воздухом, с прикреплёнными снизу одной, двумя или тремя игральными язычковыми трубами, клавишами и ступками, служащими для создания многоголосия.",
     },
@@ -97,8 +96,7 @@ const instruments = [
       name: "organ",
       nameRU: "орган",
       mp3: require("./../../assets/sounds/organ.mp3"),
-      //TODO
-      png: require("./../../assets/images/collage-main.png"),
+      png: require("./../../assets/images/organ.png"),
       descript: "The organ is a keyboard instrument of one or more pipe divisions or other means for producing tones, each played from its own manual, with the hands, or pedalboard, with the feet.",
       descriptRU: "Орган — клавишный духовой музыкальный инструмент. Большие концертные органы превосходят по габаритам все прочие музыкальные инструменты. Основу конструкции органа составляют духовые трубы разной длины и диаметра, устройство для нагнетания воздуха, пульт с клавиатурами, трактура. Звуковое своеобразие органа определяют специфические тембры («регистры»), набор которых индивидуален для каждого инструмента. Оформ­ле­ние кор­пу­са (большого акустического) органа иногда пред­став­ля­ет не мень­шую ху­дожественную цен­ность, чем его зву­ча­ние.",
     },
@@ -108,6 +106,7 @@ const instruments = [
     {
       name: "piano",
       nameRU: "фортепиано",
+      // TODO Tim Burton
       mp3: require("./../../assets/sounds/piano.mp3"),
       png: require("./../../assets/images/piano.png"),
       descript: "The piano is a stringed keyboard instrument in which the strings are struck by wooden hammers that are coated with a softer material. It is played using a keyboard, which is a row of keys (small levers) that the performer presses down or strikes with the fingers and thumbs of both hands to cause the hammers to strike the strings. It was invented in Italy by Bartolomeo Cristofori around the year 1700.",
@@ -124,40 +123,32 @@ const instruments = [
     {
       name: "synthesizer",
       nameRU: "синтезатор",
-      // TODO
-      mp3: require("./../../assets/sounds/horn.mp3"),
-      // TODO
-      png: require("./../../assets/images/horn.png"),
+      mp3: require("./../../assets/sounds/synthesizer.mp3"),
+      png: require("./../../assets/images/synthesizer.png"),
       descript: "A synthesizer is an electronic musical instrument that generates audio signals. Synthesizers typically create sounds by generating waveforms through methods including subtractive synthesis, additive synthesis and frequency modulation synthesis. These sounds may be altered by components such as filters, which cut or boost frequencies; envelopes, which control articulation, or how notes begin and end; and low-frequency oscillators, which modulate parameters such as pitch, volume, or filter characteristics affecting timbre. Synthesizers are typically played with keyboards or controlled by sequencers, software or other instruments, and may be synchronized to other equipment via MIDI.",
       descriptRU: "Синтезатор — электронный клавишный музыкальный инструмент. В зависимости от способа генерации звуковых волн и их преобразования синтез звука можно классифицировать следующим образом: суммирующий, вычитающий, операторный, физический, сэплерный, волновой, гибритный. С развитием микроэлектроники начиная с конца 1970-х годов выпускаются простейшие синтезаторы как в виде отдельных инструментов, так и являющиеся составной частью других устройств, например, калькуляторов. Такие синтезаторы обычно позволяют воспроизводить только один тон одновременно.",
     },
     {
       name: "harpsichord",
       nameRU: "клавесин",
-      //TODO
-      mp3: require("./../../assets/sounds/trumpet.mp3"),
-      //TODO
-      png: require("./../../assets/images/trumpet.png"),
+      mp3: require("./../../assets/sounds/harpsichord.mp3"),
+      png: require("./../../assets/images/harpsichord.png"),
       descript: "The trumpet is a brass instrument commonly used in classical and jazz ensembles. The trumpet group ranges from the piccolo trumpet—with the highest register in the brass family—to the bass trumpet, pitched one octave below the standard B♭ or C trumpet.",
       descriptRU: "Клавесин — клавишный струнный музыкальный инструмент с щипковым способом звукоизвлечения. Музыканта, исполняющего произведения на клавесине и его разновидностях, называют клавесини́стом. Звук клавесина — блестящий, но мало певучий, отрывистый, не поддающийся динамическим изменениям[3], то есть плавное увеличение и уменьшение громкости на клавесине невозможно. Тем не менее, разнообразных динамических эффектов можно добиться, умело управляя количеством и скоростью взятия звуков, взаимодействием с резонансом.",
     },
     {
       name: "button accordion",
       nameRU: "баян",
-      // TODO
-      mp3: require("./../../assets/sounds/bagpipes.mp3"),
-      // TODO
-      png: require("./../../assets/images/collage-main.png"),
+      mp3: require("./../../assets/sounds/button-accordion.mp3"),
+      png: require("./../../assets/images/button-accordion.png"),
       descript: "A chromatic button accordion is a type of button accordion where the melody-side keyboard consists of rows of buttons arranged chromatically. The bass-side keyboard is usually the Stradella system or one of the various free-bass systems. Included among chromatic button accordions are the Russian bayan and Schrammel accordion. There can be 3 to 5 rows of vertical treble buttons. In a 5 row chromatic, two additional rows repeat the first 2 rows to facilitate options in fingering.",
       descriptRU: "Баян — русская хроматическая ручная гармоника имеющая от 3 и более рядов круглых кнопок на клавиатуре мелодии и 5—6 рядов кнопок на клавиатуре аккомпанемента, клавиши которого звучат басами и аккордами (готовый аккомпанемент) или отдельными нотами (выборный или готово-выборный аккомпанемент).Современные баяны выпускают с двумя основными видами правой клавиатуры: трёхрядные и пятирядные. В пятирядной клавиатуре ряды 2 и 1 (считая от меха) являются вспомогательными, они дублируют ноты 5-го и 4-го рядов соответственно. Баян входит в состав оркестра русских народных инструментов.",
     },
     {
       name: "celesta",
       nameRU: "челеста",
-      //TODO
       mp3: require("./../../assets/sounds/organ.mp3"),
-      //TODO
-      png: require("./../../assets/images/collage-main.png"),
+      png: require("./../../assets/images/celesta.png"),
       descript: "The celesta, also called a bell-piano, is a struck idiophone operated by a keyboard. It looks similar to an upright piano (four- or five-octave), albeit with smaller keys and a much smaller cabinet, or a large wooden music box (three-octave). The keys connect to hammers that strike a graduated set of metal (usually steel) plates or bars suspended over wooden resonators. Four- or five-octave models usually have a damper pedal that sustains or damps the sound. The three-octave instruments do not have a pedal because of their small \"table-top\" design. One of the best-known works that uses the celesta is Pyotr Ilyich Tchaikovsky's \"Dance of the Sugar Plum Fairy\" from The Nutcracker.",
       descriptRU: "Челеста — клавишный металлофон, по технике игры и внешне напоминающий небольшое пианино или фисгармонию. Ударный музыкальный инструмент, звучащим телом которого являются стальные пластинки. Челеста нашла применение не только как академический инструмент, но используется и в джазе, рок-музыке, других направлениях популярной музыки. В 1930-е годы Фэтс Уоллер иногда играл на челесте правой рукой и одновременно на фортепиано левой.",
     },
@@ -173,10 +164,10 @@ const instruments = [
       descriptRU: "Ксилофон — ударный музыкальный инструмент с определённой высотой звучания. Представляет собой ряд деревянных брусков разной величины, настроенных на определённые ноты. По брускам ударяют палочками с шарообразными наконечниками (малетами) или специальными молоточками, похожими на небольшие ложки. Диапазон современного ксилофона составляет 3,5 октавы.",
     },
     {
-      name: "drum",
-      nameRU: "барабан",
-      mp3: require("./../../assets/sounds/drum.mp3"),
-      png: require("./../../assets/images/drum.png"),
+      name: "drums",
+      nameRU: "барабаны",
+      mp3: require("./../../assets/sounds/drums.mp3"),
+      png: require("./../../assets/images/drums.png"),
       descript: "The drum is a member of the percussion group of musical instruments. In the Hornbostel-Sachs classification system, it is a membranophone. Drums consist of at least one membrane, called a drumhead or drum skin, that is stretched over a shell and struck, either directly with the player's hands, or with a percussion mallet, to produce sound.",
       descriptRU: "Барабан — музыкальный инструмент из семейства ударных. Типичным представителем является мембранный барабан, состоящий из полого корпуса-резонатора определённой формы или рамы, на которую натянута кожаная или пластиковая мембрана. Её натяжением регулируется относительная высота звука. Звук извлекают ударом по мембране деревянной колотушкой с мягким наконечником, палочкой, щётками, руками, а иногда и трением.",
     },
@@ -199,20 +190,16 @@ const instruments = [
     {
       name: "vargan",
       nameRU: "варган",
-      // TODO
-      mp3: require("./../../assets/sounds/bagpipes.mp3"),
-      // TODO
-      png: require("./../../assets/images/collage-main.png"),
+      mp3: require("./../../assets/sounds/vargan.mp3"),
+      png: require("./../../assets/images/vargan.png"),
       descript: "The vargan is a lamellophone instrument, consisting of a flexible metal or bamboo tongue or reed attached to a frame. Contrary to the name, the harp originated in Mongolia and has no relation to the Jewish people. Vargan may be categorized as idioglot or heteroglot (whether or not the frame and the tine are one piece); by the shape of the frame (rod or plaque); by the number of tines, and whether the tines are plucked, joint-tapped, or string-pulled.",
       descriptRU: "Варган — музыкальный инструмент в виде свободно колеблющегося в проёме рамки язычка, приводимого в движение пальцем или дёрганием за нитку. Инструмент устанавливают в области рта. Ротовая полость и глотка, а также носовая полость и нижние дыхательные пути служат резонатором, усиливающим громкость. Управляя работой артикуляционного аппарата и дыхания, изменяют тембр звучания варгана за счёт усиления тех или иных обертонов в его звуковом спектре, при этом основной тон звучит постоянным бурдоном.",
     },
     {
       name: "timpani",
       nameRU: "литавры",
-      //TODO
-      mp3: require("./../../assets/sounds/organ.mp3"),
-      //TODO
-      png: require("./../../assets/images/collage-main.png"),
+      mp3: require("./../../assets/sounds/timpani.mp3"),
+      png: require("./../../assets/images/timpani.png"),
       descript: "Timpani are musical instruments in the percussion family. A type of drum categorised as a hemispherical drum, they consist of a membrane called a head stretched over a large bowl traditionally made of copper. Thus timpani are an example of kettle drums, also known as vessel drums and semispherical drums, whose body is similar to a section of a sphere whose cut conforms the head. Most modern timpani are pedal timpani and can be tuned quickly and accurately to specific pitches by skilled players through the use of a movable foot-pedal. ",
       descriptRU: "Литавры — ударный музыкальный инструмент с определённой высотой звучания. Литавры представляют собой систему от двух до семи металлических котлообразных чаш, открытая сторона которых затянута кожей или пластиком, а нижняя часть может иметь отверстие. На литаврах возможно достичь огромных градаций звука — от едва слышного пианиссимо до оглушительного фортиссимо. Среди особых эффектов — приглушённое звучание литавр, покрытых кусками мягкого сукна.",
     },
