@@ -147,7 +147,7 @@ const instruments = [
     {
       name: "celesta",
       nameRU: "челеста",
-      mp3: require("./../../assets/sounds/organ.mp3"),
+      mp3: require("./../../assets/sounds/celesta.mp3"),
       png: require("./../../assets/images/celesta.png"),
       descript: "The celesta, also called a bell-piano, is a struck idiophone operated by a keyboard. It looks similar to an upright piano (four- or five-octave), albeit with smaller keys and a much smaller cabinet, or a large wooden music box (three-octave). The keys connect to hammers that strike a graduated set of metal (usually steel) plates or bars suspended over wooden resonators. Four- or five-octave models usually have a damper pedal that sustains or damps the sound. The three-octave instruments do not have a pedal because of their small \"table-top\" design. One of the best-known works that uses the celesta is Pyotr Ilyich Tchaikovsky's \"Dance of the Sugar Plum Fairy\" from The Nutcracker.",
       descriptRU: "Челеста — клавишный металлофон, по технике игры и внешне напоминающий небольшое пианино или фисгармонию. Ударный музыкальный инструмент, звучащим телом которого являются стальные пластинки. Челеста нашла применение не только как академический инструмент, но используется и в джазе, рок-музыке, других направлениях популярной музыки. В 1930-е годы Фэтс Уоллер иногда играл на челесте правой рукой и одновременно на фортепиано левой.",
