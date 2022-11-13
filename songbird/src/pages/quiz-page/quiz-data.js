@@ -1,4 +1,56 @@
 const instruments = [
+  // fisrt
+  [
+    {
+      name: "vivaldi",
+      nameRU: "вивальди",
+      mp3: require("./../../assets/sounds/vivaldi.mp3"),
+      png: require("./../../assets/images/vivaldi.png"),
+      descript: "Antonio Lucio Vivaldi (1678 - 1741) was an Italian composer, virtuoso violinist and impresario of Baroque music. Regarded as one of the greatest Baroque composers, Vivaldi's influence during his lifetime was widespread across Europe, giving origin to many imitators and admirers. He pioneered many developments in orchestration, violin technique and programatic music.[5] He consolidated the emerging concerto form into a widely accepted and followed idiom, which was paramount in the development of Johann Sebastian Bach's instrumental music.",
+      descriptRU: "Антонио Лучо Вивальди (1678 - 1741) — итальянский композитор и скрипач-виртуоз, педагог, дирижёр, католический священник. Оставил огромное и разнообразное композиторское наследие: оперы, оратории, инструментальная и камерная музыка. При жизни получил широкое признание как скрипач во всей Европе. Известность Вивальди как композитора при его жизни была велика, но после смерти его слава начала затухать. Одними из наиболее известных его работ являются четыре скрипичных концерта «Времена года», входящие в состав цикла «Спор гармонии с изобретением».",
+    },
+    {
+      name: "bach",
+      nameRU: "бах",
+      mp3: require("./../../assets/sounds/bach.mp3"),
+      png: require("./../../assets/images/bach.png"),
+      descript: "Johann Sebastian Bach (1685 - 1750) was a German composer and musician of the late Baroque period. He is known for his orchestral music such as the Brandenburg Concertos; instrumental compositions such as the Cello Suites; keyboard works such as the Goldberg Variations and The Well-Tempered Clavier; organ works such as the Schubler Chorales and the Toccata and Fugue in D minor; and vocal music such as the St Matthew Passion and the Mass in B minor. Since the 19th-century Bach revival he has been generally regarded as one of the greatest composers in the history of Western music.",
+      descriptRU: "Иоганн Себастьян Бах (1685 - 1750) — немецкий композитор, органист, капельмейстер, музыкальный педагог. Автор более 1000 музыкальных произведений во всех значимых жанрах своего времени (кроме оперы). Творческое наследие Баха интерпретируется как обобщение музыкального искусства барокко. Убеждённый протестант, Бах написал много духовной музыки. Его Страсти по Матфею, Месса h-moll, кантаты, инструментальные обработки протестантских хоралов — признанные шедевры мировой музыкальной классики. Бах известен как великий мастер полифонии, в его творчестве барочная полифония достигла наивысшего расцвета.",
+    },
+    {
+      name: "haydn",
+      nameRU: "гайдн",
+      mp3: require("./../../assets/sounds/haydn.mp3"),
+      png: require("./../../assets/images/haydn.png"),
+      descript: "Franz Joseph Haydn (1732 - 1809) was an Austrian composer of the Classical period. He was instrumental in the development of chamber music such as the string quartet and piano trio. His contributions to musical form have led him to be called \"Father of the Symphony\" and \"Father of the String Quartet\". Haydn spent much of his career as a court musician for the wealthy Esterházy family at their Eszterháza Castle. Until the later part of his life, this isolated him from other composers and trends in music so that he was, as he put it, \"forced to become original\". Yet his music circulated widely, and for much of his career he was the most celebrated composer in Europe.",
+      descriptRU: "Франц Йозеф Гайдн (1732 - 1809) — австрийский композитор, представитель венской классической школы, один из основоположников таких музыкальных жанров, как симфония и струнный квартет, также внес вклад в такой жанр, как сонаты для клавира. Создатель мелодии, впоследствии лёгшей в основу гимнов Германии и Австро-Венгрии. Сын каретного мастера.",
+    },
+    {
+      name: "beethoven",
+      nameRU: "бетховен",
+      mp3: require("./../../assets/sounds/beethoven.mp3"),
+      png: require("./../../assets/images/beethoven.png"),
+      descript: "Ludwig van Beethoven (1770 – 1827) was a German composer and pianist. Beethoven remains one of the most admired composers in the history of Western music; his works rank amongst the most performed of the classical music repertoire and span the transition from the Classical period to the Romantic era in classical music. His career has conventionally been divided into early, middle, and late periods. His early period, during which he forged his craft, is typically considered to have lasted until 1802. From 1802 to around 1812, his middle period showed an individual development from the styles of Joseph Haydn and Wolfgang Amadeus Mozart, and is sometimes characterized as heroic. During this time, he began to grow increasingly deaf. In his late period, from 1812 to 1827, he extended his innovations in musical form and expression.",
+      descriptRU: "Людвиг ван Бетховен (1770 – 1827) — немецкий композитор, пианист и дирижёр, последний представитель «венской классической школы». Бетховен — ключевая фигура классической музыки в период между классицизмом и романтизмом, один из наиболее исполняемых композиторов в мире. Он писал во всех существовавших в его время жанрах, включая оперу, музыку к драматическим спектаклям, хоровые сочинения. Самыми значительными в его наследии считаются инструментальные произведения: фортепианные, скрипичные и виолончельные сонаты, концерты для фортепиано, для скрипки, квартеты, увертюры, симфонии. Творчество Бетховена оказало значительное воздействие на симфонизм XIX и XX веков.",
+    },
+    {
+      name: "ogiński",
+      nameRU: "огинский",
+      mp3: require("./../../assets/sounds/ogiński.mp3"),
+      png: require("./../../assets/images/ogiński.png"),
+      descript: "Michał Kleofas Ogiński (1765 – 1833) was a Polish diplomat and politician, Grand Treasurer of Lithuania, and a senator of Tsar Alexander I. He was also a composer of early Romantic music.",
+      descriptRU: "Князь Михаил Клеофас Огинский (1765 — 1833) — польский композитор-любитель, дипломат, политический деятель Речи Посполитой и Российской империи, один из лидеров восстания Костюшко, почётный член Виленского университета, член Правительствующего Сената, автор знаменитого «Полонеза Огинского».",
+    },
+    {
+      name: "mozart",
+      nameRU: "моцарт",
+      mp3: require("./../../assets/sounds/mozart.mp3"),
+      png: require("./../../assets/images/mozart.png"),
+      descript: "Wolfgang Amadeus Mozart (1756 — 1791), baptised as Joannes Chrysostomus Wolfgangus Theophilus Mozart, was a prolific and influential composer of the Classical period. Despite his short life, his rapid pace of composition resulted in more than 800 works of virtually every genre of his time. Many of these compositions are acknowledged as pinnacles of the symphonic, concertante, chamber, operatic, and choral repertoire. Mozart is widely regarded as among the greatest composers in the history of Western music, with his music admired for its \"melodic beauty, its formal elegance and its richness of harmony and texture\".",
+      descriptRU: "Вольфганг Амадй Моцарт (1756 — 1791) — выдающийся австрийский композитор и музыкант-виртуоз. Один из самых популярных классических композиторов, Моцарт оказал большое влияние на мировую музыкальную культуру. По свидетельству современников, Моцарт обладал феноменальным музыкальным слухом, памятью и способностью к импровизации. Самый молодой член Болонской филармонической академии (с 1770 года) за всю её историю, а также самый молодой кавалер ордена Золотой шпоры (1770).",
+    },
+  ],
+  // =========== instruments =====
   //strings
   [
     {
@@ -204,6 +256,9 @@ const instruments = [
       descriptRU: "Литавры — ударный музыкальный инструмент с определённой высотой звучания. Литавры представляют собой систему от двух до семи металлических котлообразных чаш, открытая сторона которых затянута кожей или пластиком, а нижняя часть может иметь отверстие. На литаврах возможно достичь огромных градаций звука — от едва слышного пианиссимо до оглушительного фортиссимо. Среди особых эффектов — приглушённое звучание литавр, покрытых кусками мягкого сукна.",
     },
   ],
+  // =========== end instruments =====
+  // =========== composers ===========
+  
 ];
 
 export default instruments
