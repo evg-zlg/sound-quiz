@@ -127,20 +127,6 @@ languagues.addEventListener("click", changeLang);
 toggleTheme.addEventListener("click", changeTheme);
 
 function changeTheme (e) {
-  // // --primary-bg-color: #fffefc;
-  // --primary-bg-color: rgb(58, 58, 58);
-  // // --primary-text-color: #040404;
-  // --primary-text-color: #fffefc;
-  // --primary-accent-color: #e16259;
-  // --hover-color: #c0443b;
-  // --right-color: rgb(53, 136, 53);
-  // // --right-light-color: rgba(53, 136, 53, 0.5);
-  // --right-light-color: rgb(150, 192, 150);
-  // // --shadow-color: rgb(167, 167, 167);
-  // --shadow-color: rgb(94, 94, 94);
-  // --drop-shadow-color: rgba(0,0,0,0.3);
-  // --shadow-light-color: rgba(167, 167, 167, 0.8);
-
   if (toggleTheme.childNodes[1].childNodes[1].checked) {
     //change colors
     document.documentElement.style.setProperty("--primary-bg-color", "rgb(58, 58, 58)");
@@ -158,6 +144,7 @@ function changeTheme (e) {
     let imagesStartPage = startPage.querySelectorAll("img");
     imagesStartPage[0].classList.add("--invert");
     imagesStartPage[1].classList.add("--invert");
+    document.querySelector(".songs__image").classList.add("songs__image--invert");
     //change color image quiz-page
     changeThemeImgComposers("dark");
   } else {
@@ -177,6 +164,7 @@ function changeTheme (e) {
     let imagesStartPage = startPage.querySelectorAll("img");
     imagesStartPage[0].classList.remove("--invert");
     imagesStartPage[1].classList.remove("--invert");
+    document.querySelector(".songs__image").classList.remove("songs__image--invert");
 
     //change color image quiz-page
     changeThemeImgComposers("light");
