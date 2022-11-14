@@ -18,10 +18,12 @@
       font-weight: 500;
       color: var(--primery-text-color);
       text-transform: uppercase;
+      text-align: center;
 
       @media (max-width: 820px) {
         font-size: 1rem;
       }
+      
     }
     
     &__control {

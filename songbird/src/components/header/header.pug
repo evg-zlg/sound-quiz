@@ -5,8 +5,11 @@ mixin header()
     .header 
         figure.logo
             a.logo__link(href="./") 
-                img.logo__img(src=require("../../assets/logo/logo-header.png") alt="Logo")
-                label.logo__label sound quiz
+                .logo-animate 
+                    img.logo-animate__left(src=require("./../../assets/logo/logo-left.png"))
+                    img.logo-animate__mid(src=require("./../../assets/logo/logo-mid.png"))
+                    img.logo-animate__right(src=require("./../../assets/logo/logo-right.png"))
+                    label.logo-animate__label sound quiz
         menu.menu
             li.menu__item
                 a.menu__link.menu__link--active(href="") About 
