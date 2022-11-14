@@ -1,55 +1,5 @@
 const instruments = [
- // fourth
- [
-  {
-    name: "rimsky-korsakov",
-    nameRU: "римский-корсаков",
-    mp3: require("./../../assets/sounds/rimsky-korsakov.mp3"),
-    png: require("./../../assets/images/rimsky-korsakov.png"),
-    descript: "Nikolai Andreyevich Rimsky-Korsakov (1844 — 1908) was a Russian composer, a member of the group of composers known as The Five. He was a master of orchestration. His best-known orchestral compositions—Capriccio Espagnol, the Russian Easter Festival Overture, and the symphonic suite Scheherazade—are staples of the classical music repertoire, along with suites and excerpts from some of his 15 operas. Scheherazade is an example of his frequent use of fairy-tale and folk subjects.",
-    descriptRU: "Николай Андреевич Римский-Корсаков (1844 — 1908) — русский композитор, педагог, дирижёр, общественный деятель, музыкальный критик; участник «Могучей кучки». Среди его сочинений — 15 опер, 3 симфонии, симфонические произведения, инструментальные концерты, кантаты, камерно-инструментальная, вокальная и духовная музыка.",
-  },
-  {
-    name: "verdi",
-    nameRU: "верди",
-    mp3: require("./../../assets/sounds/verdi.mp3"),
-    png: require("./../../assets/images/verdi.png"),
-    descript: "Giuseppe Fortunino Francesco Verdi (1813 – 1901) was an Italian composer best known for his operas. He was born near Busseto to a provincial family of moderate means, receiving a musical education with the help of a local patron. Verdi came to dominate the Italian opera scene after the era of Gioachino Rossini, Gaetano Donizetti, and Vincenzo Bellini, whose works significantly influenced him.",
-    descriptRU: "Джузеппе Фортунино Франческо Верди (1813 — 1883) — итальянский композитор. Его творчество является одним из величайших достижений мирового оперного искусства и кульминацией развития итальянской оперы XIX века. Им созданы 26 опер, реквием, струнный квартет и ряд духовных пьес. Лучшие оперы композитора: «Бал-маскарад», «Риголетто», «Трубадур», «Травиата». Вершина творчества — последние оперы: «Аида», «Отелло», «Фальстаф».",
-  },
-  {
-    name: "brahms",
-    nameRU: "брамс",
-    mp3: require("./../../assets/sounds/brahms.mp3"),
-    png: require("./../../assets/images/brahms.png"),
-    descript: "Johannes Brahms (1833 – 1897) was a German composer, pianist, and conductor of the mid-Romantic period. Born in Hamburg into a Lutheran family, he spent much of his professional life in Vienna. He is sometimes grouped with Johann Sebastian Bach and Ludwig van Beethoven as one of the \"Three Bs\" of music, a comment originally made by the nineteenth-century conductor Hans von Bülow. Brahms composed for symphony orchestra, chamber ensembles, piano, organ, violin, voice, and chorus. A virtuoso pianist, he premiered many of his own works. He worked with leading performers of his time, including the pianist Clara Schumann and the violinist Joseph Joachim (the three were close friends). Many of his works have become staples of the modern concert repertoire.",
-    descriptRU: "Иоганнес Брамс (1833 — 1897) — немецкий композитор и пианист, один из центральных представителей эпохи романтизма. В Гамбурге действует музей Брамса, в экспозиции которого представлены документы о жизни и творчестве Иоганнеса Брамса, оригиналы партитур его произведений. Музей размещается в нескольких помещениях приюта Байлинга, поскольку дом, в котором родился композитор, был разрушен в годы 2-й мировой войны.",
-  },
-  {
-    name: "mussorgsky",
-    nameRU: "мусоргский",
-    mp3: require("./../../assets/sounds/mussorgsky.mp3"),
-    png: require("./../../assets/images/mussorgsky.png"),
-    descript: "Modest Petrovich Mussorgsky (1839 – 1881) was a Russian composer, one of the group known as \"The Five\". He was an innovator of Russian music in the Romantic period. He strove to achieve a uniquely Russian musical identity, often in deliberate defiance of the established conventions of Western music. Many of his works were inspired by Russian history, Russian folklore, and other national themes. Such works include the opera Boris Godunov, the orchestral tone poem Night on Bald Mountain and the piano suite Pictures at an Exhibition.",
-    descriptRU: "Модест Петрович Мусоргский (1839 — 1881) — русский композитор, член «Могучей кучки». Работал в различных жанрах: в его творческом наследии — оперы, оркестровые пьесы, циклы вокальной и фортепианной музыки, романсы и песни, хоры. В творчестве Мусоргского нашли оригинальное и яркое выражение русские национальные черты, но самобытность его при жизни не была в полной мере оценена. С начала XX века и поныне его оперы «Борис Годунов» и «Хованщина», цикл фортепианных миниатюр «Картинки с выставки», вокальные циклы «Песни и пляски смерти», «Детская» признаются шедеврами мирового музыкального искусства.",
-  },
-  {
-    name: "chaikovsky",
-    nameRU: "чайковский",
-    mp3: require("./../../assets/sounds/chaikovsky.mp3"),
-    png: require("./../../assets/images/chaikovsky.png"),
-    descript: "Pyotr Ilyich Tchaikovsky (1840 — 1893) was a Russian composer of the Romantic period. He was the first Russian composer whose music would make a lasting impression internationally. He wrote some of the most popular concert and theatrical music in the current classical repertoire, including the ballets Swan Lake and The Nutcracker, the 1812 Overture, his First Piano Concerto, Violin Concerto, the Romeo and Juliet Overture-Fantasy, several symphonies, and the opera Eugene Onegin.",
-    descriptRU: "Пётр Ильич Чайковский (1840 — 1893) — русский композитор, педагог, дирижёр и музыкальный критик. Как композитор-профессионал Чайковский сформировался в 1860—1870 годы, ознаменованные большим подъёмом общественной и культурной жизни Российской империи: многогранным развитием русской музыки, литературы и живописи, расцветом отечественного естествознания, ярких завоеваний в области философии и эстетики.",
-  },
-  {
-    name: "grieg",
-    nameRU: "григ",
-    mp3: require("./../../assets/sounds/grieg.mp3"),
-    png: require("./../../assets/images/grieg.png"),
-    descript: "Edvard Hagerup Grieg (1843 – 1907) was a Norwegian composer and pianist. He is widely considered one of the main Romantic era composers, and his music is part of the standard classical repertoire worldwide. His use of Norwegian folk music in his own compositions brought the music of Norway to fame, as well as helping to develop a national identity, much as Jean Sibelius did in Finland and Bedřich Smetana in Bohemia.",
-    descriptRU: "Эдвард Хагеруп Григ (1843 – 1907) — норвежский композитор, пианист, дирижёр, общественный деятель. Григ, творчество которого в целом относят к музыкальному романтизму, испытал значительное влияние норвежской народной культуры (эпоса, музыки, танца, современных бытовых традиций). Среди наиболее часто исполняемых произведений Грига — две сюиты из музыки к драме Генрика Ибсена «Пер Гюнт», Концерт для фортепиано с оркестром, фортепианные миниатюры из сборников «Лирические пьесы» (10 тетрадей), песни «Лебедь» (En svane), «Избушка» (Hytten), «Люблю тебя!» (Jeg elsker dig!), «Сердце поэта» (Du fatter ei Bølgernes evige Gang).",
-  },
-],
+ 
   // =========== instruments =====
   //strings
   [
@@ -332,8 +282,8 @@ const instruments = [
       nameRU: "штраус",
       mp3: require("./../../assets/sounds/strauss.mp3"),
       png: require("./../../assets/images/strauss.png"),
-      descript: "Franz Joseph Haydn (1732 - 1809) was an Austrian composer of the Classical period. He was instrumental in the development of chamber music such as the string quartet and piano trio. His contributions to musical form have led him to be called \"Father of the Symphony\" and \"Father of the String Quartet\". Haydn spent much of his career as a court musician for the wealthy Esterházy family at their Eszterháza Castle. Until the later part of his life, this isolated him from other composers and trends in music so that he was, as he put it, \"forced to become original\". Yet his music circulated widely, and for much of his career he was the most celebrated composer in Europe.",
-      descriptRU: "Иоганн Батист Штраус (1804 — 1849) — австрийский композитор, скрипач и дирижёр. Родоначальник музыкальной династии Штраусов. Трое его сыновей — Иоганн, Йозеф и Эдуард — тоже стали известными композиторами. Наследие композитора насчитывает 251 творение (из них 152 вальса). Это наследие было бережно сохранено его сыном Иоганном Штраусом-младшим и издано в 1889 году в Лейпциге.",
+      descript: "Richard Georg Strauss (1864 — 1949) was a German composer, conductor, pianist, and violinist. Considered a leading composer of the late Romantic and early modern eras, he has been described as a successor of Richard Wagner and Franz Liszt. Along with Gustav Mahler, he represents the late flowering of German Romanticism, in which pioneering subtleties of orchestration are combined with an advanced harmonic style.",
+      descriptRU: "Рихард Штраус (1864 — 1949) — немецкий композитор эпохи позднего романтизма, яркий представитель немецкого экспрессионизма, особенно прославился благодаря своим симфоническим поэмам и операм. Был также выдающимся дирижёром. Рихард Штраус и Густав Малер вместе представляют собой образец стиля позднего немецкого романтизма после Рихарда Вагнера.",
     },
     {
       name: "glinka",
@@ -362,56 +312,113 @@ const instruments = [
     },
   ],
   // third
-[
-  {
-    name: "liszt",
-    nameRU: "лист",
-    mp3: require("./../../assets/sounds/liszt.mp3"),
-    png: require("./../../assets/images/liszt.png"),
-    descript: "Franz Liszt (1811 – 1886) was a Hungarian composer, pianist and teacher of the Romantic period. With a diverse body of work spanning more than six decades, he is considered to be one of the most prolific and influential composers of his era and remains one of the most popular composers in modern concert piano repertoire.",
-    descriptRU: "Ференц Лист (1811 — 1886) — венгро-немецкий композитор, пианист, педагог, дирижёр, публицист, крупный представитель музыкального романтизма. Лист был одним из величайших пианистов XIX века. Его эпоха была расцветом концертного пианизма, Лист был в авангарде этого процесса, имея безграничные технические возможности. До сих пор его виртуозность остаётся ориентиром для современных пианистов, а произведения — вершинами фортепианной виртуозности.",
-  },
-  {
-    name: "verdi",
-    nameRU: "верди",
-    mp3: require("./../../assets/sounds/verdi.mp3"),
-    png: require("./../../assets/images/verdi.png"),
-    descript: "Giuseppe Fortunino Francesco Verdi (1813 – 1901) was an Italian composer best known for his operas. He was born near Busseto to a provincial family of moderate means, receiving a musical education with the help of a local patron. Verdi came to dominate the Italian opera scene after the era of Gioachino Rossini, Gaetano Donizetti, and Vincenzo Bellini, whose works significantly influenced him.",
-    descriptRU: "Джузеппе Фортунино Франческо Верди (1813 — 1883) — итальянский композитор. Его творчество является одним из величайших достижений мирового оперного искусства и кульминацией развития итальянской оперы XIX века. Им созданы 26 опер, реквием, струнный квартет и ряд духовных пьес. Лучшие оперы композитора: «Бал-маскарад», «Риголетто», «Трубадур», «Травиата». Вершина творчества — последние оперы: «Аида», «Отелло», «Фальстаф».",
-  },
-  {
-    name: "brahms",
-    nameRU: "брамс",
-    mp3: require("./../../assets/sounds/brahms.mp3"),
-    png: require("./../../assets/images/brahms.png"),
-    descript: "Johannes Brahms (1833 – 1897) was a German composer, pianist, and conductor of the mid-Romantic period. Born in Hamburg into a Lutheran family, he spent much of his professional life in Vienna. He is sometimes grouped with Johann Sebastian Bach and Ludwig van Beethoven as one of the \"Three Bs\" of music, a comment originally made by the nineteenth-century conductor Hans von Bülow. Brahms composed for symphony orchestra, chamber ensembles, piano, organ, violin, voice, and chorus. A virtuoso pianist, he premiered many of his own works. He worked with leading performers of his time, including the pianist Clara Schumann and the violinist Joseph Joachim (the three were close friends). Many of his works have become staples of the modern concert repertoire.",
-    descriptRU: "Иоганнес Брамс (1833 — 1897) — немецкий композитор и пианист, один из центральных представителей эпохи романтизма. В Гамбурге действует музей Брамса, в экспозиции которого представлены документы о жизни и творчестве Иоганнеса Брамса, оригиналы партитур его произведений. Музей размещается в нескольких помещениях приюта Байлинга, поскольку дом, в котором родился композитор, был разрушен в годы 2-й мировой войны.",
-  },
-  {
-    name: "mussorgsky",
-    nameRU: "мусоргский",
-    mp3: require("./../../assets/sounds/mussorgsky.mp3"),
-    png: require("./../../assets/images/mussorgsky.png"),
-    descript: "Modest Petrovich Mussorgsky (1839 – 1881) was a Russian composer, one of the group known as \"The Five\". He was an innovator of Russian music in the Romantic period. He strove to achieve a uniquely Russian musical identity, often in deliberate defiance of the established conventions of Western music. Many of his works were inspired by Russian history, Russian folklore, and other national themes. Such works include the opera Boris Godunov, the orchestral tone poem Night on Bald Mountain and the piano suite Pictures at an Exhibition.",
-    descriptRU: "Модест Петрович Мусоргский (1839 — 1881) — русский композитор, член «Могучей кучки». Работал в различных жанрах: в его творческом наследии — оперы, оркестровые пьесы, циклы вокальной и фортепианной музыки, романсы и песни, хоры. В творчестве Мусоргского нашли оригинальное и яркое выражение русские национальные черты, но самобытность его при жизни не была в полной мере оценена. С начала XX века и поныне его оперы «Борис Годунов» и «Хованщина», цикл фортепианных миниатюр «Картинки с выставки», вокальные циклы «Песни и пляски смерти», «Детская» признаются шедеврами мирового музыкального искусства.",
-  },
-  {
-    name: "chaikovsky",
-    nameRU: "чайковский",
-    mp3: require("./../../assets/sounds/chaikovsky.mp3"),
-    png: require("./../../assets/images/chaikovsky.png"),
-    descript: "Pyotr Ilyich Tchaikovsky (1840 — 1893) was a Russian composer of the Romantic period. He was the first Russian composer whose music would make a lasting impression internationally. He wrote some of the most popular concert and theatrical music in the current classical repertoire, including the ballets Swan Lake and The Nutcracker, the 1812 Overture, his First Piano Concerto, Violin Concerto, the Romeo and Juliet Overture-Fantasy, several symphonies, and the opera Eugene Onegin.",
-    descriptRU: "Пётр Ильич Чайковский (1840 — 1893) — русский композитор, педагог, дирижёр и музыкальный критик. Как композитор-профессионал Чайковский сформировался в 1860—1870 годы, ознаменованные большим подъёмом общественной и культурной жизни Российской империи: многогранным развитием русской музыки, литературы и живописи, расцветом отечественного естествознания, ярких завоеваний в области философии и эстетики.",
-  },
-  {
-    name: "grieg",
-    nameRU: "григ",
-    mp3: require("./../../assets/sounds/grieg.mp3"),
-    png: require("./../../assets/images/grieg.png"),
-    descript: "Edvard Hagerup Grieg (1843 – 1907) was a Norwegian composer and pianist. He is widely considered one of the main Romantic era composers, and his music is part of the standard classical repertoire worldwide. His use of Norwegian folk music in his own compositions brought the music of Norway to fame, as well as helping to develop a national identity, much as Jean Sibelius did in Finland and Bedřich Smetana in Bohemia.",
-    descriptRU: "Эдвард Хагеруп Григ (1843 – 1907) — норвежский композитор, пианист, дирижёр, общественный деятель. Григ, творчество которого в целом относят к музыкальному романтизму, испытал значительное влияние норвежской народной культуры (эпоса, музыки, танца, современных бытовых традиций). Среди наиболее часто исполняемых произведений Грига — две сюиты из музыки к драме Генрика Ибсена «Пер Гюнт», Концерт для фортепиано с оркестром, фортепианные миниатюры из сборников «Лирические пьесы» (10 тетрадей), песни «Лебедь» (En svane), «Избушка» (Hytten), «Люблю тебя!» (Jeg elsker dig!), «Сердце поэта» (Du fatter ei Bølgernes evige Gang).",
-  },
-],
+  [
+    {
+      name: "liszt",
+      nameRU: "лист",
+      mp3: require("./../../assets/sounds/liszt.mp3"),
+      png: require("./../../assets/images/liszt.png"),
+      descript: "Franz Liszt (1811 – 1886) was a Hungarian composer, pianist and teacher of the Romantic period. With a diverse body of work spanning more than six decades, he is considered to be one of the most prolific and influential composers of his era and remains one of the most popular composers in modern concert piano repertoire.",
+      descriptRU: "Ференц Лист (1811 — 1886) — венгро-немецкий композитор, пианист, педагог, дирижёр, публицист, крупный представитель музыкального романтизма. Лист был одним из величайших пианистов XIX века. Его эпоха была расцветом концертного пианизма, Лист был в авангарде этого процесса, имея безграничные технические возможности. До сих пор его виртуозность остаётся ориентиром для современных пианистов, а произведения — вершинами фортепианной виртуозности.",
+    },
+    {
+      name: "verdi",
+      nameRU: "верди",
+      mp3: require("./../../assets/sounds/verdi.mp3"),
+      png: require("./../../assets/images/verdi.png"),
+      descript: "Giuseppe Fortunino Francesco Verdi (1813 – 1901) was an Italian composer best known for his operas. He was born near Busseto to a provincial family of moderate means, receiving a musical education with the help of a local patron. Verdi came to dominate the Italian opera scene after the era of Gioachino Rossini, Gaetano Donizetti, and Vincenzo Bellini, whose works significantly influenced him.",
+      descriptRU: "Джузеппе Фортунино Франческо Верди (1813 — 1883) — итальянский композитор. Его творчество является одним из величайших достижений мирового оперного искусства и кульминацией развития итальянской оперы XIX века. Им созданы 26 опер, реквием, струнный квартет и ряд духовных пьес. Лучшие оперы композитора: «Бал-маскарад», «Риголетто», «Трубадур», «Травиата». Вершина творчества — последние оперы: «Аида», «Отелло», «Фальстаф».",
+    },
+    {
+      name: "brahms",
+      nameRU: "брамс",
+      mp3: require("./../../assets/sounds/brahms.mp3"),
+      png: require("./../../assets/images/brahms.png"),
+      descript: "Johannes Brahms (1833 – 1897) was a German composer, pianist, and conductor of the mid-Romantic period. Born in Hamburg into a Lutheran family, he spent much of his professional life in Vienna. He is sometimes grouped with Johann Sebastian Bach and Ludwig van Beethoven as one of the \"Three Bs\" of music, a comment originally made by the nineteenth-century conductor Hans von Bülow. Brahms composed for symphony orchestra, chamber ensembles, piano, organ, violin, voice, and chorus. A virtuoso pianist, he premiered many of his own works. He worked with leading performers of his time, including the pianist Clara Schumann and the violinist Joseph Joachim (the three were close friends). Many of his works have become staples of the modern concert repertoire.",
+      descriptRU: "Иоганнес Брамс (1833 — 1897) — немецкий композитор и пианист, один из центральных представителей эпохи романтизма. В Гамбурге действует музей Брамса, в экспозиции которого представлены документы о жизни и творчестве Иоганнеса Брамса, оригиналы партитур его произведений. Музей размещается в нескольких помещениях приюта Байлинга, поскольку дом, в котором родился композитор, был разрушен в годы 2-й мировой войны.",
+    },
+    {
+      name: "mussorgsky",
+      nameRU: "мусоргский",
+      mp3: require("./../../assets/sounds/mussorgsky.mp3"),
+      png: require("./../../assets/images/mussorgsky.png"),
+      descript: "Modest Petrovich Mussorgsky (1839 – 1881) was a Russian composer, one of the group known as \"The Five\". He was an innovator of Russian music in the Romantic period. He strove to achieve a uniquely Russian musical identity, often in deliberate defiance of the established conventions of Western music. Many of his works were inspired by Russian history, Russian folklore, and other national themes. Such works include the opera Boris Godunov, the orchestral tone poem Night on Bald Mountain and the piano suite Pictures at an Exhibition.",
+      descriptRU: "Модест Петрович Мусоргский (1839 — 1881) — русский композитор, член «Могучей кучки». Работал в различных жанрах: в его творческом наследии — оперы, оркестровые пьесы, циклы вокальной и фортепианной музыки, романсы и песни, хоры. В творчестве Мусоргского нашли оригинальное и яркое выражение русские национальные черты, но самобытность его при жизни не была в полной мере оценена. С начала XX века и поныне его оперы «Борис Годунов» и «Хованщина», цикл фортепианных миниатюр «Картинки с выставки», вокальные циклы «Песни и пляски смерти», «Детская» признаются шедеврами мирового музыкального искусства.",
+    },
+    {
+      name: "chaikovsky",
+      nameRU: "чайковский",
+      mp3: require("./../../assets/sounds/chaikovsky.mp3"),
+      png: require("./../../assets/images/chaikovsky.png"),
+      descript: "Pyotr Ilyich Tchaikovsky (1840 — 1893) was a Russian composer of the Romantic period. He was the first Russian composer whose music would make a lasting impression internationally. He wrote some of the most popular concert and theatrical music in the current classical repertoire, including the ballets Swan Lake and The Nutcracker, the 1812 Overture, his First Piano Concerto, Violin Concerto, the Romeo and Juliet Overture-Fantasy, several symphonies, and the opera Eugene Onegin.",
+      descriptRU: "Пётр Ильич Чайковский (1840 — 1893) — русский композитор, педагог, дирижёр и музыкальный критик. Как композитор-профессионал Чайковский сформировался в 1860—1870 годы, ознаменованные большим подъёмом общественной и культурной жизни Российской империи: многогранным развитием русской музыки, литературы и живописи, расцветом отечественного естествознания, ярких завоеваний в области философии и эстетики.",
+    },
+    {
+      name: "rimsky-korsakov",
+      nameRU: "римский-корсаков",
+      mp3: require("./../../assets/sounds/rimsky-korsakov.mp3"),
+      png: require("./../../assets/images/rimsky-korsakov.png"),
+      descript: "Nikolai Andreyevich Rimsky-Korsakov (1844 — 1908) was a Russian composer, a member of the group of composers known as The Five. He was a master of orchestration. His best-known orchestral compositions—Capriccio Espagnol, the Russian Easter Festival Overture, and the symphonic suite Scheherazade—are staples of the classical music repertoire, along with suites and excerpts from some of his 15 operas. Scheherazade is an example of his frequent use of fairy-tale and folk subjects.",
+      descriptRU: "Николай Андреевич Римский-Корсаков (1844 — 1908) — русский композитор, педагог, дирижёр, общественный деятель, музыкальный критик; участник «Могучей кучки». Среди его сочинений — 15 опер, 3 симфонии, симфонические произведения, инструментальные концерты, кантаты, камерно-инструментальная, вокальная и духовная музыка.",
+    },
+    
+  ],
+  // fourth
+  [
+    {
+      name: "grieg",
+      nameRU: "григ",
+      mp3: require("./../../assets/sounds/grieg.mp3"),
+      png: require("./../../assets/images/grieg.png"),
+      descript: "Edvard Hagerup Grieg (1843 – 1907) was a Norwegian composer and pianist. He is widely considered one of the main Romantic era composers, and his music is part of the standard classical repertoire worldwide. His use of Norwegian folk music in his own compositions brought the music of Norway to fame, as well as helping to develop a national identity, much as Jean Sibelius did in Finland and Bedřich Smetana in Bohemia.",
+      descriptRU: "Эдвард Хагеруп Григ (1843 – 1907) — норвежский композитор, пианист, дирижёр, общественный деятель. Григ, творчество которого в целом относят к музыкальному романтизму, испытал значительное влияние норвежской народной культуры (эпоса, музыки, танца, современных бытовых традиций). Среди наиболее часто исполняемых произведений Грига — две сюиты из музыки к драме Генрика Ибсена «Пер Гюнт», Концерт для фортепиано с оркестром, фортепианные миниатюры из сборников «Лирические пьесы» (10 тетрадей), песни «Лебедь» (En svane), «Избушка» (Hytten), «Люблю тебя!» (Jeg elsker dig!), «Сердце поэта» (Du fatter ei Bølgernes evige Gang).",
+    },
+    {
+      name: "schnittke",
+      nameRU: "шнитке",
+      // TODO
+      mp3: require("./../../assets/sounds/verdi.mp3"),
+      png: require("./../../assets/images/schnittke.png"),
+      descript: "Alfred Garrievich Schnittke (1934 – 1998) was a Russian composer of Jewish-German descent. Among the most performed and recorded composers of late 20th-century classical music, he is described by musicologist Ivan Moody as a \"composer who was concerned in his music to depict the moral and spiritual struggles of contemporary man in depth and detail.\"",
+      descriptRU: "Альфред Гарриевич Шнитке (1934 — 1998) — советский и российский композитор, музыкальный педагог и музыковед. Заслуженный деятель искусств РСФСР (1987). Лауреат Государственной премии РСФСР имени Н. К. Крупской (1986), Государственной премии Российской Федерации (1995). Автор четырёх опер, трёх балетов, 10 симфоний, 15 инструментальных концертов, многочисленных произведений камерной, вокальной, хоровой и инструментальной музыки, музыки к кинофильмам, мультфильмам и театральным постановкам.",
+    },
+    {
+      name: "rachmaninoff",
+      nameRU: "рахманинов",
+      // TODO
+      mp3: require("./../../assets/sounds/brahms.mp3"),
+      png: require("./../../assets/images/rachmaninoff.png"),
+      descript: "Sergei Vasilyevich Rachmaninoff (1873 — 1943) was a Russian composer, virtuoso pianist, and conductor. Rachmaninoff is widely considered one of the finest pianists of his day and, as a composer, one of the last great representatives of Romanticism in Russian classical music. Early influences of Tchaikovsky, Rimsky-Korsakov, and other Russian composers gave way to a thoroughly personal idiom notable for its song-like melodicism, expressiveness and rich orchestral colours. The piano is featured prominently in Rachmaninoff's compositional output and he made a point of using his skills as a performer to fully explore the expressive and technical possibilities of the instrument.",
+      descriptRU: "Сергей Васильевич Рахманинов (1873 — 1943) — русский композитор, пианист, дирижёр. Синтезировал в своём творчестве принципы петербургской и московской композиторских школ (а также смешение традиций западноевропейской и ближневосточной музыки) и создал свой оригинальный стиль. В творчестве Рахманинова как верующего человека прослеживаются христианские мотивы: Литургия св. Иоанна Златоуста (1910), Всенощная (1915). Рахманинов не только сделал выдающийся вклад в развитие русской духовной музыки, но и в прочих своих произведениях воплотил христианские идеи и символику.",
+    },
+    {
+      name: "prokofiev",
+      nameRU: "прокофьев",
+      // TODO
+      mp3: require("./../../assets/sounds/mussorgsky.mp3"),
+      png: require("./../../assets/images/prokofiev.png"),
+      descript: "Sergei Sergeyevich Prokofiev (1891 — 1953) was a Russian composer, pianist, and conductor who later worked in the Soviet Union. As the creator of acknowledged masterpieces across numerous music genres, he is regarded as one of the major composers of the 20th century. His works include such widely heard pieces as the March from The Love for Three Oranges, the suite Lieutenant Kijé, the ballet Romeo and Juliet—from which \"Dance of the Knights\" is taken—and Peter and the Wolf. Of the established forms and genres in which he worked, he created—excluding juvenilia—seven completed operas, seven symphonies, eight ballets, five piano concertos, two violin concertos, a cello concerto, a symphony-concerto for cello and orchestra, and nine completed piano sonatas.",
+      descriptRU: "Сергей Сергеевич Прокофьев (1891 — 1953) — русский и советский композитор, пианист, дирижёр, музыкальный писатель, шахматист первой категории. Народный артист РСФСР (1947). Лауреат Ленинской премии (1957) и шести Сталинских премий (1943, 1946 — трижды, 1947, 1952). Прокофьев писал во всех современных ему жанрах. Его перу принадлежат 8 опер, 8 балетов (7 балетов. \"Трапеция\" часто не упоминается, так как балет был задуман как инструментальное произведение) 7 симфоний и другие оркестровые сочинения, 9 концертов для сольного инструмента с оркестром, 9 фортепианных сонат, оратории и кантаты, камерные вокальные и инструментальные сочинения, музыка для кино и театра.",
+    },
+    {
+      name: "khachaturian",
+      nameRU: "хачатурян",
+      // TODO
+      mp3: require("./../../assets/sounds/chaikovsky.mp3"),
+      png: require("./../../assets/images/khachaturian.png"),
+      descript: "Aram Ilyich Khachaturian (1903 — 1978) was a Soviet and Armenian composer and conductor. He is considered one of the leading Soviet composers. Born and raised in Tbilisi, the multicultural capital of Georgia, Khachaturian moved to Moscow in 1921 following the Sovietization of the Caucasus. Without prior music training, he enrolled in the Gnessin Musical Institute, subsequently studying at the Moscow Conservatory in the class of Nikolai Myaskovsky, among others. His first major work, the Piano Concerto (1936), popularized his name within and outside the Soviet Union. It was followed by the Violin Concerto (1940) and the Cello Concerto (1946). His other significant compositions include the Masquerade Suite (1941), the Anthem of the Armenian SSR (1944), three symphonies (1935, 1943, 1947), and around 25 film scores. Khachaturian is best known for his ballet music—Gayane (1942) and Spartacus (1954). His most popular piece, the \"Sabre Dance\" from Gayane, has been used extensively in popular culture and has been performed by a number of musicians worldwide. His style is \"characterized by colorful harmonies, captivating rhythms, virtuosity, improvisations, and sensuous melodies\".",
+      descriptRU: "Арам Ильич Хачатурян (1903 — 1978) — армянский советский композитор, дирижёр, педагог, музыкально-общественный деятель. Автор трёх балетов, трёх симфоний, шести концертов, произведений вокальной, хоровой, инструментальной и программной музыки, музыки к кинофильмам и театральным постановкам, а также музыки Государственного гимна Армянской ССР (1944).",
+    },
+    {
+      name: "shostakovich",
+      nameRU: "шостакович",
+      // TODO
+      mp3: require("./../../assets/sounds/grieg.mp3"),
+      png: require("./../../assets/images/shostakovich.png"),
+      descript: "Dmitri Dmitriyevich Shostakovich (1906 — 1975) was a Soviet-era Russian composer and pianist who became internationally known after the premiere of his First Symphony in 1926 and was regarded throughout his life as a major composer. Shostakovich achieved early fame in the Soviet Union, but had a complex relationship with its government. His 1934 opera Lady Macbeth of Mtsensk was initially a success, but eventually was condemned by the Soviet government, putting his career at risk. In 1948 his work was denounced under the Zhdanov Doctrine, with professional consequences lasting several years. Even after his censure was rescinded in 1956, performances of his music were occasionally subject to state interventions, as with his Thirteenth Symphony (1962). Shostakovich was a member of the Supreme Soviet of the RSFSR (1947) and the Supreme Soviet of the Soviet Union (from 1962 until his death), as well as chairman of the RSFSR Union of Composers (1960–1968). Over the course of his career, he earned several important awards, including the Order of Lenin, from the Soviet government.",
+      descriptRU: "Дмитрий Дмитриевич Шостакович (1906 — 1975) — советский композитор, пианист, педагог, музыкально-общественный деятель. Народный артист СССР (1954), Герой Социалистического Труда (1966). Лауреат Ленинской премии (1958), пяти Сталинских премий (1941, 1942, 1946, 1950, 1952), Государственной премии СССР (1968), Государственной премии РСФСР имени М. И. Глинки (1974), а также номинант на премию «Оскар» за написание музыки к фильму «Хованщина». Один из крупнейших композиторов XX века, автор 15 симфоний и 15 квартетов, 6 концертов, 3 опер, 3 балетов, многочисленных произведений камерной музыки, музыки для кинофильмов и театральных постановок.",
+    },
+  ],
 ];
 
 export default instruments
