@@ -1,11 +1,11 @@
 include ./../../components/button/button.pug
 
 main.main 
-    h1.main__title welcome to the #[strong.main__title--colored sound quiz]
+    h1.title welcome to the #[br] #[strong.title--colored sound quiz]
     .main__about
         .main__description    
-            h2.main__text.main__text--question simple sounds
-            p.main__text Try to identify a musical instrument by sounds, and then listen to beautiful music 
+            h2.main__title music instruments
+            p.main__text Listen to the music and try to identify the musical instrument 
             +button("Try it", "main__btn js-btn--play")
         .main__collage
             img(src=require("./../../assets/images/collage-single.png"), alt="Musical instruments").main__image
@@ -22,7 +22,7 @@ main.main
             //- img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
             //- img(src=require("./../../assets/images/drum.png"), alt="Musical instruments").main__image
 
-section.rules 
+//- section.rules 
     h2.rules__title how to play?
     .rules__items 
         .rules__item 
@@ -40,13 +40,13 @@ section.songs
       img(src=require("./../../assets/images/listen-music-great.png"), alt="").songs__img
     .songs__description 
         h2.songs__title listen to great music 
-        p.songs__text Listen, listen more.. and find right song.
+        p.songs__text Listen, listen more.. and find right song
         +button("Hmm, that's interesting", "songs__btn js-btn--play")
 
 section.composer
     .composer__description 
       h2.composer__title Do you know the classics?
-      p.composer__text Test your knowledge and learn something new in the section COMPOSERS
+      p.composer__text Test your knowledge and learn something new in the sound quiz
       +button("I'm ready to play", "composer__btn js-btn--play")
     .composer__image 
       img(src=require("./../../assets/images/composer-1.png"), alt="").composer__img
