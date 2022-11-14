@@ -215,7 +215,15 @@ function shuffleAnswers(arr) {
 }
 
 function updateQuestion() {
-  //
+  //exclude composers images dark theme
+  if ((document.querySelector(".toggle__input").checked) && (currentQuestIndex >= 4)) {
+    imgPlayer.classList.remove("--invert");
+    inputs.forEach(elem => {
+      elem.parentNode.children[0].classList.remove("--invert");
+    })
+    infoImage.classList.remove("--invert");
+  }
+
   answerFound = false;
   //update player label
   window.lang === "en" ? playerLabelFirst.innerText = "Listen to music and find the answer" :
@@ -248,4 +256,21 @@ function updateQuestion() {
   imgPlayer.src = require("./../../assets/images/collage-main.png");
 };
 
-export default updateLangQuiz;
+function changeThemeImgComposers(mode) {
+  const imagesQuizPage = document.querySelector(".quiz-page").querySelectorAll("img");
+  console.log(imagesQuizPage);
+  if (mode === "dark") {
+    // withou composers
+    if (currentQuestIndex < 4) {
+      for (let i = 0; i < imagesQuizPage.length; i++) {
+        imagesQuizPage[i].classList.add("--invert");
+      };
+    } 
+  } else {
+    for (let i = 0; i < imagesQuizPage.length; i++) {
+      imagesQuizPage[i].classList.remove("--invert");
+    };
+  }
+};
+
+export { updateLangQuiz, changeThemeImgComposers }

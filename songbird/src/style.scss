@@ -7,14 +7,19 @@
 
 :root {
   --primary-bg-color: #fffefc;
+  // --primary-bg-color: rgb(58, 58, 58);
   --primary-text-color: #040404;
+  // --primary-text-color: #fffefc;
   --primary-accent-color: #e16259;
   --hover-color: #c0443b;
   --right-color: rgb(53, 136, 53);
   --right-light-color: rgba(53, 136, 53, 0.5);
+  // --right-light-color: rgb(150, 192, 150);
   --shadow-color: rgb(167, 167, 167);
+  // --shadow-color: rgb(94, 94, 94);
   --drop-shadow-color: rgba(0,0,0,0.3);
-  --shadow-light-color: rgba(167, 167, 167, 0.8)
+  --shadow-light-color: rgba(167, 167, 167, 0.8);
+
 }
 
 
@@ -41,6 +46,7 @@ body,
   color: var(--primary-text-color);
   background-color: var(--primary-bg-color);
   font-family: "Roboto Serif", Helvetica, sans-serif;
+  transition: all 0.5s ease 0s;
 }
 .content {
   margin: 0 auto;
@@ -79,4 +85,8 @@ body,
     padding: 10px 0 0 0;
   }
 
+}
+
+.--invert {
+  filter: invert(90%);
 }

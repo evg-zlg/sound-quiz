@@ -1,4 +1,4 @@
-import updateLangQuiz from "./../../pages/quiz-page/quiz-page.js";
+import { updateLangQuiz, changeThemeImgComposers } from "./../../pages/quiz-page/quiz-page.js";
 
 const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
@@ -8,7 +8,7 @@ const themeToggleLable = document.querySelector(".toggle__label").childNodes[0];
 const languagues = document.querySelector(".languague");
 const languaguesIcon = document.querySelector(".languague__icon");
 const languaguesLabel = document.querySelector(".languague__label");
-
+const toggleTheme = document.querySelector(".toggle");
 
 aboutLink.onclick = function () {
   document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
@@ -123,3 +123,63 @@ function changeLang () {
 };
 
 languagues.addEventListener("click", changeLang);
+
+toggleTheme.addEventListener("click", changeTheme);
+
+function changeTheme (e) {
+  // // --primary-bg-color: #fffefc;
+  // --primary-bg-color: rgb(58, 58, 58);
+  // // --primary-text-color: #040404;
+  // --primary-text-color: #fffefc;
+  // --primary-accent-color: #e16259;
+  // --hover-color: #c0443b;
+  // --right-color: rgb(53, 136, 53);
+  // // --right-light-color: rgba(53, 136, 53, 0.5);
+  // --right-light-color: rgb(150, 192, 150);
+  // // --shadow-color: rgb(167, 167, 167);
+  // --shadow-color: rgb(94, 94, 94);
+  // --drop-shadow-color: rgba(0,0,0,0.3);
+  // --shadow-light-color: rgba(167, 167, 167, 0.8);
+
+  if (toggleTheme.childNodes[1].childNodes[1].checked) {
+    //change colors
+    document.documentElement.style.setProperty("--primary-bg-color", "rgb(58, 58, 58)");
+    document.documentElement.style.setProperty("--primary-text-color", "#fffefc");
+    document.documentElement.style.setProperty("--right-light-color", "rgb(150, 192, 150)");
+    document.documentElement.style.setProperty("--right-color", "rgb(86 213 86)");
+    document.documentElement.style.setProperty("--shadow-color", "rgb(94, 94, 94)");
+    //invert logo
+    let logoAnimate = document.querySelector(".logo-animate");
+    logoAnimate.children[0].classList.add("--invert");
+    logoAnimate.children[1].classList.add("--invert");
+    logoAnimate.children[2].classList.add("--invert");
+    //invert png on start page
+    let startPage = document.querySelector(".start-page");
+    let imagesStartPage = startPage.querySelectorAll("img");
+    imagesStartPage[0].classList.add("--invert");
+    imagesStartPage[1].classList.add("--invert");
+    //change color image quiz-page
+    changeThemeImgComposers("dark");
+  } else {
+    //change colors
+    document.documentElement.style.setProperty("--primary-bg-color", "#fffefc");
+    document.documentElement.style.setProperty("--primary-text-color", "#040404");
+    document.documentElement.style.setProperty("--right-light-color", "rgba(53, 136, 53, 0.5)");
+    document.documentElement.style.setProperty("--right-color", "rgb(53, 136, 53)");
+    document.documentElement.style.setProperty("--shadow-color", "rgb(167, 167, 167)");
+    //invert logo
+    let logoAnimate = document.querySelector(".logo-animate");
+    logoAnimate.children[0].classList.remove("--invert");
+    logoAnimate.children[1].classList.remove("--invert");
+    logoAnimate.children[2].classList.remove("--invert");
+    //invert png on start page
+    let startPage = document.querySelector(".start-page");
+    let imagesStartPage = startPage.querySelectorAll("img");
+    imagesStartPage[0].classList.remove("--invert");
+    imagesStartPage[1].classList.remove("--invert");
+
+    //change color image quiz-page
+    changeThemeImgComposers("light");
+  }
+};
+
