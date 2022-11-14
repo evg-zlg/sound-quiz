@@ -1,3 +1,5 @@
+import updateLangQuiz from "./../../pages/quiz-page/quiz-page.js";
+
 const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
 const quizLink = menu[1];
@@ -68,6 +70,8 @@ function updateLang (lang = "en") {
     composerText.textContent = "Test your knowledge and learn something new in the sound quiz";
     composerBtn.textContent = "I'm ready to play";
 
+    //update quiz
+    updateLangQuiz("en");
 
   } else  if (lang === "ru") {
     // update lang in header 
@@ -93,6 +97,9 @@ function updateLang (lang = "en") {
     composerText.textContent = "Проверь себя и узнай что-то новое в музыкальной викторине";
     composerBtn.textContent = "Готов сыграть";
 
+    //update quiz
+    updateLangQuiz("ru");
+    
   }
 }
 
@@ -102,6 +109,7 @@ function changeLang () {
       languaguesIcon.classList.add("languague__icon--ru");
       languaguesIcon.classList.remove("languague__icon--en");
       languaguesLabel.textContent = "Русский";
+      window.lang = "ru";
       updateLang("ru");
 
     } else {
@@ -110,6 +118,7 @@ function changeLang () {
       languaguesIcon.classList.remove("languague__icon--ru");
       languaguesLabel.textContent = "English";
       updateLang("en");
+      window.lang = "en";
     }
 };
 

@@ -41,7 +41,7 @@ include ./../../components/button/button.pug
         .game__question 
             img.game__image(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
             .game__player 
-                +player("What instrument?")
+                +player("listen to the question")
         .game__answers
             .game__inputs
                 label.game__answer
@@ -72,5 +72,5 @@ include ./../../components/button/button.pug
                 img.info__image(src=require("./../../assets/images/piano.png"))
                 p.info__text Lorem ipsum
                 .info__player
-                    +player("Listen to this instrument ")
+                    +player("")
         +button("next question", "game__next") 

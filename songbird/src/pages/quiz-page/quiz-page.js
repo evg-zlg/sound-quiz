@@ -4,7 +4,6 @@ import questions from "./quiz-data";
 
 const inputs = document.querySelectorAll(".game__input");
 const btnNext = document.querySelector(".game__next");
-const temp = document.querySelector(".game__temp");
 const count = document.querySelector(".score__count");
 const imgPlayer = document.querySelector(".game__image");
 const gameInfo = document.querySelector(".info");
@@ -16,6 +15,10 @@ const playerLabelFirst = document.querySelectorAll(".player__label")[0];
 const playerLabelSecond = document.querySelectorAll(".player__label")[1];
 const progressItems = document.querySelectorAll(".choise-group__item");
 const countQuestions = questions.length;
+const groupCategoryInstruments = document.querySelectorAll(".choise-group__category")[0];
+const groupCategoryComposers = document.querySelectorAll(".choise-group__category")[1];
+const scoreLabel = document.querySelector(".score__label").childNodes[0];
+
 
 let category = 0;
 let score = 0;
@@ -24,6 +27,9 @@ let currentQuestIndex = 0;
 let currentQuest = new Object;
 let rightAnswerIndex = 0;
 let answerFound = false;
+let answer = new Object;
+
+window.lang = "en";
 
 // on load quiz
 document.addEventListener("DOMContentLoaded", () => {
@@ -70,8 +76,52 @@ function updateProgress() {
   }
 };
 
+function updateLangQuiz (lang = "en") {
+  if (lang === "en") {
+    groupCategoryInstruments.textContent = "instruments";
+    groupCategoryComposers.textContent = "composers";
+    scoreLabel.textContent = "Score: ";
+    // update label player
+    if (answerFound) {
+      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name;
+    } else {
+      playerLabelFirst.textContent = "Listen to music and find the answer";
+    }
+    // update answers
+    for (let i = 0; i < currentQuest.length; i++) {
+      //label answer
+      inputs[i].parentNode.childNodes[2].data = currentQuest[i].name;
+    };
+    //update info
+    infoText.textContent = answer.descript;
+    //update btn
+    btnNext.textContent = "next question";
+
+  } else if (lang === "ru") {
+    groupCategoryInstruments.textContent = "инструменты";
+    groupCategoryComposers.textContent = "композиторы";
+    scoreLabel.textContent = "Счёт: ";
+    // update label player
+    if (answerFound) {
+      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].nameRU;
+    } else {
+      playerLabelFirst.textContent = "Послушай музыку и найди ответ";
+    }
+    // update answers
+    for (let i = 0; i < currentQuest.length; i++) {
+      //label answer
+      inputs[i].parentNode.childNodes[2].data = currentQuest[i].nameRU;
+    };
+    //update info
+    infoText.textContent = answer.descriptRU;
+    //update btn
+    btnNext.textContent = "следующий вопрос";
+
+  }
+}
+
 function checkAnswer(answer, obj) {
-  if (answer == obj.name) {
+  if ((answer == obj.name) || (answer == obj.nameRU)) {
     return true
   } else {
     return false
@@ -81,12 +131,17 @@ function checkAnswer(answer, obj) {
 function handlerAnswersInput (e) {
 
   // get answer object
-  let answer = currentQuest.filter(item => item.name == e.target.parentNode.childNodes[2].textContent)[0];
+
+  if (lang === "en") {
+    answer = currentQuest.filter(item => item.name == e.target.parentNode.childNodes[2].textContent)[0];
+  } else if (lang === "ru") {
+    answer = currentQuest.filter(item => item.nameRU == e.target.parentNode.childNodes[2].textContent)[0];
+  }
   
   //load new data into game__info
   infoImage.src = answer.png;
-  infoText.innerText = answer.descript;
-  playerLabelSecond.textContent = "Listen to the "+answer.name;
+  lang === "en" ? infoText.innerText = answer.descript : infoText.innerText = answer.descriptRU;
+  
   //load audi into info
   load(answer, 1)
 
@@ -113,7 +168,8 @@ function handlerAnswersInput (e) {
       imgPlayer.src = currentQuest[rightAnswerIndex].png;
 
       //update player label
-      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name;
+      lang === "en" ? playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name :
+                      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].nameRU;
     }
 
   } else {
@@ -133,16 +189,6 @@ function isFinish() {
         return true
     } else return false
 }
-
-function updateGameQuestionPlayerLabel () {
-  if (category === 0) {
-    playerLabelFirst.innerText = "What instrument?";
-  } else if (category === 1) {
-    playerLabelFirst.innerText = "Who is the composer?";
-  } else if (category === 2) {
-    playerLabelFirst.innerText = "Do you know this music?";
-  }
-};
 
 function choiseCurrentQuest () {
   if (category === 0) {
@@ -172,7 +218,8 @@ function updateQuestion() {
   //
   answerFound = false;
   //update player label
-  updateGameQuestionPlayerLabel();
+  window.lang === "en" ? playerLabelFirst.innerText = "Listen to music and find the answer" :
+                         playerLabelFirst.innerText = "Послушай музыку и найди ответ";
   //update score
   scoreTemp = 5;
   //update currentQuest
@@ -192,7 +239,8 @@ function updateQuestion() {
   // load answers
   for (let i = 0; i < currentQuest.length; i++) {
     //label answer
-    inputs[i].parentNode.childNodes[2].data = currentQuest[i].name;
+    window.lang === "en" ? inputs[i].parentNode.childNodes[2].data = currentQuest[i].name :
+                           inputs[i].parentNode.childNodes[2].data = currentQuest[i].nameRU;
     //image answer
     inputs[i].parentNode.childNodes[0].src = currentQuest[i].png;
   };
@@ -200,6 +248,4 @@ function updateQuestion() {
   imgPlayer.src = require("./../../assets/images/collage-main.png");
 };
 
-
-
-
+export default updateLangQuiz;
