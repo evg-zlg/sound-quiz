@@ -1,5 +1,6 @@
 import "./components/header/header.js";
 import "./components/player/player.js";
+import "./components/toggle/toggle.js";
 import "./pages/quiz-page/quiz-page.js";
 
 const startPage = document.querySelector(".start-page");

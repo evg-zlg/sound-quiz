@@ -1,6 +1,10 @@
 const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
 const quizLink = menu[1];
+const languagues = document.querySelector(".languague");
+const languaguesIcon = document.querySelector(".languague__icon");
+const languaguesLabel = document.querySelector(".languague__label");
+
 
 aboutLink.onclick = function () {
   document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
@@ -23,3 +27,17 @@ quizLink.onclick = function () {
 
   return false;
 }
+
+function changeLang () {
+    if (languaguesIcon.classList.contains("languague__icon--en")) {
+      languaguesIcon.classList.add("languague__icon--ru");
+      languaguesIcon.classList.remove("languague__icon--en");
+      languaguesLabel.textContent = "Русский"
+    } else {
+      languaguesIcon.classList.add("languague__icon--en");
+      languaguesIcon.classList.remove("languague__icon--ru");
+      languaguesLabel.textContent = "English"
+    }
+};
+
+languagues.addEventListener("click", changeLang);

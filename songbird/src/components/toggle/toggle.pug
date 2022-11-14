@@ -1,0 +1,8 @@
+mixin toggle(text, mode)
+    div.toggle 
+        label(class="toggle__label") #{text}
+          if mode == "checked"
+            input(type="checkbox" checked class="toggle__input" )
+          else
+            input(type="checkbox" class="toggle__input" ) 
+          span.toggle__mark  

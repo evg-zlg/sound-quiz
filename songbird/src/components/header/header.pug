@@ -1,4 +1,5 @@
 include ./../button/button.pug
+include ./../toggle/toggle.pug
 
 mixin header() 
     .header 
@@ -13,4 +14,9 @@ mixin header()
                 a.menu__link(href="") Quiz 
             li.menu__item
                 a.menu__link(href="#") Gallery
-        +button("Lets play", "js-btn--play")
+        .header__options
+          +toggle("dark theme")        
+          .languague
+              .languague__icon.languague__icon--en(alt="Languegue") 
+              label.languague__label English 
+        //- +button("Lets play", "js-btn--play")

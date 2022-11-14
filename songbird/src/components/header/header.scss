@@ -120,3 +120,45 @@
     }
 }
 
+.header__options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: flex-start;
+
+  .languague {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    &__icon {
+      width: 29px;
+      height: 20px;
+      
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      margin: 0 15px 0 6px;
+      border-radius: 3px;
+      border: 1px solid var(--shadow-color);
+      transition: background-image 0.15s ease 0s;
+
+      &--en {
+        background-image: url("./../../assets/logo/lang-en.png");
+      }
+      &--ru {
+        background-image: url("./../../assets/logo/lang-ru.png");
+      }
+    }
+
+    &__label {
+      pointer-events: none;
+    }
+  }
+}
+
