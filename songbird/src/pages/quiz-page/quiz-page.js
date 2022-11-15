@@ -144,8 +144,7 @@ function handlerAnswersInput (e) {
   
   //load audi into info
   load(answer, 1)
-
-
+  //show info of item
   gameInfo.classList.remove("info--masked");
 
   if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest[rightAnswerIndex])) {
@@ -174,7 +173,7 @@ function handlerAnswersInput (e) {
 
   } else {
     //check for repeat incorrect answer
-    if (! e.target.parentNode.classList.contains("game__answer--is-wrong")) {
+    if ((! e.target.parentNode.classList.contains("game__answer--is-wrong")) && ( ! answerFound )) {
       e.target.parentNode.classList.add("game__answer--is-wrong");
       if ( ! answerFound ) {
         scoreTemp -= 1;
