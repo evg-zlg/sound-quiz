@@ -12,7 +12,7 @@ function updateLangResults(lang) {
   if (lang === "en") {
     resultsTitle.textContent = "Congratulations";
     resultsText.textContent = "You passed the quiz and scored " + score + " points";
-    resultsQuestion,textContent = "Do you want to play more?";
+    resultsQuestion.textContent = "Do you want to play more?";
     resultsBtns[0].textContent = "start a new game";
     resultsBtns[1].textContent = "open gallery";
 

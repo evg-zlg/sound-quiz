@@ -53,33 +53,34 @@ function handlerBtnNext() {
   updateProgress();
   if (isFinish()) {
     progressItems[progressItems.length - 1].classList.remove(".choise-group__item");
-    btnNext.classList.remove(".game__next--last-quest");
+    btnNext.classList.remove("game__next--last-quest");
     //open result page
     document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
     document.querySelector(".results-page").classList.remove("results-page--hidden");
-    document.querySelectorAll(".menu__link")[1].classList.remove("menu__link--active");
+    // document.querySelectorAll(".menu__link")[1].classList.remove("menu__link--active");
   } else {
     currentQuestIndex ++;
     updateQuestion();
   }
     //check last quest and change button
-  if ((currentQuestIndex) === (countQuestions - 2)) {
-    btnNext.classList.add(".game__next--last-quest");
-  }
+  if ((currentQuestIndex) === (countQuestions - 1)) {
+    btnNext.classList.add("game__next--last-quest");
+    lang === "en" ? btnNext.textContent = "show results" : btnNext.textContent = "показать результаты"
+  } 
 };
 
 function updateProgress() {
   let mode = "choise-group__item--current";
   for (let i = 0; progressItems.length; i++) {
-    if (progressItems[i].classList.contains(mode)) {
-      progressItems[i].classList.remove(mode);
-      progressItems[i].textContent = scoreTemp;
-      i++;
-      if (progressItems[i]) {
-        progressItems[i].classList.add(mode);
-      } 
-      break;
-    }
+      if (progressItems[i].classList.contains(mode)) {
+        progressItems[i].classList.remove(mode);
+        progressItems[i].textContent = scoreTemp;
+        i++;
+        if (progressItems[i]) {
+          progressItems[i].classList.add(mode);
+        } 
+        break;
+      }
   }
 };
 
@@ -102,7 +103,8 @@ function updateLangQuiz (lang = "en") {
     //update info
     infoText.textContent = answer.descript;
     //update btn
-    btnNext.textContent = "next question";
+    btnNext.classList.contains("game__next--last-quest") ? btnNext.textContent = "show results" :
+                                                           btnNext.textContent = "next question"
 
   } else if (lang === "ru") {
     groupCategoryInstruments.textContent = "инструменты";
@@ -122,7 +124,8 @@ function updateLangQuiz (lang = "en") {
     //update info
     infoText.textContent = answer.descriptRU;
     //update btn
-    btnNext.textContent = "следующий вопрос";
+    btnNext.classList.contains("game__next--last-quest") ? btnNext.textContent = "показать результаты" :
+                                                           btnNext.textContent = "следующий вопрос"
 
   }
 }
@@ -204,7 +207,7 @@ function choiseCurrentQuest () {
 }
 
 function choiseRightAnswer(arr) {
-  rightAnswerIndex = Math.floor(Math.random() * (arr.length - 1));
+  rightAnswerIndex = Math.floor(Math.random() * (arr.length));
 }
 
 function shuffleAnswers(arr) {
@@ -273,7 +276,6 @@ function changeThemeImgComposers(mode) {
         imagesQuizPage[i].classList.add("--invert");
       };
     } 
-    //maskeo.classList.add("info--masked--invert");
   } else {
     for (let i = 0; i < imagesQuizPage.length; i++) {
       imagesQuizPage[i].classList.remove("--invert");
@@ -298,6 +300,9 @@ function startNewGame() {
 
   //update quets
   updateQuestion();
+
+  //update text in button 
+  lang === "en" ? btnNext.textContent = "next questions" : btnNext.textContent = "следующий вопрос"
 }
 
 export { startNewGame, updateLangQuiz, changeThemeImgComposers, score }
