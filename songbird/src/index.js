@@ -20,3 +20,4 @@ function handlerPlayBtn() {
 document.querySelectorAll(".js-btn--play").forEach(elem => {
     elem.addEventListener("click", handlerPlayBtn);
 });
+

@@ -1,4 +1,4 @@
-import { score } from "./../quiz-page/quiz-page.js";
+import { score, startNewGame } from "./../quiz-page/quiz-page.js";
 
 const resultsTitle = document.querySelector(".results__title");
 const resultsText = document.querySelector(".results__text");
@@ -24,5 +24,12 @@ function updateLangResults(lang) {
     resultsBtns[1].textContent = "открыть галлерею";
   }
 }
+//start new game
+resultsBtns[0].addEventListener("click", () => {
+  document.querySelector(".quiz-page").classList.remove("quiz-page--hidden");
+  document.querySelector(".results-page").classList.add("results-page--hidden");
+  document.querySelectorAll(".menu__link")[1].classList.add("menu__link--active");
+  startNewGame();
+});
 
 export { updateLangResults }

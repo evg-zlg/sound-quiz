@@ -53,11 +53,18 @@ function handlerBtnNext() {
   updateProgress();
   if (isFinish()) {
     progressItems[progressItems.length - 1].classList.remove(".choise-group__item");
-    alert("finish");
+    btnNext.classList.remove(".game__next--last-quest");
+    //open result page
+    document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
+    document.querySelector(".results-page").classList.remove("results-page--hidden");
+    document.querySelectorAll(".menu__link")[1].classList.remove("menu__link--active");
   } else {
     currentQuestIndex ++;
-
     updateQuestion();
+  }
+    //check last quest and change button
+  if ((currentQuestIndex) === (countQuestions - 2)) {
+    btnNext.classList.add(".game__next--last-quest");
   }
 };
 
@@ -253,6 +260,7 @@ function updateQuestion() {
   };
   //load quest image by default
   imgPlayer.src = require("./../../assets/images/collage-main.png");
+
 };
 
 function changeThemeImgComposers(mode) {
@@ -271,8 +279,25 @@ function changeThemeImgComposers(mode) {
       imagesQuizPage[i].classList.remove("--invert");
     };
   }
-  
-
 };
 
-export { updateLangQuiz, changeThemeImgComposers, score }
+function startNewGame() {
+  // clear progress
+  progressItems.forEach(elem => {
+    elem.classList.remove("choise-group__item--current");
+    elem.textContent = "";
+  })
+  progressItems[0].classList.add("choise-group__item--current");
+
+  //clear score
+  score = 0;
+  count.textContent = 0;
+
+  //setup quetsindex in begin
+  currentQuestIndex = 0;
+
+  //update quets
+  updateQuestion();
+}
+
+export { startNewGame, updateLangQuiz, changeThemeImgComposers, score }

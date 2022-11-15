@@ -430,4 +430,8 @@
   padding: 10px 0;
   margin: 10px 0;
   transition: all 0.15s ease 0s;
+
+  &--last-quest {
+    background-color: var(--right-light-color);
+  }
 }
