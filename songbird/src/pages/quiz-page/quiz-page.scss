@@ -241,11 +241,13 @@
 
       &--is-right {
         color: var(--right-color);
+        background-color: var(--right-very-light-color);
         font-weight: 600;
       }
 
       &--is-wrong {
         color: var(--primary-accent-color);
+        background-color: var(--primary-accent-light-color);
         font-weight: 600;
       }
     }     
