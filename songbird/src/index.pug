@@ -12,12 +12,12 @@ head
 body 
     .content 
         +header()
-        .start-page.start-page--hidden
+        .start-page
             include pages/start-page/start-page.pug
         .quiz-page.quiz-page--hidden
             include pages/quiz-page/quiz-page.pug
         .results-page.results-page--hidden
             include pages/results-page/results-page.pug
-        .gallery-page
+        .gallery-page.gallery-page--hidden
             include pages/gallery-page/gallery-page.pug
     script(src=require("./index.js") type="module") 
