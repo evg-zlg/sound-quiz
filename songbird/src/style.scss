@@ -9,20 +9,21 @@
 
 :root {
   --primary-bg-color: #fffefc;
-  // --primary-bg-color: rgb(58, 58, 58);
+  // --primary-bg-color: rgb(58, 58, 58); for dark theme
   --primary-text-color: #040404;
-  // --primary-text-color: #fffefc;
+  // --primary-text-color: #fffefc; for dark theme
+  --primary-text-light-color: rgba(255,255,252, 0.9); //for dark theme
   --primary-accent-color: #e16259;
   --primary-accent-light-color: #e7c5c331;
   --hover-color: #c0443b;
   --right-color: rgb(53, 136, 53);
   --right-light-color: rgba(53, 136, 53, 0.5);
   --right-very-light-color: rgba(198, 218, 198, 0.185);
-  // --right-light-color: rgb(150, 192, 150);
+  // --right-light-color: rgb(150, 192, 150); for dark theme
   --shadow-color: rgb(167, 167, 167);
-  // --shadow-color: rgb(94, 94, 94);
+  // --shadow-color: rgb(94, 94, 94); for dark theme
   --drop-shadow-color: rgba(0,0,0,0.3);
-  // --drop-shadow-color: rgba(170, 170, 170, 0.3);
+  // --drop-shadow-color: rgba(170, 170, 170, 0.3); for dark theme
   --shadow-light-color: rgba(167, 167, 167, 0.8);
 }
 

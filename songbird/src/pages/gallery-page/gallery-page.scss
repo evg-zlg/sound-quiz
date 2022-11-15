@@ -49,6 +49,16 @@
     @media (max-width: 820px) {
       max-height: 50%;
     }
+    &--dark {
+      background-color: var(--primary-text-light-color);
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    background-color: unset;
   }
 
   &__info {
@@ -87,11 +97,7 @@
     }
   }
 
-  &__img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-  }
+
 
   &__control {
     text-align: start;

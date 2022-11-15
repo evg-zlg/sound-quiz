@@ -1,5 +1,6 @@
 import { updateLangQuiz, changeThemeImgComposers } from "./../../pages/quiz-page/quiz-page.js";
 import { updateLangResults } from "./../../pages/results-page/results-page.js";
+import { updateLangGallery, changeThemeImgGallery } from "./../../pages/gallery-page/gallery-page.js";
 
 const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
@@ -105,8 +106,11 @@ function updateLang (lang = "en") {
     //update quiz
     updateLangQuiz("en");
 
-    //update resulte
+    //update results
     updateLangResults("en");
+
+    //update gallery
+    updateLangGallery("en");
 
   } else  if (lang === "ru") {
     // update lang in header 
@@ -137,6 +141,8 @@ function updateLang (lang = "en") {
     //update resulte
     updateLangResults("ru");
 
+    //update gallery
+    updateLangGallery("ru");
   }
 }
 
@@ -188,6 +194,9 @@ function changeTheme (e) {
     //change color image quiz-page
     changeThemeImgComposers("dark");
 
+    //change color image gallery
+    changeThemeImgGallery("dark");
+
   } else {
     //change colors
     document.documentElement.style.setProperty("--primary-bg-color", "#fffefc");
@@ -212,6 +221,10 @@ function changeTheme (e) {
     
     //change color image quiz-page
     changeThemeImgComposers("light");
+
+    //change color image gallery
+    changeThemeImgGallery("light");
+    
   }
 };
 
