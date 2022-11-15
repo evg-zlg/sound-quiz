@@ -1,5 +1,6 @@
 // console.log("hello from quiz-page");
 import { load, handlerBtnPlay, playAudio, pauseAudio } from "./../../components/player/player.js";
+import { updateScoreCount } from "./../../pages/results-page/results-page.js";
 import questions from "./quiz-data";
 
 const inputs = document.querySelectorAll(".game__input");
@@ -57,16 +58,17 @@ function handlerBtnNext() {
     //open result page
     document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
     document.querySelector(".results-page").classList.remove("results-page--hidden");
-    // document.querySelectorAll(".menu__link")[1].classList.remove("menu__link--active");
+    // update score on the results page
+    updateScoreCount(score);
   } else {
     currentQuestIndex ++;
     updateQuestion();
-  }
+  };
     //check last quest and change button
   if ((currentQuestIndex) === (countQuestions - 1)) {
     btnNext.classList.add("game__next--last-quest");
     lang === "en" ? btnNext.textContent = "show results" : btnNext.textContent = "показать результаты"
-  } 
+  };
 };
 
 function updateProgress() {
@@ -149,6 +151,7 @@ function handlerAnswersInput (e) {
   }
   
   //load new data into game__info
+  // answer.pngColor ? infoImage.src = answer.pngColor : infoImage.src = answer.png;
   infoImage.src = answer.png;
   lang === "en" ? infoText.innerText = answer.descript : infoText.innerText = answer.descriptRU;
   

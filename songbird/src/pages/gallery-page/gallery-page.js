@@ -14,7 +14,7 @@ function appendObjects() {
       cardImage.className = "card__image";
       const cardImg = document.createElement("img");
       cardImg.className = "card__img";
-      cardImg.src = item.png;
+      item.pngColor ? cardImg.src = item.pngColor : cardImg.src = item.png;
       cardImg.alt = item.name;
       const cardInfo = document.createElement("div");
       cardInfo.className = "card__info";
@@ -75,7 +75,6 @@ function updateLangGallery(lang) {
 function changeThemeImgGallery(theme) {
   const cardImages = document.querySelectorAll(".card__image");
   cardImages.forEach(elem => {
-    console.log(elem);
     if (theme === "dark") {
       elem.classList.add("card__image--dark");
     } else {

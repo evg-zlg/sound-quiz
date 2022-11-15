@@ -85,6 +85,9 @@
     color: var(--primary-accent-color);
     bottom: -5px;
     left: 10px;
+    &--on-anim {
+      animation: go-label-fly 0.7s infinite alternate;
+    }
   }
 }
 
@@ -117,7 +120,15 @@
       top: 6px;
   }
   to {
-      top: 5px;
+      top: 4px;
+  }
+}
+@keyframes go-label-fly {
+  from {
+      bottom: -5px;
+  }
+  to {
+      bottom: -3px;
   }
 }
 .logo {

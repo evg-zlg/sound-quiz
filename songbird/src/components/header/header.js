@@ -18,6 +18,7 @@ logoLink.onclick = function() {
   logoAnimate.childNodes[1].classList.toggle("logo-animate__left--on-anim");
   logoAnimate.childNodes[2].classList.toggle("logo-animate__mid--on-anim");
   logoAnimate.childNodes[3].classList.toggle("logo-animate__right--on-anim");
+  // logoAnimate.childNodes[4].classList.toggle("logo-animate__label--on-anim");
   
   return false;
 };
@@ -26,6 +27,8 @@ aboutLink.onclick = function () {
   document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
   quizLink.classList.remove("menu__link--active");
   
+  document.querySelector(".results-page").classList.add("results-page--hidden");
+
   document.querySelector(".gallery-page").classList.add("gallery-page--hidden");
   galleryLink.classList.remove("menu__link--active");
 
@@ -55,6 +58,8 @@ quizLink.onclick = function () {
 galleryLink.onclick = function () {
   document.querySelector(".start-page").classList.add("start-page--hidden");
   aboutLink.classList.remove("menu__link--active");
+
+  document.querySelector(".results-page").classList.add("results-page--hidden");
 
   document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
   quizLink.classList.remove("menu__link--active");

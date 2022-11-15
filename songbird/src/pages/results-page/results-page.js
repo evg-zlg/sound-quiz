@@ -6,7 +6,9 @@ const resultsCount = document.querySelector(".results__count");
 const resultsQuestion = document.querySelector(".results__question");
 const resultsBtns = document.querySelectorAll(".results__btn");
 
-resultsCount.textContent = score;
+function updateScoreCount(score) {
+  document.querySelector(".results__count").textContent = score;
+}
 
 function updateLangResults(lang) {
   if (lang === "en") {
@@ -32,4 +34,12 @@ resultsBtns[0].addEventListener("click", () => {
   startNewGame();
 });
 
-export { updateLangResults }
+resultsBtns[1].addEventListener("click", () => {
+  document.querySelector(".gallery-page").classList.remove("gallery-page--hidden");
+  document.querySelector(".results-page").classList.add("results-page--hidden");
+  document.querySelectorAll(".menu__link")[2].classList.add("menu__link--active");
+  document.querySelectorAll(".menu__link")[1].classList.remove("menu__link--active");
+  startNewGame();
+});
+
+export { updateLangResults, updateScoreCount }
