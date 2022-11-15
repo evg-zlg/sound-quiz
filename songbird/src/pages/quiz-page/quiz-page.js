@@ -268,7 +268,6 @@ function updateQuestion() {
 
 function changeThemeImgComposers(mode) {
   const imagesQuizPage = document.querySelector(".quiz-page").querySelectorAll("img");
-  console.log(imagesQuizPage);
   if (mode === "dark") {
     // without composers
     if (currentQuestIndex < 4) {

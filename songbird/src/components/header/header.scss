@@ -47,7 +47,9 @@
     position: absolute;
     left: 0;
     top: -3px;
-    animation: go-left-fly 0.7s infinite alternate;
+    &--on-anim {
+      animation: go-left-fly 0.7s infinite alternate;
+    }
   }
   &__mid {
     width: 50px;
@@ -57,7 +59,9 @@
     position: absolute;
     left: 27px;
     top: 5px;
-    animation: go-mid-fly 0.7s infinite alternate;
+    &--on-anim {
+      animation: go-mid-fly 0.7s infinite alternate;
+    }
   }
   &__right {
     width: 50px;
@@ -67,7 +71,10 @@
     position: absolute;
     right: 0px;
     top: -3px;
-    animation: go-right-fly 0.7s infinite alternate;
+
+    &--on-anim {
+      animation: go-right-fly 0.7s infinite alternate;
+    }
   }
   &__label {
     position: absolute;

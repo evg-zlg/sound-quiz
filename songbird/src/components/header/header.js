@@ -5,30 +5,61 @@ const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
 const quizLink = menu[1];
 const galleryLink = menu[2];
+const logoLink = document.querySelector(".logo__link");
 const themeToggleLable = document.querySelector(".toggle__label").childNodes[0];
 const languagues = document.querySelector(".languague");
 const languaguesIcon = document.querySelector(".languague__icon");
 const languaguesLabel = document.querySelector(".languague__label");
 const toggleTheme = document.querySelector(".toggle");
+const logoAnimate = document.querySelector(".logo-animate");
+
+logoLink.onclick = function() {
+  logoAnimate.childNodes[1].classList.toggle("logo-animate__left--on-anim");
+  logoAnimate.childNodes[2].classList.toggle("logo-animate__mid--on-anim");
+  logoAnimate.childNodes[3].classList.toggle("logo-animate__right--on-anim");
+  
+  return false;
+};
 
 aboutLink.onclick = function () {
   document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
   quizLink.classList.remove("menu__link--active");
   
+  document.querySelector(".gallery-page").classList.add("gallery-page--hidden");
+  galleryLink.classList.remove("menu__link--active");
+
   document.querySelector(".start-page").classList.remove("start-page--hidden");
   aboutLink.classList.add("menu__link--active");
+  
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 
   return false;
 };
 
 quizLink.onclick = function () {
-  document.querySelector(".quiz-page").classList.remove("quiz-page--hidden");
-  quizLink.classList.add("menu__link--active");
+  document.querySelector(".gallery-page").classList.add("gallery-page--hidden");
+  galleryLink.classList.remove("menu__link--active");
   
   document.querySelector(".start-page").classList.add("start-page--hidden");
   aboutLink.classList.remove("menu__link--active");
+
+  document.querySelector(".quiz-page").classList.remove("quiz-page--hidden");
+  quizLink.classList.add("menu__link--active");
+
   document.body.scrollTop = document.documentElement.scrollTop = 0;
+
+  return false;
+}
+
+galleryLink.onclick = function () {
+  document.querySelector(".start-page").classList.add("start-page--hidden");
+  aboutLink.classList.remove("menu__link--active");
+
+  document.querySelector(".quiz-page").classList.add("quiz-page--hidden");
+  quizLink.classList.remove("menu__link--active");
+
+  document.querySelector(".gallery-page").classList.remove("gallery-page--hidden");
+  galleryLink.classList.add("menu__link--active");
 
   return false;
 }
@@ -142,7 +173,6 @@ function changeTheme (e) {
     document.documentElement.style.setProperty("--shadow-color", "rgb(94, 94, 94)");
     document.documentElement.style.setProperty("--drop-shadow-color", "rgba(170, 170, 170, 0.3)");
     //invert logo
-    let logoAnimate = document.querySelector(".logo-animate");
     logoAnimate.children[0].classList.add("--invert");
     logoAnimate.children[1].classList.add("--invert");
     logoAnimate.children[2].classList.add("--invert");
@@ -168,7 +198,6 @@ function changeTheme (e) {
     document.documentElement.style.setProperty("--drop-shadow-color", "rgba(0,0,0,0.3)");
 
     //invert logo
-    let logoAnimate = document.querySelector(".logo-animate");
     logoAnimate.children[0].classList.remove("--invert");
     logoAnimate.children[1].classList.remove("--invert");
     logoAnimate.children[2].classList.remove("--invert");

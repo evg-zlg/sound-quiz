@@ -5,6 +5,7 @@
 @import "./pages/start-page/start-page.scss";
 @import "./pages/quiz-page/quiz-page.scss";
 @import "./pages/results-page/results-page.scss";
+@import "./pages/gallery-page/gallery-page.scss";
 
 :root {
   --primary-bg-color: #fffefc;
@@ -79,6 +80,7 @@ body,
 }
 .quiz-page {
   margin: 20px auto 0;
+  
   &--hidden {
     display: none;
   }
@@ -92,11 +94,25 @@ body,
 
 .results-page {
   height: 100%;
+
   &--hidden {
     display: none;
   }  
+
+}
+
+.gallery-page {
+  &--hidden {
+    display: none;
+  }
+
+  @media (max-width: 820px) {
+    margin: 80px auto 0;
+    padding: 10px 10px;
+  }
 }
 
 .--invert {
   filter: invert(90%);
 }
+
