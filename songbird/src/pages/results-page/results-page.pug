@@ -1,0 +1,10 @@
+include ./../../components/button/button.pug
+
+.results 
+    h1.results__title Congratulations 
+    p.results__text You passed the quiz and scored #[span.results__count 0] points!
+    p.results__question Do you want to play more?
+    +button("start a new game", "results__btn")
+    +button("open gallery", "results__btn")
+
+

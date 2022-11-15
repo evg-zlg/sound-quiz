@@ -259,17 +259,20 @@ function changeThemeImgComposers(mode) {
   const imagesQuizPage = document.querySelector(".quiz-page").querySelectorAll("img");
   console.log(imagesQuizPage);
   if (mode === "dark") {
-    // withou composers
+    // without composers
     if (currentQuestIndex < 4) {
       for (let i = 0; i < imagesQuizPage.length; i++) {
         imagesQuizPage[i].classList.add("--invert");
       };
     } 
+    //maskeo.classList.add("info--masked--invert");
   } else {
     for (let i = 0; i < imagesQuizPage.length; i++) {
       imagesQuizPage[i].classList.remove("--invert");
     };
   }
+  
+
 };
 
-export { updateLangQuiz, changeThemeImgComposers }
+export { updateLangQuiz, changeThemeImgComposers, score }

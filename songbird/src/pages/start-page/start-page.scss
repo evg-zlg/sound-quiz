@@ -162,7 +162,6 @@
 .title {
   text-transform: uppercase;
   font-size: 3rem;
-  letter-spacing: 0.2rem;
   line-height: 120%;
   text-align: center;
   margin: 0 0 100px 0;
@@ -444,26 +443,19 @@
 
     &__link {
       height: 45px;
-      align-items: center;
-      background-image: url("./../../assets/logo/git-hub.png");
-      background-size: 30%;
-      background-repeat: no-repeat;
-      background-color: transparent;
-      background-position: 0 center;
-      filter: drop-shadow(1px 0px 5px var(--drop-shadow-color));
-      
+      align-items: center;      
       font-size: 1.5rem;
+      color: var(--primery-text-color);
       text-decoration: none;
       display: flex;
-      padding: 0 0 0 60px;
-
+      gap: 10px;
+      background: unset;
       position: relative;
 
       @media (max-width: 510px) {
         font-size: 1.125rem;
         height: 50px;
         background-size: 40%;
-        padding: 0 0 0 50px;
       }
 
       &::after {
@@ -482,6 +474,17 @@
       }
     }
 
+    &__img {
+      height: 100%;
+      object-fit: contain;
+      background: unset;
+    }
+
+    &__label {
+      background: unset;
+      color: var(--primary-text-color);
+    }
+
     &__text {
       font-size: 2rem;
       font-weight: 600;
@@ -494,12 +497,6 @@
     &__logo {
       height: 45px;
       width: 121px;
-      background-image: url("./../../assets/logo/rs-school-js.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-color: transparent;
-      background-position: 0 center;
-      filter: drop-shadow(1px 0px 5px var(--drop-shadow-color));
       position: relative;
 
       @media (max-width: 510px) {

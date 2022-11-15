@@ -1,7 +1,9 @@
 import "./components/player/player.js";
 import "./components/toggle/toggle.js";
-import "./pages/quiz-page/quiz-page.js";
 import "./components/header/header.js";
+import "./pages/quiz-page/quiz-page.js";
+import "./pages/results-page/results-page.js";
+
 
 const startPage = document.querySelector(".start-page");
 const quizPage = document.querySelector(".quiz-page");

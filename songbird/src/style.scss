@@ -4,6 +4,7 @@
 @import "./components/toggle/toggle.scss";
 @import "./pages/start-page/start-page.scss";
 @import "./pages/quiz-page/quiz-page.scss";
+@import "./pages/results-page/results-page.scss";
 
 :root {
   --primary-bg-color: #fffefc;
@@ -11,19 +12,18 @@
   --primary-text-color: #040404;
   // --primary-text-color: #fffefc;
   --primary-accent-color: #e16259;
-  --primary-accent-light-color: #dd7f783b;
+  --primary-accent-light-color: #e7c5c331;
   --hover-color: #c0443b;
   --right-color: rgb(53, 136, 53);
   --right-light-color: rgba(53, 136, 53, 0.5);
-  --right-very-light-color: rgba(82, 148, 82, 0.288);
+  --right-very-light-color: rgba(198, 218, 198, 0.185);
   // --right-light-color: rgb(150, 192, 150);
   --shadow-color: rgb(167, 167, 167);
   // --shadow-color: rgb(94, 94, 94);
   --drop-shadow-color: rgba(0,0,0,0.3);
+  // --drop-shadow-color: rgba(170, 170, 170, 0.3);
   --shadow-light-color: rgba(167, 167, 167, 0.8);
-
 }
-
 
 // :root {
 //   background-color: #fefefe;
@@ -50,6 +50,7 @@ body,
   font-family: "Source Serif Pro", Helvetica, sans-serif;
   transition: all 0.5s ease 0s;
 }
+
 .content {
   margin: 0 auto;
   max-width: 1080px;  
@@ -87,6 +88,13 @@ body,
     padding: 10px 0 0 0;
   }
 
+}
+
+.results-page {
+  height: 100%;
+  &--hidden {
+    display: none;
+  }  
 }
 
 .--invert {

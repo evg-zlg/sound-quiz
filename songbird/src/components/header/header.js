@@ -134,6 +134,7 @@ function changeTheme (e) {
     document.documentElement.style.setProperty("--right-light-color", "rgb(150, 192, 150)");
     document.documentElement.style.setProperty("--right-color", "rgb(86 213 86)");
     document.documentElement.style.setProperty("--shadow-color", "rgb(94, 94, 94)");
+    document.documentElement.style.setProperty("--drop-shadow-color", "rgba(170, 170, 170, 0.3)");
     //invert logo
     let logoAnimate = document.querySelector(".logo-animate");
     logoAnimate.children[0].classList.add("--invert");
@@ -144,7 +145,10 @@ function changeTheme (e) {
     let imagesStartPage = startPage.querySelectorAll("img");
     imagesStartPage[0].classList.add("--invert");
     imagesStartPage[1].classList.add("--invert");
-    document.querySelector(".songs__image").classList.add("songs__image--invert");
+    imagesStartPage[4].classList.add("--invert");
+    imagesStartPage[5].classList.add("--invert");
+    document.querySelector(".songs__image").classList.add("songs__image--invert");      
+
     //change color image quiz-page
     changeThemeImgComposers("dark");
   } else {
@@ -154,6 +158,8 @@ function changeTheme (e) {
     document.documentElement.style.setProperty("--right-light-color", "rgba(53, 136, 53, 0.5)");
     document.documentElement.style.setProperty("--right-color", "rgb(53, 136, 53)");
     document.documentElement.style.setProperty("--shadow-color", "rgb(167, 167, 167)");
+    document.documentElement.style.setProperty("--drop-shadow-color", "rgba(0,0,0,0.3)");
+
     //invert logo
     let logoAnimate = document.querySelector(".logo-animate");
     logoAnimate.children[0].classList.remove("--invert");
@@ -164,8 +170,10 @@ function changeTheme (e) {
     let imagesStartPage = startPage.querySelectorAll("img");
     imagesStartPage[0].classList.remove("--invert");
     imagesStartPage[1].classList.remove("--invert");
+    imagesStartPage[4].classList.remove("--invert");
+    imagesStartPage[5].classList.remove("--invert");
     document.querySelector(".songs__image").classList.remove("songs__image--invert");
-
+    
     //change color image quiz-page
     changeThemeImgComposers("light");
   }
