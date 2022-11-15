@@ -75,7 +75,7 @@ function updateLang (lang = "en") {
 
   } else  if (lang === "ru") {
     // update lang in header 
-    aboutLink.textContent = "Об игре";
+    aboutLink.textContent = "Главная";
     quizLink.textContent = "Викторина";
     galleryLink.textContent = "Галлерея";
     themeToggleLable.textContent = "тёмная тема";

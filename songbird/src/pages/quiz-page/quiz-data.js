@@ -376,8 +376,7 @@ const instruments = [
     {
       name: "schnittke",
       nameRU: "шнитке",
-      // TODO
-      mp3: require("./../../assets/sounds/verdi.mp3"),
+      mp3: require("./../../assets/sounds/schnittke.mp3"),
       png: require("./../../assets/images/schnittke.png"),
       descript: "Alfred Garrievich Schnittke (1934 – 1998) was a Russian composer of Jewish-German descent. Among the most performed and recorded composers of late 20th-century classical music, he is described by musicologist Ivan Moody as a \"composer who was concerned in his music to depict the moral and spiritual struggles of contemporary man in depth and detail.\"",
       descriptRU: "Альфред Гарриевич Шнитке (1934 — 1998) — советский и российский композитор, музыкальный педагог и музыковед. Заслуженный деятель искусств РСФСР (1987). Лауреат Государственной премии РСФСР имени Н. К. Крупской (1986), Государственной премии Российской Федерации (1995). Автор четырёх опер, трёх балетов, 10 симфоний, 15 инструментальных концертов, многочисленных произведений камерной, вокальной, хоровой и инструментальной музыки, музыки к кинофильмам, мультфильмам и театральным постановкам.",
@@ -385,8 +384,7 @@ const instruments = [
     {
       name: "rachmaninoff",
       nameRU: "рахманинов",
-      // TODO
-      mp3: require("./../../assets/sounds/brahms.mp3"),
+      mp3: require("./../../assets/sounds/rachmaninoff.mp3"),
       png: require("./../../assets/images/rachmaninoff.png"),
       descript: "Sergei Vasilyevich Rachmaninoff (1873 — 1943) was a Russian composer, virtuoso pianist, and conductor. Rachmaninoff is widely considered one of the finest pianists of his day and, as a composer, one of the last great representatives of Romanticism in Russian classical music. Early influences of Tchaikovsky, Rimsky-Korsakov, and other Russian composers gave way to a thoroughly personal idiom notable for its song-like melodicism, expressiveness and rich orchestral colours. The piano is featured prominently in Rachmaninoff's compositional output and he made a point of using his skills as a performer to fully explore the expressive and technical possibilities of the instrument.",
       descriptRU: "Сергей Васильевич Рахманинов (1873 — 1943) — русский композитор, пианист, дирижёр. Синтезировал в своём творчестве принципы петербургской и московской композиторских школ (а также смешение традиций западноевропейской и ближневосточной музыки) и создал свой оригинальный стиль. В творчестве Рахманинова как верующего человека прослеживаются христианские мотивы: Литургия св. Иоанна Златоуста (1910), Всенощная (1915). Рахманинов не только сделал выдающийся вклад в развитие русской духовной музыки, но и в прочих своих произведениях воплотил христианские идеи и символику.",
@@ -394,8 +392,7 @@ const instruments = [
     {
       name: "prokofiev",
       nameRU: "прокофьев",
-      // TODO
-      mp3: require("./../../assets/sounds/mussorgsky.mp3"),
+      mp3: require("./../../assets/sounds/prokofiev.mp3"),
       png: require("./../../assets/images/prokofiev.png"),
       descript: "Sergei Sergeyevich Prokofiev (1891 — 1953) was a Russian composer, pianist, and conductor who later worked in the Soviet Union. As the creator of acknowledged masterpieces across numerous music genres, he is regarded as one of the major composers of the 20th century. His works include such widely heard pieces as the March from The Love for Three Oranges, the suite Lieutenant Kijé, the ballet Romeo and Juliet—from which \"Dance of the Knights\" is taken—and Peter and the Wolf. Of the established forms and genres in which he worked, he created—excluding juvenilia—seven completed operas, seven symphonies, eight ballets, five piano concertos, two violin concertos, a cello concerto, a symphony-concerto for cello and orchestra, and nine completed piano sonatas.",
       descriptRU: "Сергей Сергеевич Прокофьев (1891 — 1953) — русский и советский композитор, пианист, дирижёр, музыкальный писатель, шахматист первой категории. Народный артист РСФСР (1947). Лауреат Ленинской премии (1957) и шести Сталинских премий (1943, 1946 — трижды, 1947, 1952). Прокофьев писал во всех современных ему жанрах. Его перу принадлежат 8 опер, 8 балетов (7 балетов. \"Трапеция\" часто не упоминается, так как балет был задуман как инструментальное произведение) 7 симфоний и другие оркестровые сочинения, 9 концертов для сольного инструмента с оркестром, 9 фортепианных сонат, оратории и кантаты, камерные вокальные и инструментальные сочинения, музыка для кино и театра.",
@@ -403,8 +400,7 @@ const instruments = [
     {
       name: "khachaturian",
       nameRU: "хачатурян",
-      // TODO
-      mp3: require("./../../assets/sounds/chaikovsky.mp3"),
+      mp3: require("./../../assets/sounds/khachaturian.mp3"),
       png: require("./../../assets/images/khachaturian.png"),
       descript: "Aram Ilyich Khachaturian (1903 — 1978) was a Soviet and Armenian composer and conductor. He is considered one of the leading Soviet composers. Born and raised in Tbilisi, the multicultural capital of Georgia, Khachaturian moved to Moscow in 1921 following the Sovietization of the Caucasus. Without prior music training, he enrolled in the Gnessin Musical Institute, subsequently studying at the Moscow Conservatory in the class of Nikolai Myaskovsky, among others. His first major work, the Piano Concerto (1936), popularized his name within and outside the Soviet Union. It was followed by the Violin Concerto (1940) and the Cello Concerto (1946). His other significant compositions include the Masquerade Suite (1941), the Anthem of the Armenian SSR (1944), three symphonies (1935, 1943, 1947), and around 25 film scores. Khachaturian is best known for his ballet music—Gayane (1942) and Spartacus (1954). His most popular piece, the \"Sabre Dance\" from Gayane, has been used extensively in popular culture and has been performed by a number of musicians worldwide. His style is \"characterized by colorful harmonies, captivating rhythms, virtuosity, improvisations, and sensuous melodies\".",
       descriptRU: "Арам Ильич Хачатурян (1903 — 1978) — армянский советский композитор, дирижёр, педагог, музыкально-общественный деятель. Автор трёх балетов, трёх симфоний, шести концертов, произведений вокальной, хоровой, инструментальной и программной музыки, музыки к кинофильмам и театральным постановкам, а также музыки Государственного гимна Армянской ССР (1944).",
@@ -412,8 +408,7 @@ const instruments = [
     {
       name: "shostakovich",
       nameRU: "шостакович",
-      // TODO
-      mp3: require("./../../assets/sounds/grieg.mp3"),
+      mp3: require("./../../assets/sounds/shostakovich.mp3"),
       png: require("./../../assets/images/shostakovich.png"),
       descript: "Dmitri Dmitriyevich Shostakovich (1906 — 1975) was a Soviet-era Russian composer and pianist who became internationally known after the premiere of his First Symphony in 1926 and was regarded throughout his life as a major composer. Shostakovich achieved early fame in the Soviet Union, but had a complex relationship with its government. His 1934 opera Lady Macbeth of Mtsensk was initially a success, but eventually was condemned by the Soviet government, putting his career at risk. In 1948 his work was denounced under the Zhdanov Doctrine, with professional consequences lasting several years. Even after his censure was rescinded in 1956, performances of his music were occasionally subject to state interventions, as with his Thirteenth Symphony (1962). Shostakovich was a member of the Supreme Soviet of the RSFSR (1947) and the Supreme Soviet of the Soviet Union (from 1962 until his death), as well as chairman of the RSFSR Union of Composers (1960–1968). Over the course of his career, he earned several important awards, including the Order of Lenin, from the Soviet government.",
       descriptRU: "Дмитрий Дмитриевич Шостакович (1906 — 1975) — советский композитор, пианист, педагог, музыкально-общественный деятель. Народный артист СССР (1954), Герой Социалистического Труда (1966). Лауреат Ленинской премии (1958), пяти Сталинских премий (1941, 1942, 1946, 1950, 1952), Государственной премии СССР (1968), Государственной премии РСФСР имени М. И. Глинки (1974), а также номинант на премию «Оскар» за написание музыки к фильму «Хованщина». Один из крупнейших композиторов XX века, автор 15 симфоний и 15 квартетов, 6 концертов, 3 опер, 3 балетов, многочисленных произведений камерной музыки, музыки для кинофильмов и театральных постановок.",
