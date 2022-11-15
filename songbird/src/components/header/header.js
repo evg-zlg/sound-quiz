@@ -1,4 +1,5 @@
 import { updateLangQuiz, changeThemeImgComposers } from "./../../pages/quiz-page/quiz-page.js";
+import { updateLangResults } from "./../../pages/results-page/results-page.js";
 
 const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
@@ -73,6 +74,9 @@ function updateLang (lang = "en") {
     //update quiz
     updateLangQuiz("en");
 
+    //update resulte
+    updateLangResults("en");
+
   } else  if (lang === "ru") {
     // update lang in header 
     aboutLink.textContent = "Главная";
@@ -99,7 +103,9 @@ function updateLang (lang = "en") {
 
     //update quiz
     updateLangQuiz("ru");
-    
+    //update resulte
+    updateLangResults("ru");
+
   }
 }
 
@@ -151,6 +157,7 @@ function changeTheme (e) {
 
     //change color image quiz-page
     changeThemeImgComposers("dark");
+
   } else {
     //change colors
     document.documentElement.style.setProperty("--primary-bg-color", "#fffefc");
