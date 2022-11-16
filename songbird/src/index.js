@@ -5,11 +5,34 @@ import "./pages/quiz-page/quiz-page.js";
 import "./pages/results-page/results-page.js";
 import "./pages/gallery-page/gallery-page.js";
 
+import { changeTheme, changeLang } from "./components/header/header.js";
 
 const startPage = document.querySelector(".start-page");
 const quizPage = document.querySelector(".quiz-page");
 const resultsPage = document.querySelector(".results-page");
+const lsOptions = new Object;
 
+document.addEventListener("DOMContentLoaded", () => {
+  //load theme from local storage
+  try {
+    lsOptions["lsThemeEvgZlg"] = localStorage.getItem("lsThemeEvgZlg");
+  } catch (err) {
+    
+  } finally {
+    lsOptions["lsThemeEvgZlg"] ? lsOptions["lsThemeEvgZlg"] : lsOptions["lsThemeEvgZlg"] = "light";
+    changeTheme(lsOptions["lsThemeEvgZlg"]);
+  };
+  console.log("lsThemeEvgZlg", lsOptions["lsThemeEvgZlg"]);
+  //load theme from local storage
+  try {
+    lsOptions["lsLangEvgZlg"] = localStorage.getItem("lsLangEvgZlg");
+  } catch (err) {
+  } finally {
+    lsOptions["lsLangEvgZlg"] ? lsOptions["lsLangEvgZlg"] : lsOptions["lsLangEvgZlg"] = "en";
+    changeLang(lsOptions["lsLangEvgZlg"]);
+  };
+  console.log("lsLangEvgZlg", lsOptions["lsLangEvgZlg"]);
+});
 
 function handlerPlayBtn() {
   startPage.classList.add("start-page--hidden");
@@ -23,3 +46,4 @@ document.querySelectorAll(".js-btn--play").forEach(elem => {
     elem.addEventListener("click", handlerPlayBtn);
 });
 
+export { lsOptions }

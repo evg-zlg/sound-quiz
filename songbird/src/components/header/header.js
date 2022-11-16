@@ -1,6 +1,7 @@
 import { updateLangQuiz, changeThemeImgComposers } from "./../../pages/quiz-page/quiz-page.js";
 import { updateLangResults } from "./../../pages/results-page/results-page.js";
 import { updateLangGallery, changeThemeImgGallery } from "./../../pages/gallery-page/gallery-page.js";
+import { lsOptions } from "./../../index.js";
 
 const menu = document.querySelectorAll(".menu__link");
 const aboutLink = menu[0];
@@ -151,15 +152,16 @@ function updateLang (lang = "en") {
   }
 }
 
-function changeLang () {
-    if (languaguesIcon.classList.contains("languague__icon--en")) {
+function changeLang (lang) {
+    if ((languaguesIcon.classList.contains("languague__icon--en")) || (lang === "ru")) {
       // change icon and label in header
       languaguesIcon.classList.add("languague__icon--ru");
       languaguesIcon.classList.remove("languague__icon--en");
       languaguesLabel.textContent = "Русский";
       window.lang = "ru";
       updateLang("ru");
-
+      //update local storage
+      lsOptions["lsLangEvgZlg"] = "ru";
     } else {
       // change icon and label in header on ru
       languaguesIcon.classList.add("languague__icon--en");
@@ -167,15 +169,19 @@ function changeLang () {
       languaguesLabel.textContent = "English";
       updateLang("en");
       window.lang = "en";
-    }
+      lsOptions["lsLangEvgZlg"] = "en";
+    };
+    localStorage.setItem("lsLangEvgZlg", lsOptions["lsLangEvgZlg"]);
 };
 
 languagues.addEventListener("click", changeLang);
 
 toggleTheme.addEventListener("click", changeTheme);
 
-function changeTheme (e) {
-  if (toggleTheme.childNodes[1].childNodes[1].checked) {
+function changeTheme (theme) {
+  if ((toggleTheme.childNodes[1].childNodes[1].checked) || (theme === "dark")) {
+    toggleTheme.childNodes[1].childNodes[1].checked = true;
+    
     //change colors
     document.documentElement.style.setProperty("--primary-bg-color", "rgb(58, 58, 58)");
     document.documentElement.style.setProperty("--primary-text-color", "#fffefc");
@@ -201,6 +207,9 @@ function changeTheme (e) {
 
     //change color image gallery
     changeThemeImgGallery("dark");
+
+    //update local storage options
+    lsOptions["lsThemeEvgZlg"] = "dark";
 
   } else {
     //change colors
@@ -229,7 +238,13 @@ function changeTheme (e) {
 
     //change color image gallery
     changeThemeImgGallery("light");
-    
+
+    //update local storage options
+    lsOptions["lsThemeEvgZlg"] = "light";
   }
+
+  //update local storage 
+  localStorage.setItem("lsThemeEvgZlg", lsOptions["lsThemeEvgZlg"]);
 };
 
+export { changeTheme, changeLang }
