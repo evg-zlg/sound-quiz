@@ -17,12 +17,10 @@ document.addEventListener("DOMContentLoaded", () => {
   try {
     lsOptions["lsThemeEvgZlg"] = localStorage.getItem("lsThemeEvgZlg");
   } catch (err) {
-    
   } finally {
     lsOptions["lsThemeEvgZlg"] ? lsOptions["lsThemeEvgZlg"] : lsOptions["lsThemeEvgZlg"] = "light";
     changeTheme(lsOptions["lsThemeEvgZlg"]);
   };
-  console.log("lsThemeEvgZlg", lsOptions["lsThemeEvgZlg"]);
   //load theme from local storage
   try {
     lsOptions["lsLangEvgZlg"] = localStorage.getItem("lsLangEvgZlg");
@@ -31,7 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
     lsOptions["lsLangEvgZlg"] ? lsOptions["lsLangEvgZlg"] : lsOptions["lsLangEvgZlg"] = "en";
     changeLang(lsOptions["lsLangEvgZlg"]);
   };
-  console.log("lsLangEvgZlg", lsOptions["lsLangEvgZlg"]);
 });
 
 function handlerPlayBtn() {

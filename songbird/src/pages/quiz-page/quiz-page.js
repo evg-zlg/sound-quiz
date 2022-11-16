@@ -151,8 +151,8 @@ function handlerAnswersInput (e) {
   }
   
   //load new data into game__info
-  // answer.pngColor ? infoImage.src = answer.pngColor : infoImage.src = answer.png;
-  infoImage.src = answer.png;
+  answer.pngColor ? infoImage.src = answer.pngColor : infoImage.src = answer.png;
+  // infoImage.src = answer.png;
   lang === "en" ? infoText.innerText = answer.descript : infoText.innerText = answer.descriptRU;
   
   //load audi into info
@@ -177,7 +177,8 @@ function handlerAnswersInput (e) {
       count.innerText = score;
 
       //load quest image
-      imgPlayer.src = currentQuest[rightAnswerIndex].png;
+      // currentQuest[rightAnswerIndex].pngColor ? imgPlayer.src = currentQuest[rightAnswerIndex].pngColor:
+                                                imgPlayer.src = currentQuest[rightAnswerIndex].png;
 
       //update player label
       lang === "en" ? playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name :
@@ -275,12 +276,14 @@ function changeThemeImgComposers(mode) {
     // without composers
     if (currentQuestIndex < 4) {
       for (let i = 0; i < imagesQuizPage.length; i++) {
-        imagesQuizPage[i].classList.add("--invert");
+        imagesQuizPage[i].classList.contains("info__image") ? imagesQuizPage[i].classList.add("info__image--dark") :
+                                                              imagesQuizPage[i].classList.add("--invert");
       };
     } 
   } else {
     for (let i = 0; i < imagesQuizPage.length; i++) {
-      imagesQuizPage[i].classList.remove("--invert");
+      imagesQuizPage[i].classList.contains("info__image") ? imagesQuizPage[i].classList.remove("info__image--dark") :
+                                                            imagesQuizPage[i].classList.remove("--invert");
     };
   }
 };

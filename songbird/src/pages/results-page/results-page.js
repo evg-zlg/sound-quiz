@@ -13,14 +13,14 @@ function updateScoreCount(score) {
 function updateLangResults(lang) {
   if (lang === "en") {
     resultsTitle.textContent = "Congratulations";
-    resultsText.textContent = "You passed the quiz and scored " + score + " points";
+    resultsText.innerHTML = "You passed the quiz and scored <span class = \"results__count\"> " + score + "</span> points!";
     resultsQuestion.textContent = "Do you want to play more?";
     resultsBtns[0].textContent = "start a new game";
     resultsBtns[1].textContent = "open gallery";
 
   } else if (lang === "ru") {
     resultsTitle.textContent = "поздравляю";
-    resultsText.textContent = "Викторина закончилась, у тебя " + score + " points";
+    resultsText.innerHTML = "Викторина закончилась, у тебя <span class = \"results__count\">" + score + "</span> очков!";
     resultsQuestion.textContent = "Хочешь сыграть ещё?";
     resultsBtns[0].textContent = "начать новую игру";
     resultsBtns[1].textContent = "открыть галлерею";
