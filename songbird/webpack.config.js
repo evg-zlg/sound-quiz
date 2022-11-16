@@ -42,7 +42,7 @@ module.exports = {
         loader: 'babel-loader',
       },
       {
-        test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp)$/i,
+        test: /\.(?:ico|gif|png|jpg|jpeg|svg|webp|mp4)$/i,
         type: "asset/resource",
         generator: {
           filename: "images/[hash][ext][query]"
