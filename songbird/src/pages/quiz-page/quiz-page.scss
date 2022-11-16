@@ -248,7 +248,7 @@
       }
 
       &--is-wrong {
-        color: var(--primary-accent-color);
+        color: var(--wrong-color);
         background-color: var(--primary-accent-light-color);
         font-weight: 600;
       }

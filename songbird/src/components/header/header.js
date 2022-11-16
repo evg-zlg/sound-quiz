@@ -153,7 +153,10 @@ function updateLang (lang = "en") {
 }
 
 function changeLang (lang) {
-    if ((languaguesIcon.classList.contains("languague__icon--en")) || (lang === "ru")) {
+  if ( ! (typeof lang === "string")) {
+    languaguesIcon.classList.contains("languague__icon--en") ? lang = "ru" : lang = "en";
+  } 
+    if (lang === "ru") {
       // change icon and label in header
       languaguesIcon.classList.add("languague__icon--ru");
       languaguesIcon.classList.remove("languague__icon--en");
@@ -181,14 +184,15 @@ toggleTheme.addEventListener("click", changeTheme);
 function changeTheme (theme) {
   if ((toggleTheme.childNodes[1].childNodes[1].checked) || (theme === "dark")) {
     toggleTheme.childNodes[1].childNodes[1].checked = true;
-    
-    //change colors
+
+    //change colors dark
     document.documentElement.style.setProperty("--primary-bg-color", "rgb(58, 58, 58)");
     document.documentElement.style.setProperty("--primary-text-color", "#fffefc");
     document.documentElement.style.setProperty("--right-light-color", "rgb(150, 192, 150)");
     document.documentElement.style.setProperty("--right-color", "rgb(86 213 86)");
     document.documentElement.style.setProperty("--shadow-color", "rgb(94, 94, 94)");
     document.documentElement.style.setProperty("--drop-shadow-color", "rgba(170, 170, 170, 0.3)");
+    document.documentElement.style.setProperty("--wrong-color", "#ff7f62");
     //invert logo
     logoAnimate.children[0].classList.add("--invert");
     logoAnimate.children[1].classList.add("--invert");
@@ -212,13 +216,14 @@ function changeTheme (theme) {
     lsOptions["lsThemeEvgZlg"] = "dark";
 
   } else {
-    //change colors
+    //change colors light
     document.documentElement.style.setProperty("--primary-bg-color", "#fffefc");
     document.documentElement.style.setProperty("--primary-text-color", "#040404");
     document.documentElement.style.setProperty("--right-light-color", "rgba(53, 136, 53, 0.5)");
     document.documentElement.style.setProperty("--right-color", "rgb(53, 136, 53)");
     document.documentElement.style.setProperty("--shadow-color", "rgb(167, 167, 167)");
     document.documentElement.style.setProperty("--drop-shadow-color", "rgba(0,0,0,0.3)");
+    document.documentElement.style.setProperty("--wrong-color", "#e32a1d");
 
     //invert logo
     logoAnimate.children[0].classList.remove("--invert");
