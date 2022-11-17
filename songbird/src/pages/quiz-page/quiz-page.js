@@ -19,7 +19,8 @@ const countQuestions = questions.length;
 const groupCategoryInstruments = document.querySelectorAll(".choise-group__category")[0];
 const groupCategoryComposers = document.querySelectorAll(".choise-group__category")[1];
 const scoreLabel = document.querySelector(".score__label").childNodes[0];
-
+const rightSound = new Audio(require("./../../assets/sounds/right.mp3"));
+const wrongSound = new Audio(require("./../../assets/sounds/wrong.mp3"));
 
 let category = 0;
 let score = 0;
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < currentQuest.length; i++) {
     inputs[i].addEventListener("click", handlerAnswersInput);
   }  
+
 });
 
 
@@ -163,6 +165,7 @@ function handlerAnswersInput (e) {
   if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest[rightAnswerIndex])) {
     // if music play, set pause
     answerFound = true;
+    rightSound.play();
     if (playerPlayFirst.classList.contains("player__play--pause")) {
       playerPlayFirst.classList.remove("player__play--pause");
       pauseAudio(0);
@@ -191,6 +194,7 @@ function handlerAnswersInput (e) {
       e.target.parentNode.classList.add("game__answer--is-wrong");
       if ( ! answerFound ) {
         scoreTemp -= 1;
+        wrongSound.play();
       }
     }
     
