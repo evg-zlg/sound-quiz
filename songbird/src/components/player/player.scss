@@ -1,3 +1,4 @@
+
 .player {
     // border-radius: 10px;
     // border: 1px solid #e16259;
@@ -100,10 +101,11 @@
         -webkit-appearance: none;
         appearance: none;
         border-radius: 50%;
-        border: 2px solid var(--primary-accent-color);
+        border: 3px solid var(--primary-bg-color);
         background-color: var(--primary-accent-color);
-        height: 15px;
-        width: 15px;
+        // box-shadow: 1px 1px 1px (--primary-bg-color);
+        height: 22px;
+        width: 22px;
       }
       :focus {
         // outline: none;
@@ -115,14 +117,26 @@
    
     &__current-time {
         position: absolute;
-        left: 0;
-        bottom: -23px;
+        left: 60px;
+        bottom: 32px;
         font-size: 1rem;
+
+        @media (max-width: 820px) {
+            font-size: 0.9rem;
+            bottom: 23px;
+        }
     }
     &__all-time {
         position: absolute;
-        right: 0;
-        bottom: -23px;
+        right: 10px;
+        bottom: 32px;
         font-size: 1rem;
+        
+        @media (max-width: 820px) {
+            font-size: 0.9rem;
+            bottom: 23px;
+        }
     }
+
+
 }

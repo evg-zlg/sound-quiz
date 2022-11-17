@@ -1,51 +1,13 @@
-// const title = document.querySelector(".player__label");
-// const audio = document.querySelectorAll(".player__audio");
-// const btnPlay = document.querySelectorAll(".player__play");
-// const progress = document.querySelector(".player__progress-in");
-// const currentTime = document.querySelector(".player__current-time");
-// const allTime = document.querySelector(".player__all-time");
-
-
-// function playAudio (n) {
-//   audio[n].play();
-// }
-
-// function pauseAudio (n) {
-//   audio[n].pause();
-// }
-
-// function handlerBtnPlay(n) {
-//   if (btnPlay[n].classList.contains("player__play--pause")) {
-//     pauseAudio(n);
-//   } else {
-//     playAudio(n);
-//   }
-//   btnPlay[n].classList.toggle("player__play--pause");
-// };
-
-// btnPlay[0].addEventListener("click", () => handlerBtnPlay(0));
-// btnPlay[1].addEventListener("click", () => handlerBtnPlay(1));
-
-
-// function load(obj,i) {
-//   audio[i].src = obj.mp3;
-// }
-
-// audio[0].addEventListener("ended", () => {
-//   btnPlay[0].classList.toggle("player__play--pause");
-// });
-// audio[1].addEventListener("ended", () => {
-//   btnPlay[1].classList.toggle("player__play--pause");
-// });
-
-const playerDOM = document.querySelector(".player");
-
 class Player {
   constructor() {
     this.audio = new Audio();
     this.isPlay = false;
     this.timerShowVolume = 3;
     this.playerPlayBtn = document.createElement("button");
+    this.playerCurrentTime = document.createElement("label");  
+    this.playerAllTime = document.createElement("label");  
+    this.currentTime = 0;
+    this.duration = 0;
   };
 
   log() {
@@ -67,6 +29,34 @@ class Player {
 
   load(src) {
     this.audio.src = src;
+
+    this.audio.addEventListener("loadedmetadata", () => {
+       const duration = Math.trunc(this.audio.duration);
+
+      // update duration label  
+      if (duration > 0) {
+        let time = "";
+        let seconds = duration % 60; 
+        if (duration > 60) {
+          time = "0" + Math.trunc(duration / 60) + ":";
+        } else {
+          time = "00:";
+        };
+        if (duration % 60 >= 10) {
+          time += seconds;
+        } else {
+          time += "0" + seconds;
+        };
+        this.playerAllTime.textContent = time;
+      } else {
+        this.playerAllTime.textContent = "00:00";
+      };
+
+      //update rande value
+      
+    })
+    
+
   };
 
   createDOMElements() {
@@ -75,8 +65,6 @@ class Player {
     const playerVolumeBtn = document.createElement("button");
     const playerProgress = document.createElement("input");  
     const playerVolume = document.createElement("input");  
-    const playerCurrentTime = document.createElement("label");  
-    const playerAllTime = document.createElement("label");  
     const playerRowProgress = document.createElement("div");
     const playerRowVolume = document.createElement("div");
 
@@ -85,16 +73,18 @@ class Player {
     this.playerPlayBtn.className = "player__play";
     playerVolume.className = "player__volume"
     playerProgress.type = "range";
+    playerProgress.value = 0;
     playerVolume.type = "range";
     playerVolumeBtn.className = "player__volume-btn";
-    playerCurrentTime.className = "player__current-time";
-    playerAllTime.className = "player__all-time";
+    this.playerCurrentTime.className = "player__current-time";
+    this.playerCurrentTime.textContent = "00:00";
+    this.playerAllTime.className = "player__all-time";
     
     playerProgress.className = "player__progress";
     playerRowProgress.className = "player__row";
     playerRowVolume.className = "player__row";
 
-    playerRowProgress.append(this.playerPlayBtn, playerProgress, playerCurrentTime, playerAllTime);
+    playerRowProgress.append(this.playerPlayBtn, playerProgress, this.playerCurrentTime, this.playerAllTime);
     playerRowVolume.append(playerVolumeBtn, playerVolume);
 
     playerControl.append(playerRowProgress, playerRowVolume);
@@ -113,6 +103,43 @@ class Player {
     playerVolumeBtn.addEventListener("click", () => {
 
     });    
+
+    //update progress
+    function updateProgress (e) {
+      const currentTime = e.target.currentTime;
+      const duration = e.srcElement.duration;
+      const progressLength = ( currentTime / duration ) * 100;
+      playerProgress.value = progressLength;
+      
+      // return currentTime;
+    };
+
+    //get string for update current time label
+    function getStringOfTime(currentTime) { 
+      // console.log("currentTime = ", currentTime);
+      if (currentTime > 0) {
+        let time = "";
+        if (currentTime > 60) {
+          time = "0" + Math.trunc(currentTime / 60) + ":";
+        } else {
+          time = "00:";
+        };
+        if ((currentTime % 60) >= 10) {
+          time += Math.trunc(currentTime % 60);
+        } else {
+          time += "0" + Math.trunc(currentTime % 60);
+        };
+        return time;
+      } else {
+        return "00:00";
+      };
+    };
+
+    this.audio.addEventListener("timeupdate", (e) => {
+      // console.log(this.playerCurrentTime);
+      this.playerCurrentTime.textContent = getStringOfTime(e.target.currentTime);
+      updateProgress(e);
+    });
 
     return player;
   }    

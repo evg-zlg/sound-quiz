@@ -154,6 +154,11 @@ function checkAnswer(answer, obj) {
 }
 
 function handlerAnswersInput (e) {
+  // fix bug with progress in the info
+  const prog = gameInfo.querySelector(".player__progress");
+  prog.setAttribute("value", "0");
+  console.log("prog:", prog);
+
   //pause for pleyer info
   infoPlayer.pause();
 
@@ -276,8 +281,9 @@ function updateQuestion() {
   // hidden info
   gameInfo.classList.add("info--masked");
   // load audio for quest
-  // load(currentQuest[rightAnswerIndex], 0);
   questPlayer.load(currentQuest[rightAnswerIndex].mp3);
+  //update current and duration
+  
   // load answers
   for (let i = 0; i < currentQuest.length; i++) {
     //label answer
