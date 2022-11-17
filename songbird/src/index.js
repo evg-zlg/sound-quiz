@@ -1,4 +1,4 @@
-import "./components/player/player.js";
+// import "./components/player/player.js";
 import "./components/toggle/toggle.js";
 import "./components/header/header.js";
 import "./pages/quiz-page/quiz-page.js";

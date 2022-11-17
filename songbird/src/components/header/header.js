@@ -1,4 +1,4 @@
-import { updateLangQuiz, changeThemeImgComposers } from "./../../pages/quiz-page/quiz-page.js";
+import { updateLangQuiz, changeThemeImgComposers, startNewGame } from "./../../pages/quiz-page/quiz-page.js";
 import { updateLangResults } from "./../../pages/results-page/results-page.js";
 import { updateLangGallery, changeThemeImgGallery } from "./../../pages/gallery-page/gallery-page.js";
 import { lsOptions } from "./../../index.js";
@@ -51,6 +51,8 @@ quizLink.onclick = function () {
   document.querySelector(".quiz-page").classList.remove("quiz-page--hidden");
   quizLink.classList.add("menu__link--active");
 
+  startNewGame();
+  
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 
   return false;

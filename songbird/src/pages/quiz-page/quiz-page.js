@@ -1,5 +1,5 @@
 // console.log("hello from quiz-page");
-import { load, handlerBtnPlay, playAudio, pauseAudio } from "./../../components/player/player.js";
+import { Player } from "./../../components/player/player.js";
 import { updateScoreCount } from "./../../pages/results-page/results-page.js";
 import questions from "./quiz-data";
 
@@ -10,17 +10,19 @@ const imgPlayer = document.querySelector(".game__image");
 const gameInfo = document.querySelector(".info");
 const infoImage = document.querySelector(".info__image");
 const infoText = document.querySelector(".info__text");
-const playerPlayFirst = document.querySelectorAll(".player__play")[0];
-const playerPlaySecond = document.querySelectorAll(".player__play")[1];
-const playerLabelFirst = document.querySelectorAll(".player__label")[0];
-const playerLabelSecond = document.querySelectorAll(".player__label")[1];
+const infoPlayerDOM = document.querySelector(".info__player");
+const gamePlayer = document.querySelector(".game__player");
+const questLabel = document.querySelector(".player__label");
 const progressItems = document.querySelectorAll(".choise-group__item");
 const countQuestions = questions.length;
 const groupCategoryInstruments = document.querySelectorAll(".choise-group__category")[0];
 const groupCategoryComposers = document.querySelectorAll(".choise-group__category")[1];
 const scoreLabel = document.querySelector(".score__label").childNodes[0];
-const rightSound = new Audio(require("./../../assets/sounds/right.mp3"));
-const wrongSound = new Audio(require("./../../assets/sounds/wrong.mp3"));
+const questPlayer = new Player();
+const infoPlayer = new Player();
+
+// const rightSound = new Player(require("./../../assets/sounds/right.mp3"));
+// const wrongSound = new Player(require("./../../assets/sounds/wrong.mp3"));
 
 let category = 0;
 let score = 0;
@@ -33,6 +35,8 @@ let answer = new Object;
 
 window.lang = "en";
 
+
+
 // on load quiz
 document.addEventListener("DOMContentLoaded", () => {
   updateQuestion();
@@ -40,7 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < currentQuest.length; i++) {
     inputs[i].addEventListener("click", handlerAnswersInput);
   }  
-
+  gamePlayer.append(questPlayer.createDOMElements(".game__player"));
+  infoPlayerDOM.append(infoPlayer.createDOMElements(".info__player"));
 });
 
 
@@ -48,10 +53,8 @@ btnNext.addEventListener("click", handlerBtnNext);
 
 function handlerBtnNext() {
   // document.body.scrollTop = document.documentElement.scrollTop = 160;
-  playerPlaySecond.classList.remove("player__play--pause");
-  playerPlayFirst.classList.remove("player__play--pause");
-  pauseAudio(1);
-  pauseAudio(0);
+  // playerPlaySecond.classList.remove("player__play--pause");
+  questPlayer.pause();
 
   updateProgress();
   if (isFinish()) {
@@ -95,9 +98,9 @@ function updateLangQuiz (lang = "en") {
     scoreLabel.textContent = "Score: ";
     // update label player
     if (answerFound) {
-      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name;
+      questLabel.innerText = currentQuest[rightAnswerIndex].name;
     } else {
-      playerLabelFirst.textContent = "Listen to music and find the answer";
+      questLabel.textContent = "Listen to music and find the answer";
     }
     // update answers
     for (let i = 0; i < currentQuest.length; i++) {
@@ -116,9 +119,9 @@ function updateLangQuiz (lang = "en") {
     scoreLabel.textContent = "Счёт: ";
     // update label player
     if (answerFound) {
-      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].nameRU;
+      questLabel.innerText = currentQuest[rightAnswerIndex].nameRU;
     } else {
-      playerLabelFirst.textContent = "Послушай музыку и найди ответ";
+      questLabel.textContent = "Послушай музыку и найди ответ";
     }
     // update answers
     for (let i = 0; i < currentQuest.length; i++) {
@@ -143,6 +146,9 @@ function checkAnswer(answer, obj) {
 }
 
 function handlerAnswersInput (e) {
+  // create wrong and right audio for clicks
+  const wrongSound = new Player(require("./../../assets/sounds/wrong.mp3"));
+  const rightSound = new Player(require("./../../assets/sounds/right.mp3"));
 
   // get answer object
 
@@ -157,8 +163,9 @@ function handlerAnswersInput (e) {
   // infoImage.src = answer.png;
   lang === "en" ? infoText.innerText = answer.descript : infoText.innerText = answer.descriptRU;
   
-  //load audi into info
-  load(answer, 1)
+  //load audi into 
+  infoPlayer.load(answer.mp3);
+  // load(answer, 1)
   //show info of item
   gameInfo.classList.remove("info--masked");
 
@@ -166,10 +173,7 @@ function handlerAnswersInput (e) {
     // if music play, set pause
     answerFound = true;
     rightSound.play();
-    if (playerPlayFirst.classList.contains("player__play--pause")) {
-      playerPlayFirst.classList.remove("player__play--pause");
-      pauseAudio(0);
-    }
+    questPlayer.pause();
 
     if ( ! e.target.parentNode.classList.contains("game__answer--is-right")) {
       e.target.parentNode.classList.add("game__answer--is-right");
@@ -184,8 +188,8 @@ function handlerAnswersInput (e) {
                                                 imgPlayer.src = currentQuest[rightAnswerIndex].png;
 
       //update player label
-      lang === "en" ? playerLabelFirst.innerText = currentQuest[rightAnswerIndex].name :
-                      playerLabelFirst.innerText = currentQuest[rightAnswerIndex].nameRU;
+      lang === "en" ? questLabel.innerText = currentQuest[rightAnswerIndex].name :
+                      questLabel.innerText = currentQuest[rightAnswerIndex].nameRU;
     }
 
   } else {
@@ -243,8 +247,8 @@ function updateQuestion() {
 
   answerFound = false;
   //update player label
-  window.lang === "en" ? playerLabelFirst.innerText = "Listen to music and find the answer" :
-                         playerLabelFirst.innerText = "Послушай музыку и найди ответ";
+  window.lang === "en" ? questLabel.innerText = "Listen to music and find the answer" :
+                         questLabel.innerText = "Послушай музыку и найди ответ";
   //update score
   scoreTemp = 5;
   //update currentQuest
@@ -260,7 +264,8 @@ function updateQuestion() {
   // hidden info
   gameInfo.classList.add("info--masked");
   // load audio for quest
-  load(currentQuest[rightAnswerIndex], 0);
+  // load(currentQuest[rightAnswerIndex], 0);
+  questPlayer.load(currentQuest[rightAnswerIndex].mp3);
   // load answers
   for (let i = 0; i < currentQuest.length; i++) {
     //label answer
