@@ -111,8 +111,8 @@ class Player {
     });
 
     playerVolumeBtn.addEventListener("click", () => {
-      
-    });
+
+    });    
 
     return player;
   }    

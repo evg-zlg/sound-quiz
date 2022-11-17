@@ -11,6 +11,7 @@
   cursor: pointer;
   position: relative;
   padding-left: 50px;
+  white-space: nowrap;
 
   @media (max-width: 820px) {
     font-size: 0.9rem;

@@ -1,4 +1,5 @@
 // console.log("hello from quiz-page");
+import { info } from "autoprefixer";
 import { Player } from "./../../components/player/player.js";
 import { updateScoreCount } from "./../../pages/results-page/results-page.js";
 import questions from "./quiz-data";
@@ -35,8 +36,6 @@ let answer = new Object;
 
 window.lang = "en";
 
-
-
 // on load quiz
 document.addEventListener("DOMContentLoaded", () => {
   updateQuestion();
@@ -46,6 +45,15 @@ document.addEventListener("DOMContentLoaded", () => {
   }  
   gamePlayer.append(questPlayer.createDOMElements(".game__player"));
   infoPlayerDOM.append(infoPlayer.createDOMElements(".info__player"));
+
+  // pause other player button play
+  gamePlayer.querySelector(".player__play").addEventListener("click", () => {
+    infoPlayer.pause();
+  });
+  infoPlayerDOM.querySelector(".player__play").addEventListener("click", () => {
+    questPlayer.pause();
+  });
+  
 });
 
 
@@ -146,12 +154,16 @@ function checkAnswer(answer, obj) {
 }
 
 function handlerAnswersInput (e) {
+  //pause for pleyer info
+  infoPlayer.pause();
+
   // create wrong and right audio for clicks
-  const wrongSound = new Player(require("./../../assets/sounds/wrong.mp3"));
-  const rightSound = new Player(require("./../../assets/sounds/right.mp3"));
+  const wrongSound = new Player();
+  const rightSound = new Player();
+  wrongSound.load(require("./../../assets/sounds/wrong.mp3"));
+  rightSound.load(require("./../../assets/sounds/right.mp3"));
 
   // get answer object
-
   if (lang === "en") {
     answer = currentQuest.filter(item => item.name == e.target.parentNode.childNodes[2].textContent)[0];
   } else if (lang === "ru") {
@@ -289,11 +301,27 @@ function changeThemeImgComposers(mode) {
                                                               imagesQuizPage[i].classList.add("--invert");
       };
     } 
+    // add class for players buttons
+    document.querySelectorAll(".player__play").forEach(elem => {
+      elem.classList.add("player__play--dark");
+    })
+    document.querySelectorAll(".player__volume-btn").forEach(elem => {
+      elem.classList.add("player__volume-btn--dark");
+    })
+
   } else {
     for (let i = 0; i < imagesQuizPage.length; i++) {
       imagesQuizPage[i].classList.contains("info__image") ? imagesQuizPage[i].classList.remove("info__image--dark") :
                                                             imagesQuizPage[i].classList.remove("--invert");
     };
+    // remove class for players buttons
+    document.querySelectorAll(".player__play").forEach(elem => {
+      elem.classList.remove("player__play--dark");
+    })
+    document.querySelectorAll(".player__volume-btn").forEach(elem => {
+      elem.classList.remove("player__volume-btn--dark");
+    })
+
   }
 };
 

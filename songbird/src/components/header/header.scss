@@ -1,8 +1,8 @@
 .header {
     height: 85px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    // display: flex;
+    // justify-content: flex-end;
+    // align-items: center;
     border-bottom: 1px solid var(--shadow-color);
     padding: 5px 10px;
     position: sticky;
@@ -23,20 +23,16 @@
       // display: none;
     }
 
-    .logo {
-        margin: 0 0 0 0; 
-        position: absolute;
-        left: 5px;
-        top: 5px;
-    }
 
     &__wrapper {
       width: 100%;
+      height: 100%;
       display: flex;
       gap: 4vw;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
     }    
+
 }
 .logo-animate {
   width: 105px;
@@ -136,7 +132,7 @@
   }
 }
 .logo {
-    height: 92%;
+    height: 100%;
     position: relative;
 
     &__link{
@@ -223,8 +219,8 @@
 }
 
 .header__options {
-  position: absolute;
-  right: 10px;
+  // position: absolute;
+  // right: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

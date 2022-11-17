@@ -53,6 +53,10 @@
         &--pause {
           background-image: url("pause-btn.png");
         }
+
+        &--dark {
+          filter: invert(100%);
+        }
     }
 
     &__volume-btn {
@@ -63,13 +67,17 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center center;
-      cursor: pointer;
       background-color: unset;
 
       @media (max-width: 820px) {
         width: 30px;
         height: 30px;
       }
+
+      &--dark {
+        filter: invert(100%);
+      }
+
     }
 
     &__volume, 
