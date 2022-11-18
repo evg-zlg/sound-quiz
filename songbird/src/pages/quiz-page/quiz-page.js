@@ -154,10 +154,10 @@ function checkAnswer(answer, obj) {
 }
 
 function handlerAnswersInput (e) {
-  // fix bug with progress in the info
-  const prog = gameInfo.querySelector(".player__progress");
-  prog.setAttribute("value", "0");
-  console.log("prog:", prog);
+  // // fix bug with progress in the info
+  // const prog = gameInfo.querySelector(".player__progress");
+  // prog.setAttribute("value", "0");
+  // console.log("prog:", prog);
 
   //pause for pleyer info
   infoPlayer.pause();
@@ -332,7 +332,7 @@ function changeThemeImgComposers(mode) {
 };
 
 function startNewGame() {
-  // clear progress
+  // clear progress game
   progressItems.forEach(elem => {
     elem.classList.remove("choise-group__item--current");
     elem.textContent = "";

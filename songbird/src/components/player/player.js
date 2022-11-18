@@ -6,6 +6,7 @@ class Player {
     this.playerPlayBtn = document.createElement("button");
     this.playerCurrentTime = document.createElement("label");  
     this.playerAllTime = document.createElement("label");  
+    this.playerProgress = document.createElement("input");
     this.currentTime = 0;
     this.duration = 0;
   };
@@ -52,18 +53,34 @@ class Player {
         this.playerAllTime.textContent = "00:00";
       };
 
-      //update rande value
-      
-    })
-    
+      //update progress value
+      this.playerProgress.value = 0;
+    });
 
+    this.playerProgress.addEventListener("input", (e) => {
+      console.log("e.target.value:", e.target.value);
+      const duration = this.audio.duration;
+      console.log(this.audio);
+      console.log(e.target.value * duration / 100);
+      this.audio.currentTime = e.target.value * duration / 100;
+    });
+
+  };
+  setCurrentTime(e) {
+    console.log("e.target.value:", e.target.value);
+    console.log("clientWidth: ", this.clientWidth);
+    const currentTime = e.target.currentTime;
+    const duration = e.target.duration;
+    const progressLength = ( currentTime / duration ) * 100;
+    console.log(this);
+    this.audio.currentTime = ( duration * e.target.value) / 100;
   };
 
   createDOMElements() {
     const player = document.createElement("div");
     const playerControl = document.createElement("div");
     const playerVolumeBtn = document.createElement("button");
-    const playerProgress = document.createElement("input");  
+    
     const playerVolume = document.createElement("input");  
     const playerRowProgress = document.createElement("div");
     const playerRowVolume = document.createElement("div");
@@ -72,8 +89,11 @@ class Player {
     playerControl.className = "player__control";
     this.playerPlayBtn.className = "player__play";
     playerVolume.className = "player__volume"
+
+    const playerProgress = this.playerProgress;
     playerProgress.type = "range";
     playerProgress.value = 0;
+
     playerVolume.type = "range";
     playerVolumeBtn.className = "player__volume-btn";
     this.playerCurrentTime.className = "player__current-time";
@@ -107,11 +127,9 @@ class Player {
     //update progress
     function updateProgress (e) {
       const currentTime = e.target.currentTime;
-      const duration = e.srcElement.duration;
+      const duration = e.target.duration;
       const progressLength = ( currentTime / duration ) * 100;
       playerProgress.value = progressLength;
-      
-      // return currentTime;
     };
 
     //get string for update current time label

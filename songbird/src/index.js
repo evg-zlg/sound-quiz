@@ -6,6 +6,7 @@ import "./pages/results-page/results-page.js";
 import "./pages/gallery-page/gallery-page.js";
 
 import { changeTheme, changeLang } from "./components/header/header.js";
+import { startNewGame } from "./pages/quiz-page/quiz-page.js";
 
 const startPage = document.querySelector(".start-page");
 const quizPage = document.querySelector(".quiz-page");
@@ -37,6 +38,7 @@ function handlerPlayBtn() {
   document.body.scrollTop = document.documentElement.scrollTop = 0;
   document.querySelector(".menu__link--active").classList.remove("menu__link--active");
   document.querySelectorAll(".menu__link")[1].classList.add("menu__link--active");
+  startNewGame();
 }
 
 document.querySelectorAll(".js-btn--play").forEach(elem => {
