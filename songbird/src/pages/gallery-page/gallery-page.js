@@ -1,13 +1,29 @@
 import questions from "./../quiz-page/quiz-data.js";
+import { Player } from "./../../components/player/player.js";
 
 const galleryItems = document.querySelector(".gallery__items");
 const galleryTitle = document.querySelector(".gallery__title");
 const galleryDescription = document.querySelector(".gallery__description");
+const galleryPlayerDOM = document.querySelector(".gallery__player");
+const galleryPlayer = new Player();
 
+// append player
+galleryPlayerDOM.append(galleryPlayer.createDOMElements());
+
+
+function handlerCardPlayBtn(btn, mp3) {
+  console.log(btn);
+  console.log(mp3);
+  galleryPlayer.load(mp3);
+  galleryPlayer.play();
+}
+
+// create gallery items
 function appendObjects() {
   
   questions.forEach(elem => {
     elem.forEach(item => {
+
       const card = document.createElement("div");
       card.className = "card";
       const cardImage = document.createElement("div");
@@ -31,7 +47,11 @@ function appendObjects() {
       const cardPlay = document.createElement("button");
       cardPlay.className = "btn card__play";
       lang === "en" ? cardPlay.textContent = "play" : cardPlay.textContent = "послушать";
-  
+      
+      cardPlay.addEventListener("click", () => {
+        handlerCardPlayBtn(cardPlay, item.mp3)
+      });
+
       //build structure    
       cardControl.append(cardPlay);
       cardDescription.append(cardText, cardControl);
