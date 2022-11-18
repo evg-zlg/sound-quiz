@@ -1,5 +1,7 @@
 .gallery {
   margin: 0 0 50px 0;
+  position: relative;
+
   &__title {
     color: var(--primary-accent-color);
     text-transform: uppercase;
@@ -14,6 +16,14 @@
     margin: 0 0 15px 0;
   }
 
+  &__player {
+    position: sticky;
+    top: 85px;
+    background-color: var(--primary-bg-color);
+    width: 100%;
+    padding: 10px 0;
+  }
+  
   &__items {
     display: flex;
     flex-wrap: wrap;

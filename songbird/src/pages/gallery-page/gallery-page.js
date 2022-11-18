@@ -11,8 +11,7 @@ const galleryPlayer = new Player();
 galleryPlayerDOM.append(galleryPlayer.createDOMElements());
 
 
-function handlerCardPlayBtn(btn, mp3) {
-  console.log(btn);
+function handlerCardPlayBtn(mp3) {
   console.log(mp3);
   galleryPlayer.load(mp3);
   galleryPlayer.play();
@@ -49,7 +48,7 @@ function appendObjects() {
       lang === "en" ? cardPlay.textContent = "play" : cardPlay.textContent = "послушать";
       
       cardPlay.addEventListener("click", () => {
-        handlerCardPlayBtn(cardPlay, item.mp3)
+        handlerCardPlayBtn(item.mp3)
       });
 
       //build structure    
