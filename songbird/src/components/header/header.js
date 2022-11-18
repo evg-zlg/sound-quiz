@@ -14,6 +14,8 @@ const languaguesIcon = document.querySelector(".languague__icon");
 const languaguesLabel = document.querySelector(".languague__label");
 const toggleTheme = document.querySelector(".toggle");
 const logoAnimate = document.querySelector(".logo-animate");
+const burgerBtn = document.querySelector(".burger-btn");
+const headerWrapper = document.querySelector(".header__wrapper");
 
 logoLink.onclick = function() {
   logoAnimate.childNodes[1].classList.toggle("logo-animate__left--on-anim");
@@ -35,6 +37,10 @@ aboutLink.onclick = function () {
 
   document.querySelector(".start-page").classList.remove("start-page--hidden");
   aboutLink.classList.add("menu__link--active");
+
+  //close burger
+  burgerBtn.classList.remove("burger-btn--opened");
+  headerWrapper.classList.remove("header__wrapper--open-burger");
   
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 
@@ -52,6 +58,10 @@ quizLink.onclick = function () {
   quizLink.classList.add("menu__link--active");
 
   startNewGame();
+
+  //close burger
+  burgerBtn.classList.remove("burger-btn--opened");
+  headerWrapper.classList.remove("header__wrapper--open-burger");
   
   document.body.scrollTop = document.documentElement.scrollTop = 0;
 
@@ -70,8 +80,20 @@ galleryLink.onclick = function () {
   document.querySelector(".gallery-page").classList.remove("gallery-page--hidden");
   galleryLink.classList.add("menu__link--active");
 
+  //close burger
+  burgerBtn.classList.remove("burger-btn--opened");
+  headerWrapper.classList.remove("header__wrapper--open-burger");
+
   return false;
 }
+
+//burger menu button
+burgerBtn.addEventListener("click", () => {
+  //change icon button
+  burgerBtn.classList.toggle("burger-btn--opened");
+  //open wrapper
+  headerWrapper.classList.toggle("header__wrapper--open-burger");
+});
 
 function updateLang (lang = "en") {
   const title = document.querySelector(".title").childNodes[0];
@@ -199,6 +221,8 @@ function changeTheme (theme) {
     logoAnimate.children[0].classList.add("--invert");
     logoAnimate.children[1].classList.add("--invert");
     logoAnimate.children[2].classList.add("--invert");
+    //invert burger button
+    burgerBtn.classList.add("burger-btn--dark");
     //invert png on start page
     let startPage = document.querySelector(".start-page");
     let imagesStartPage = startPage.querySelectorAll("img");
@@ -231,6 +255,8 @@ function changeTheme (theme) {
     logoAnimate.children[0].classList.remove("--invert");
     logoAnimate.children[1].classList.remove("--invert");
     logoAnimate.children[2].classList.remove("--invert");
+    //invert burger button
+    burgerBtn.classList.remove("burger-btn--dark");
     //invert png on start page
     let startPage = document.querySelector(".start-page");
     let imagesStartPage = startPage.querySelectorAll("img");
