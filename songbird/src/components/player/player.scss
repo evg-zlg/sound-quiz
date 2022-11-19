@@ -69,10 +69,15 @@
       background-repeat: no-repeat;
       background-position: center center;
       background-color: unset;
+      cursor: pointer;
 
       @media (max-width: 820px) {
         width: 30px;
         height: 30px;
+      }
+
+      &--mute {
+        background-image: url("volume-btn-mute.png");
       }
 
       &--dark {

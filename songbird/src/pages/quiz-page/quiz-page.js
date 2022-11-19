@@ -1,3 +1,4 @@
+import { info } from "autoprefixer";
 import { Player } from "./../../components/player/player.js";
 import { updateScoreCount } from "./../../pages/results-page/results-page.js";
 import questions from "./quiz-data";
@@ -61,6 +62,7 @@ function handlerBtnNext() {
   // document.body.scrollTop = document.documentElement.scrollTop = 160;
   // playerPlaySecond.classList.remove("player__play--pause");
   questPlayer.pause();
+  infoPlayer.pause();
 
   updateProgress();
   if (isFinish()) {
@@ -74,6 +76,7 @@ function handlerBtnNext() {
   } else {
     currentQuestIndex ++;
     updateQuestion();
+    questPlayer.play();
   };
     //check last quest and change button
   if ((currentQuestIndex) === (countQuestions - 1)) {
@@ -326,7 +329,7 @@ function changeThemeImgComposers(mode) {
 };
 
 function startNewGame() {
-  // clear progress game
+  // clear progress
   progressItems.forEach(elem => {
     elem.classList.remove("choise-group__item--current");
     elem.textContent = "";

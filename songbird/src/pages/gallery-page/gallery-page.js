@@ -12,7 +12,6 @@ galleryPlayerDOM.append(galleryPlayer.createDOMElements());
 
 
 function handlerCardPlayBtn(mp3) {
-  console.log(mp3);
   galleryPlayer.load(mp3);
   galleryPlayer.play();
 }

@@ -4,18 +4,15 @@
 }
 .toggle__label {
   display: inline-block;
-  font-weight: 600;
-  font-size: 1rem;
+  // font-weight: 600;
+  font-size: inherit;
   color: var(--primary-text-color);
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
   padding-left: 50px;
   white-space: nowrap;
-
-  @media (max-width: 820px) {
-    font-size: 0.9rem;
-  }
+  text-shadow: 0.5px 1px 4px var(--shadow-color);
 }
 
 .toggle__input {
@@ -33,6 +30,9 @@
   height: 20px;
   border: 1.5px solid var(--shadow-color);  
   border-radius: 20px;  
+  @media (max-width: 767px) {
+    top: 3px;
+  }
 }
 .toggle__input:checked + .toggle__mark::before {
   border: 1.5px solid var(--primary-accent-color);
@@ -47,6 +47,9 @@
   top: 3px;
   background: var(--shadow-color);
   border-radius: 50%;
+  @media (max-width: 767px) {
+    top: 8px;
+  }
 }
 
 .toggle__input:checked + .toggle__mark::after{

@@ -8,6 +8,7 @@ class Player {
     this.playerAllTime = document.createElement("label");  
     this.playerProgress = document.createElement("input");
     this.playerVolume = document.createElement("input");  
+    this.lastVolume = -1;
     this.currentTime = 0;
     this.duration = 0;
   };
@@ -67,7 +68,6 @@ class Player {
     // update volume audio after change input range
     this.playerVolume.addEventListener("input", (e) => {
       this.audio.volume = e.target.value / 100;
-      console.log(this.audio.volume);
     })
 
   };
@@ -89,10 +89,12 @@ class Player {
     const playerProgress = this.playerProgress;
     playerProgress.type = "range";
     playerProgress.value = 0;
+    this.playerProgress.value = 0;
 
     const playerVolume = this.playerVolume;
     playerVolume.className = "player__volume"
     playerVolume.type = "range";
+    this.playerVolume.value = 100;
     playerVolumeBtn.className = "player__volume-btn";
     this.playerCurrentTime.className = "player__current-time";
     this.playerCurrentTime.textContent = "00:00";
@@ -109,7 +111,7 @@ class Player {
 
     player.append(playerControl, this.audio);
 
-    //add listener for button
+    //add listener for play btn
     this.playerPlayBtn.addEventListener("click", () => {
       if (this.isPlay) {
         this.pause();
@@ -118,8 +120,21 @@ class Player {
       };
     });
 
+    //add listener for volume btn
     playerVolumeBtn.addEventListener("click", () => {
-
+      if (playerVolumeBtn.classList.contains("player__volume-btn--mute")) {
+        playerVolumeBtn.classList.remove("player__volume-btn--mute");
+        this.audio.volume = this.lastVolume;
+        this.playerVolume.value = this.lastVolume * 100;
+      } else {
+        playerVolumeBtn.classList.add("player__volume-btn--mute");
+        this.lastVolume = this.audio.volume;
+        this.audio.volume = 0;
+        this.playerVolume.value = 0;
+        // console.log("this.audio.volume:", this.audio.volume)
+        // console.log("this.playerVolume.value:", this.playerVolume.value)
+        // console.log("lastVolume", this.lastVolume)
+      }
     });    
 
     //update progress
