@@ -185,8 +185,10 @@ function handlerAnswersInput (e) {
 
   if (checkAnswer(e.target.parentNode.childNodes[2].data, currentQuest[rightAnswerIndex])) {
     // if music play, set pause
+    if ( ! answerFound) {
+      rightSound.play();
+    }
     answerFound = true;
-    rightSound.play();
     questPlayer.pause();
 
     if ( ! e.target.parentNode.classList.contains("game__answer--is-right")) {
