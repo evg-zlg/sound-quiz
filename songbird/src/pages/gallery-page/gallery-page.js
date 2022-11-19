@@ -10,7 +10,6 @@ const galleryPlayer = new Player();
 // append player
 galleryPlayerDOM.append(galleryPlayer.createDOMElements());
 
-
 function handlerCardPlayBtn(mp3) {
   galleryPlayer.load(mp3);
   galleryPlayer.play();
@@ -18,7 +17,7 @@ function handlerCardPlayBtn(mp3) {
 
 // create gallery items
 function appendObjects() {
-  
+
   questions.forEach(elem => {
     elem.forEach(item => {
 
@@ -60,6 +59,8 @@ function appendObjects() {
       galleryItems.append(card);
     });
   })
+  //load first instrument in player
+  galleryPlayer.load(questions[0][0].mp3);
 };
 
 appendObjects();
