@@ -172,6 +172,10 @@ class Player {
       updateProgress(e);
     });
 
+    this.audio.addEventListener("ended", () => {
+      this.playerPlayBtn.classList.remove("player__play--pause");
+    });
+
     return player;
   }    
 
