@@ -1,0 +1,62 @@
+include ./../../components/button/button.pug
+
+main.main 
+    h1.title welcome to the #[br] #[strong.title--colored sound quiz]
+    .main__about
+        .main__description    
+            h2.main__title music instruments
+            p.main__text Listen to the music and try to identify the musical instrument 
+            +button("Try it", "main__btn js-btn--play")
+        .main__collage
+            img(src=require("./../../assets/images/collage-single.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/accordion.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/cello.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/guitar.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/piano.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/trumpet.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/maracas.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/double-note.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/collage-main.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/note.png"), alt="Musical instruments").main__image
+            //- img(src=require("./../../assets/images/drum.png"), alt="Musical instruments").main__image
+
+//- section.rules 
+    h2.rules__title how to play?
+    .rules__items 
+        .rules__item 
+            img(src=require("./../../assets/images/play.png"), alt="Play sound").rules__image
+            .rules__description listen to the sound
+        .rules__item 
+            img(src=require("./../../assets/images/check.png"), alt="Choose answer").rules__image
+            .rules__description choose the correct answer
+        .rules__item 
+            img(src=require("./../../assets/images/results.png"), alt="Results").rules__image
+            .rules__description see the results
+
+section.songs
+    .songs__image 
+      img(src=require("./../../assets/images/listen-music-great.png"), alt="").songs__img
+    .songs__description 
+        h2.songs__title listen to great music 
+        p.songs__text Listen, listen more.. and find right song
+        +button("Hmm, that's interesting", "songs__btn js-btn--play")
+
+section.composer
+    .composer__description 
+      h2.composer__title Do you know the classics?
+      p.composer__text Test your knowledge and learn something new in the sound quiz
+      +button("I'm ready to play", "composer__btn js-btn--play")
+    .composer__image 
+      img(src=require("./../../assets/images/composer-1.png"), alt="").composer__img
+      img(src=require("./../../assets/images/composer-with-vine-2.png"), alt="").composer__img
+        
+footer.footer
+  a.footer__link(href="https://evg-zlg.github.io/rsschool-cv/" target="_blank")
+      img.footer__img(src=require("./../../assets/logo/git-hub.png"))
+      label.footer__label evg-zlg
+  p.footer__text 2022
+  a.footer__logo(href="https://rs.school/js/" target="_blank")
+      img.footer__img(src=require("./../../assets/logo/rs-school-js.svg"))
+        

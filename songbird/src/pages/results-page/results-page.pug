@@ -1,0 +1,11 @@
+include ./../../components/button/button.pug
+
+.results 
+    video.results__video(autoplay muted loop)
+        source(src=require("./../../assets/images/salute.mp4") type="video/mp4")
+    h1.results__title Congratulations
+    p.results__text You passed the quiz and scored #[span.results__count 0] points!
+    +button("start a new game", "results__btn")
+    +button("open gallery", "results__btn")
+
+

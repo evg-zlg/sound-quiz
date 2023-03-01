@@ -1,0 +1,76 @@
+//- include ./../../components/player/player.pug
+include ./../../components/button/button.pug
+
+.quiz
+    figure.choise-group
+        .choise-group__row
+            figcaption.choise-group__category instruments
+            ul.choise-group__elements
+                li.choise-group__item.choise-group__item--current
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+        .choise-group__row
+            figcaption.choise-group__category composers
+            ul.choise-group__elements
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+                li.choise-group__item
+        //- .choise-group__row
+        //-     figcaption.choise-group__category music
+        //-     ul.choise-group__elements
+        //-         li.choise-group__item
+        //-         li.choise-group__item
+        //-         li.choise-group__item
+        //-         li.choise-group__item
+
+        //-     ul.choise-group__elements
+        //-         li.choise-group__item вальс
+        //-         li.choise-group__item симфония
+        //-         li.choise-group__item соната
+        //-         li.choise-group__item концерт
+        //-         li.choise-group__item увертюра
+        //-         li.choise-group__item разное
+        //-         li.choise-group__item современные
+                   
+    .quiz__game.game
+        .score
+                label.score__label Score: 
+                    span.score__count 0
+        .game__question 
+            img.game__image(src=require("./../../assets/images/collage-main.png"), alt="Treble clef")
+            .game__player
+                .player__label
+        .game__answers
+            .game__inputs
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Icon")
+                    input.game__input(type="radio" name="answer") 
+                    |  
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Icon")
+                    input.game__input(type="radio" name="answer") 
+                    |  
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Icon")
+                    input.game__input(type="radio" name="answer") 
+                    |  
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Icon")
+                    input.game__input(type="radio" name="answer") 
+                    |  
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Icon")
+                    input.game__input(type="radio" name="answer") 
+                    |  
+                label.game__answer
+                    img.game__icon(src=require("./../../assets/images/collage-main.png"), alt="Icon")
+                    input.game__input(type="radio" name="answer") 
+                    |  
+            .game__info.info.info--masked
+                img.info__masked(src=require("./../../assets/images/listen-music.png"))
+                img.info__image(src=require("./../../assets/images/piano.png"))
+                p.info__text Lorem ipsum
+                .info__player
+        +button("next question", "game__next") 

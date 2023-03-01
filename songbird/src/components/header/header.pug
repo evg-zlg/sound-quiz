@@ -1,0 +1,26 @@
+include ./../button/button.pug
+include ./../toggle/toggle.pug
+
+mixin header() 
+    .header 
+        figure.logo
+                a.logo__link
+                    .logo-animate 
+                        img.logo-animate__left.logo-animate__left--on-anim(src=require("./../../assets/logo/logo-left.png"))
+                        img.logo-animate__mid.logo-animate__mid--on-anim(src=require("./../../assets/logo/logo-mid.png"))
+                        img.logo-animate__right.logo-animate__right--on-anim(src=require("./../../assets/logo/logo-right.png"))
+                        label.logo-animate__label sound quiz
+        .header__wrapper
+            menu.menu
+                li.menu__item
+                    a.menu__link.menu__link--active(href="") About 
+                li.menu__item
+                    a.menu__link(href="") Quiz 
+                li.menu__item
+                    a.menu__link(href="#") Gallery
+            .header__options
+              +toggle("dark theme")        
+              .languague
+                  .languague__icon.languague__icon--en(alt="Languegue") 
+                  label.languague__label English 
+        button.burger-btn
