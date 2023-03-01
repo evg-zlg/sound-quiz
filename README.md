@@ -8,17 +8,29 @@
 
 ## Description
 The application consists of three pages - About, Quiz and Gallery.
+
 Page About contains general information, on Quiz you can test your knowledge and luck. 
+
 Page Gallery contains all songs with image from quiz.
+
 You can choose the languague and theme at any time. 
+
+Adaptive layout from 360px width viewport.
+
 
 ## How to play?
 You need to click on play and listen to the melody.
+
 Then choose one of the six answer options.
+
 After any click on the answer option on the right, an image and information appear, as well as the opportunity to listen to what you have chosen.
+
 For one question you can get from 0 to 5 points.
+
 Each wrong answer reduces points by 1.
+
 If the answer is found on the sixth attempt you will get 0 points.
+
 Any time you can click on the answers and explore the content.
 
 ## Technology stack
